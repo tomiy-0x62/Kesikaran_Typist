@@ -41,10 +41,11 @@ class ViewController: NSViewController {
      }*/
     
     override func keyDown(with event: NSEvent) {
-        print("KeDown")
+        
         label.stringValue = ("I'm Mac.")
         textField.stringValue = String(describing: event.characters!)
-        print(event.keyCode)
+        print("KeDown: Code '\(event.keyCode)'")
+        //print(event.keyCode)
     }
     
     override func flagsChanged(with event: NSEvent) {
