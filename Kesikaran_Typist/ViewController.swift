@@ -8,7 +8,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
     @IBOutlet weak var textField: NSTextField!
     @IBOutlet weak var label: NSTextField!
     
@@ -16,23 +16,36 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
+        
+        NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
+            self.flagsChanged(with: $0)
+            return $0
+        }
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+            return $0
         }
     }
     
-    override func keyUp(with event: NSEvent) {
-            print("KeyUp")
-            label.stringValue = ("I'm Mac.")
-            textField.stringValue = String(describing: event.characters!)
-        print(event.keyCode)
+    override var representedObject: Any? {
+        didSet {
+            // Update the view, if already loaded.
         }
-
-
+    }
+    /*
+     override func keyUp(with event: NSEvent) {
+     print("KeyUp")
+     label.stringValue = ("I'm Mac.")
+     textField.stringValue = String(describing: event.characters!)
+     print(event.keyCode)
+     }*/
+    
+    override func keyDown(with event: NSEvent) {
+        print("KeDown")
+        label.stringValue = ("I'm Mac.")
+        textField.stringValue = String(describing: event.characters!)
+        print(event.keyCode)
+    }
+    
 }
 

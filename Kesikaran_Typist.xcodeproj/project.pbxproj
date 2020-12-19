@@ -13,6 +13,7 @@
 		7741F3DD258E03AC001D7A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7741F3DB258E03AC001D7A6E /* Main.storyboard */; };
 		7741F3E9258E03AC001D7A6E /* Kesikaran_TypistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3E8258E03AC001D7A6E /* Kesikaran_TypistTests.swift */; };
 		7741F3F4258E03AC001D7A6E /* Kesikaran_TypistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */; };
+		77DD38DE258E367C0049F204 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD38DD258E367C0049F204 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		7741F3EF258E03AC001D7A6E /* Kesikaran_TypistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kesikaran_TypistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kesikaran_TypistUITests.swift; sourceTree = "<group>"; };
 		7741F3F5258E03AC001D7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77DD38DD258E367C0049F204 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				7741F3D5258E03AB001D7A6E /* AppDelegate.swift */,
 				7741F3D7258E03AB001D7A6E /* ViewController.swift */,
+				77DD38DD258E367C0049F204 /* CustomView.swift */,
 				7741F3D9258E03AC001D7A6E /* Assets.xcassets */,
 				7741F3DB258E03AC001D7A6E /* Main.storyboard */,
 				7741F3DE258E03AC001D7A6E /* Info.plist */,
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DD38DE258E367C0049F204 /* CustomView.swift in Sources */,
 				7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */,
 				7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */,
 			);
