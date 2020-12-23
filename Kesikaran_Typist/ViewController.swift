@@ -41,7 +41,8 @@ class ViewController: NSViewController {
      }*/
     
     override func keyDown(with event: NSEvent) {
-        
+        print(event)
+        print("\n")
         label.stringValue = ("I'm Mac.")
         textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
@@ -49,6 +50,8 @@ class ViewController: NSViewController {
     }
     
     override func flagsChanged(with event: NSEvent) {
+        print(event)
+        print("\n")
             switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
             case [.shift]:
                 print("shift key is pressed")
