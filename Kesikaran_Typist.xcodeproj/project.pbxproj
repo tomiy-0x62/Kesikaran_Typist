@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77060CBF2594DF7C00C97BC6 /* lordCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77060CBE2594DF7C00C97BC6 /* lordCSV.swift */; };
 		7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D5258E03AB001D7A6E /* AppDelegate.swift */; };
 		7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D7258E03AB001D7A6E /* ViewController.swift */; };
 		7741F3DA258E03AC001D7A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7741F3D9258E03AC001D7A6E /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77060CBE2594DF7C00C97BC6 /* lordCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lordCSV.swift; sourceTree = "<group>"; };
 		7741F3D2258E03AB001D7A6E /* Kesikaran_Typist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kesikaran_Typist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7741F3D5258E03AB001D7A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7741F3D7258E03AB001D7A6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				7741F3D5258E03AB001D7A6E /* AppDelegate.swift */,
 				7741F3D7258E03AB001D7A6E /* ViewController.swift */,
+				77060CBE2594DF7C00C97BC6 /* lordCSV.swift */,
 				77DD38E8258E43B70049F204 /* keys.csv */,
 				77DD38DD258E367C0049F204 /* CustomView.swift */,
 				7741F3D9258E03AC001D7A6E /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77DD38DE258E367C0049F204 /* CustomView.swift in Sources */,
+				77060CBF2594DF7C00C97BC6 /* lordCSV.swift in Sources */,
 				7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */,
 				7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */,
 			);
