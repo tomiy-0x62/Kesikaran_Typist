@@ -14,8 +14,12 @@ class ViewController: NSViewController {
     
     var count:Int = 0
     
+    let testClass = WordsDataManager.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        testClass.loadWord()
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
