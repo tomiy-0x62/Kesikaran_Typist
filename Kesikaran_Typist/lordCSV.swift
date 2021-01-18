@@ -63,12 +63,16 @@ class WordsDataManager {
         
         //CSVファイルパスを取得
         if let csvFilePath = Bundle.main.url(forResource: "keys", withExtension: "csv") {
-            print("Hello")
             let csvFilePathStr: String = csvFilePath.path
-            print(csvFilePathStr)
+            // print(csvFilePathStr)
             //CSVデータ読み込み
             do {
                 if let csvStringData: String = try? String(contentsOfFile: csvFilePathStr, encoding: String.Encoding.utf8) {
+                    let rows = csvStringData.components(separatedBy: "\n").filter{!$0.isEmpty}
+                    for row in rows {
+                        let values = row.components(separatedBy: " ")
+                        print("\(values[0])の文字コードは、\(values[1])、キーは\(values[2])です。")
+                    }
                     /*
                      //CSVデータを1行ずつ読み込む
                      csvStringData.enumerateLines({ (line, stop) -> () in
@@ -81,7 +85,7 @@ class WordsDataManager {
                      //単語番号を設定
                      wordData.wordNumber = self.wordDataArray.count
                      })*/
-                    print(csvStringData)
+                    // print(csvStringData)
                     hoge = csvStringData
                 } else {
                     print("Fail to get contens of keys.csv")
@@ -90,7 +94,7 @@ class WordsDataManager {
                 //ファイル読み込みエラー時
                 print(error)
             }
-            print(hoge)
+            // print(hoge)
         }else{
             print("Fail to get URL of keys.csv")
         }
