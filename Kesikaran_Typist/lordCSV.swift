@@ -84,7 +84,7 @@ class WordsDataManager {
                     print(csvStringData)
                     hoge = csvStringData
                 } else {
-                    print("AAAAAAAAAA")
+                    print("Fail to get contens of keys.csv")
                 }
             } catch let error {
                 //ファイル読み込みエラー時
@@ -92,7 +92,7 @@ class WordsDataManager {
             }
             print(hoge)
         }else{
-            print("Hello, Nill")
+            print("Fail to get URL of keys.csv")
         }
     }
     
