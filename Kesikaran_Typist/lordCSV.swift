@@ -62,9 +62,10 @@ class WordsDataManager {
         nowWordIndex = 0
         
         //CSVファイルパスを取得
-        if let csvFilePath = Bundle.main.url(forResource: "key", withExtension: "csv") {
+        if let csvFilePath = Bundle.main.url(forResource: "keys", withExtension: "csv") {
             print("Hello")
-            let csvFilePathStr: String = csvFilePath.absoluteString
+            let csvFilePathStr: String = csvFilePath.path
+            print(csvFilePathStr)
             //CSVデータ読み込み
             do {
                 if let csvStringData: String = try? String(contentsOfFile: csvFilePathStr, encoding: String.Encoding.utf8) {
@@ -82,12 +83,16 @@ class WordsDataManager {
                      })*/
                     print(csvStringData)
                     hoge = csvStringData
+                } else {
+                    print("AAAAAAAAAA")
                 }
             } catch let error {
                 //ファイル読み込みエラー時
                 print(error)
             }
             print(hoge)
+        }else{
+            print("Hello, Nill")
         }
     }
     
