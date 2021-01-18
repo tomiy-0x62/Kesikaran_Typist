@@ -13,39 +13,34 @@ import Foundation
 //==================================================
 //1つの単語に関する情報を管理するデータクラス
 //==================================================
-class KeyData {
+struct KeyData {
     
-    //単語
-    var char: String?
-    
-    //説明
-    var meaning: String?
-    
-    //単語の番号
-    var keyCode: Int = 0
+    let char: String          // "あ", "ょ"
+    let keyCodes: [Int]        // [20], [421,25]
+    let keycapChar: String    // "3" , "shift_9"
+    // shiftは右左で違うので421に統一
     
     //クラスが生成された時の処理
-    init(wordSourceDataArray: [String]) {
-        char = wordSourceDataArray[0]
-        meaning = wordSourceDataArray[1]
+    init(char: String, keyCodes: [Int], keycapChar: String) {
+        self.char = char
+        self.keyCodes = keyCodes
+        self.keycapChar = keycapChar
     }
 }
 
 //==================================================
 //全ての単語に関する情報を管理するモデルクラス
 //==================================================
-class WordsDataManager {
+class KeysDataManager {
     
     //シングルトンオブジェクトを作成
-    static let sharedInstance = WordsDataManager()
+    static let sharedInstance = KeysDataManager()
     
     //単語を格納するための配列
     var keyDataArray = [KeyData]()
     
     //現在の単語のインデックス
     var nowWordIndex: Int = 0
-    
-    var hoge: String = ""
 
     //初期化処理
     private init(){
@@ -71,8 +66,13 @@ class WordsDataManager {
                     let rows = csvStringData.components(separatedBy: "\n").filter{!$0.isEmpty}
                     for row in rows {
                         let values = row.components(separatedBy: " ")
-                        print("\(values[0])の文字コードは、\(values[1])、キーは\(values[2])です。")
+                        let keyData = KeyData(char: values[0], keyCodes: [1], keycapChar: values[2])
+                        print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
+                        self.keyDataArray.append(keyData)
                     }
+                    
+                    
+                    
                     /*
                      //CSVデータを1行ずつ読み込む
                      csvStringData.enumerateLines({ (line, stop) -> () in
@@ -86,7 +86,6 @@ class WordsDataManager {
                      wordData.wordNumber = self.wordDataArray.count
                      })*/
                     // print(csvStringData)
-                    hoge = csvStringData
                 } else {
                     print("Fail to get contens of keys.csv")
                 }
@@ -94,7 +93,6 @@ class WordsDataManager {
                 //ファイル読み込みエラー時
                 print(error)
             }
-            // print(hoge)
         }else{
             print("Fail to get URL of keys.csv")
         }

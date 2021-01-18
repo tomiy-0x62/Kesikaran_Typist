@@ -14,7 +14,7 @@ class ViewController: NSViewController {
     
     var count:Int = 0
     
-    let testClass = WordsDataManager.sharedInstance
+    let testClass = KeysDataManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
