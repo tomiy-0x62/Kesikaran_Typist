@@ -11,14 +11,14 @@ import Foundation
 // https://qiita.com/takehiro224/items/77122fe66105c4b5f986
 
 //==================================================
-//1つの単語に関する情報を管理するデータクラス
+//1つのキーに関する情報を管理する構造体
 //==================================================
 struct KeyData {
     
     let char: String          // "あ", "ょ"
     let keyCodes: [Int]        // [20], [421,25]
     let keycapChar: String    // "3" , "shift_9"
-    // shiftは右左で違うので421に統一
+    // shiftは右左でキーコードが違うので421に統一
     
     //クラスが生成された時の処理
     init(char: String, keyCodes: [Int], keycapChar: String) {
@@ -29,14 +29,14 @@ struct KeyData {
 }
 
 //==================================================
-//全ての単語に関する情報を管理するモデルクラス
+//全てのキーに関する情報を管理するモデルクラス
 //==================================================
 class KeysDataManager {
     
     //シングルトンオブジェクトを作成
     static let sharedInstance = KeysDataManager()
     
-    //単語を格納するための配列
+    //キーデータを格納するための配列
     var keyDataArray = [KeyData]()
     
     
@@ -50,6 +50,7 @@ class KeysDataManager {
     //------------------------------
     
     func searchKey(keyCode: [Int]) -> String {
+        // ex) [421, 29] -> "を"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
                 return keydata.keycapChar
@@ -59,6 +60,7 @@ class KeysDataManager {
     }
     
     func searchChar(keyCode: [Int]) -> String {
+        // ex) [421, 29] -> "shift_0"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
                 return keydata.char
@@ -67,7 +69,8 @@ class KeysDataManager {
         return "Not found"
     }
     
-    func formatKeycode(_ codes: String) -> [Int] {
+    private func formatKeycode(_ codes: String) -> [Int] {
+        // ex) "421,33" -> [421, 33]
         let rows = codes.components(separatedBy: ",").filter{!$0.isEmpty}
         var result: [Int] = []
         for row in rows {
@@ -76,7 +79,10 @@ class KeysDataManager {
         return result
     }
     
-    func removeQuarto(_ char: String) -> String {
+    private func removeQuarto(_ char: String) -> String {
+        // CSV上で文字列は可読性を上げるために"で囲ってる
+        // それを外すためのメソッド
+        // ex) "return" -> return
         return String(char.dropFirst(1).dropLast(1))
         }
     
@@ -88,14 +94,16 @@ class KeysDataManager {
         if let csvFilePath = Bundle.main.url(forResource: "keys", withExtension: "csv") {
             let csvFilePathStr: String = csvFilePath.path
             // print(csvFilePathStr)
-            //CSVデータ読み込み
             
+            //CSVデータ読み込み
             if let csvStringData: String = try? String(contentsOfFile: csvFilePathStr, encoding: String.Encoding.utf8) {
+                // 読み込んだデータを行ごとに分解
                 let rows = csvStringData.components(separatedBy: "\n").filter{!$0.isEmpty}
                 for row in rows {
+                    // スペースで分割
                     let values = row.components(separatedBy: " ")
                     let keyData = KeyData(char: removeQuarto(values[0]), keyCodes: formatKeycode(values[1]), keycapChar: removeQuarto(values[2]))
-                    print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
+                    // print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
                     self.keyDataArray.append(keyData)
                 }
             } else {

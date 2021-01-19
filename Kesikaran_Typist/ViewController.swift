@@ -13,11 +13,16 @@ class ViewController: NSViewController {
     @IBOutlet weak var label: NSTextField!
     @IBOutlet weak var typedLabel: NSTextField!
     @IBOutlet weak var typedCharLabel: NSTextField!
+    @IBOutlet weak var typedKeyLabel: NSTextField!
+    @IBOutlet weak var typedKanaLabel: NSTextField!
     
-    
+    // shiftキーの状態を保存
     var isShift: Bool = false
     
     let keyDataClass = KeysDataManager.sharedInstance
+    
+    var typedSentence: String = ""
+    var typedKeyHis: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +46,9 @@ class ViewController: NSViewController {
     }
     
     func genKeycodes(keycode: UInt16) -> [Int] {
-        
+        // shift + ○ に対応させる
+        // shift + 56 -> [421, 56]
+        // 48 -> [48]
         if isShift {
             return [421, Int(keycode)]
         }
@@ -56,6 +63,11 @@ class ViewController: NSViewController {
         print("typedKey: \(typedKey)")
         typedLabel.stringValue = ("Typed: \(typedKey)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
+        typedKeyHis += typedKey
+        typedSentence += typedChar
+        typedKeyLabel.stringValue = typedKeyHis
+        typedKanaLabel.stringValue = typedSentence
+        
     }
     
     override func flagsChanged(with event: NSEvent) {

@@ -9,6 +9,7 @@ import Cocoa
 
 class CustomView: NSView {
     
+    // KeyDownに対応するためのクラス
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
         return true
     }
