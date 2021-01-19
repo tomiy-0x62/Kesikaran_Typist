@@ -39,9 +39,7 @@ class KeysDataManager {
     //単語を格納するための配列
     var keyDataArray = [KeyData]()
     
-    //現在の単語のインデックス
-    var nowWordIndex: Int = 0
-
+    
     //初期化処理
     private init(){
         //シングルトンであることを保証するためにprivateで宣言
@@ -50,6 +48,24 @@ class KeysDataManager {
     //------------------------------
     //単語の読み込み処理
     //------------------------------
+    
+    func searchKey(keyCode: [Int]) -> String {
+        for keydata in keyDataArray {
+            if keydata.keyCodes == keyCode {
+                return keydata.keycapChar
+            }
+        }
+        return "Not found"
+    }
+    
+    func searchChar(keyCode: [Int]) -> String {
+        for keydata in keyDataArray {
+            if keydata.keyCodes == keyCode {
+                return keydata.char
+            }
+        }
+        return "Not found"
+    }
     
     func formatKeycode(_ codes: String) -> [Int] {
         let rows = codes.components(separatedBy: ",").filter{!$0.isEmpty}
@@ -60,48 +76,36 @@ class KeysDataManager {
         return result
     }
     
+    func removeQuarto(_ char: String) -> String {
+        return String(char.dropFirst(1).dropLast(1))
+        }
+    
     func loadWord() {
-        //格納済みの単語があれば一旦削除
+        //格納済みのデータがあれば一旦削除
         keyDataArray.removeAll()
-        //現在の単語のインデックスを初期化
-        nowWordIndex = 0
         
         //CSVファイルパスを取得
         if let csvFilePath = Bundle.main.url(forResource: "keys", withExtension: "csv") {
             let csvFilePathStr: String = csvFilePath.path
             // print(csvFilePathStr)
             //CSVデータ読み込み
-            do {
-                if let csvStringData: String = try? String(contentsOfFile: csvFilePathStr, encoding: String.Encoding.utf8) {
-                    let rows = csvStringData.components(separatedBy: "\n").filter{!$0.isEmpty}
-                    for row in rows {
-                        let values = row.components(separatedBy: " ")
-                        let keyData = KeyData(char: values[0], keyCodes: formatKeycode(values[1]), keycapChar: values[2])
-                        print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
-                        self.keyDataArray.append(keyData)
-                    }
-                } else {
-                    print("Fail to get contens of keys.csv")
+            
+            if let csvStringData: String = try? String(contentsOfFile: csvFilePathStr, encoding: String.Encoding.utf8) {
+                let rows = csvStringData.components(separatedBy: "\n").filter{!$0.isEmpty}
+                for row in rows {
+                    let values = row.components(separatedBy: " ")
+                    let keyData = KeyData(char: removeQuarto(values[0]), keyCodes: formatKeycode(values[1]), keycapChar: removeQuarto(values[2]))
+                    print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
+                    self.keyDataArray.append(keyData)
                 }
-            } catch let error {
-                //ファイル読み込みエラー時
-                print(error)
+            } else {
+                print("Fail to get contens of keys.csv")
             }
+            
         }else{
             print("Fail to get URL of keys.csv")
         }
     }
     
-    //------------------------------
-    //次の単語を取り出す
-    //------------------------------
-    func nextWord() -> KeyData? {
-        if nowWordIndex < keyDataArray.count {
-            let nextWord = keyDataArray[nowWordIndex]
-            nowWordIndex += 1
-            return nextWord
-        }
-        return nil
-    }
 }
 
