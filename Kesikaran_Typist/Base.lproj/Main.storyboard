@@ -728,17 +728,28 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-KR-Wg0">
+                                <rect key="frame" x="207" y="133" width="67" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Typed: XX" id="Yp1-qP-g7I">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Zxa-KR-Wg0" firstAttribute="top" secondItem="veG-Rx-wIW" secondAttribute="bottom" constant="15" id="5L3-cf-N80"/>
                             <constraint firstItem="veG-Rx-wIW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="80" id="Q1A-tm-AW5"/>
                             <constraint firstAttribute="bottom" secondItem="qHt-di-hlu" secondAttribute="bottom" constant="90" id="W9H-XE-NqG"/>
                             <constraint firstItem="veG-Rx-wIW" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="jIl-2r-C8X"/>
                             <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="p9e-l7-BGQ"/>
+                            <constraint firstItem="Zxa-KR-Wg0" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="rdh-dN-Hyk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="veG-Rx-wIW" id="OCn-7e-cpv"/>
                         <outlet property="textField" destination="qHt-di-hlu" id="wkU-Af-xcd"/>
+                        <outlet property="typedLabel" destination="Zxa-KR-Wg0" id="vXf-WK-Nhb"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

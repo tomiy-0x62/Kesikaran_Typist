@@ -11,6 +11,8 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var textField: NSTextField!
     @IBOutlet weak var label: NSTextField!
+    @IBOutlet weak var typedLabel: NSTextField!
+    
     
     var count:Int = 0
     
@@ -36,26 +38,20 @@ class ViewController: NSViewController {
             // Update the view, if already loaded.
         }
     }
-    /*
-     override func keyUp(with event: NSEvent) {
-     print("KeyUp")
-     label.stringValue = ("I'm Mac.")
-     textField.stringValue = String(describing: event.characters!)
-     print(event.keyCode)
-     }*/
     
     override func keyDown(with event: NSEvent) {
-        print(event)
-        print("\n")
+        // print(event)
+        // print("\n")
         label.stringValue = ("I'm Mac.")
         textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        //print(event.keyCode)
+        print(event.keyCode)
     }
     
     override func flagsChanged(with event: NSEvent) {
-        print(event)
-        print("\n")
+        // print(event)
+        // print("\n")
+        print(event.keyCode)
             switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
             case [.shift]:
                 print("shift key is pressed")

@@ -50,6 +50,16 @@ class KeysDataManager {
     //------------------------------
     //単語の読み込み処理
     //------------------------------
+    
+    func formatKeycode(_ codes: String) -> [Int] {
+        let rows = codes.components(separatedBy: ",").filter{!$0.isEmpty}
+        var result: [Int] = []
+        for row in rows {
+            result.append(Int(row)!)
+        }
+        return result
+    }
+    
     func loadWord() {
         //格納済みの単語があれば一旦削除
         keyDataArray.removeAll()
@@ -66,26 +76,10 @@ class KeysDataManager {
                     let rows = csvStringData.components(separatedBy: "\n").filter{!$0.isEmpty}
                     for row in rows {
                         let values = row.components(separatedBy: " ")
-                        let keyData = KeyData(char: values[0], keyCodes: [1], keycapChar: values[2])
+                        let keyData = KeyData(char: values[0], keyCodes: formatKeycode(values[1]), keycapChar: values[2])
                         print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
                         self.keyDataArray.append(keyData)
                     }
-                    
-                    
-                    
-                    /*
-                     //CSVデータを1行ずつ読み込む
-                     csvStringData.enumerateLines({ (line, stop) -> () in
-                     //カンマ区切りで分割
-                     let wordSourceDataArray = line.componentsSeparatedByString(" ")
-                     //単語データを格納するオブジェクトを作成
-                     let wordData = WordData(wordSourceDataArray: wordSourceDataArray)
-                     //単語を追加
-                     self.wordDataArray.append(wordData)
-                     //単語番号を設定
-                     wordData.wordNumber = self.wordDataArray.count
-                     })*/
-                    // print(csvStringData)
                 } else {
                     print("Fail to get contens of keys.csv")
                 }
