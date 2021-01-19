@@ -9,12 +9,12 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var textField: NSTextField!
-    @IBOutlet weak var label: NSTextField!
-    @IBOutlet weak var typedLabel: NSTextField!
-    @IBOutlet weak var typedCharLabel: NSTextField!
-    @IBOutlet weak var typedKeyLabel: NSTextField!
-    @IBOutlet weak var typedKanaLabel: NSTextField!
+    @IBOutlet weak var textField: NSTextField! // textField
+    @IBOutlet weak var label: NSTextField! // Hello, World
+    @IBOutlet weak var typedLabel: NSTextField!  // Typed: a
+    @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
+    @IBOutlet weak var typedKeyLabel: NSTextField!    // asdf
+    @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
     
     // shiftキーの状態を保存
     var isShift: Bool = false
