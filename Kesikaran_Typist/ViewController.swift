@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
     @IBOutlet weak var typedKeyLabel: NSTextField!    // asdf
     @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
+    @IBOutlet weak var testKey: KeyView!
     
     // shiftキーの状態を保存
     var isShift: Bool = false
@@ -64,6 +65,12 @@ class ViewController: NSViewController {
         TextDataClass.update(key: typedKey, char: typedChar)
         typedKeyLabel.stringValue = TextDataClass.keyData
         typedKanaLabel.stringValue = TextDataClass.StrData
+        if typedKey == "A"{
+            testKey.backgroundColor = .orange
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.testKey.backgroundColor = .white
+            }
+        }
         
     }
     
