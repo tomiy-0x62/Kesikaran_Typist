@@ -20,9 +20,7 @@ class ViewController: NSViewController {
     var isShift: Bool = false
     
     let keyDataClass = KeysDataManager.sharedInstance
-    
-    var typedSentence: String = ""
-    var typedKeyHis: String = ""
+    let TextDataClass = TextManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,17 +54,16 @@ class ViewController: NSViewController {
     }
     
     override func keyDown(with event: NSEvent) {
-        textField.stringValue = String(describing: event.characters!)
+        // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
         let typedKey = keyDataClass.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
         let typedChar = keyDataClass.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
         print("typedKey: \(typedKey)")
         typedLabel.stringValue = ("Typed: \(typedKey)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
-        typedKeyHis += typedKey
-        typedSentence += typedChar
-        typedKeyLabel.stringValue = typedKeyHis
-        typedKanaLabel.stringValue = typedSentence
+        TextDataClass.update(key: typedKey, char: typedChar)
+        typedKeyLabel.stringValue = TextDataClass.keyData
+        typedKanaLabel.stringValue = TextDataClass.StrData
         
     }
     
