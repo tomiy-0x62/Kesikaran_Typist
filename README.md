@@ -16,11 +16,17 @@ shiftの扱いが少し特殊
 
 
 
-
-
-
-
 ## TODO
+
+キーのレイアウト
+
+通常サイズのキーはファイル:写真:xcoe=100:70:48
+
+（写真はkey_sampereal.pxdのこと）
+
+
+
+
 
 ~~Kesikaran_Typist/Kesikaran_Typist/keys.json~~
 
