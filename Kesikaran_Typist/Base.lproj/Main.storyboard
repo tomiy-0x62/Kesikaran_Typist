@@ -778,7 +778,7 @@
                                             <constraint firstAttribute="width" constant="48" id="Qw2-7n-BJq"/>
                                             <constraint firstAttribute="height" constant="48" id="omk-e5-lvm"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="JGu-pP-RIF"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image=";_Key" id="JGu-pP-RIF"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82P-aj-0fj">
                                         <rect key="frame" x="310" y="126" width="48" height="48"/>
@@ -962,7 +962,7 @@
                                             <constraint firstAttribute="height" constant="48" id="BVt-mg-1WA"/>
                                             <constraint firstAttribute="width" constant="48" id="NJR-zO-kWm"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Pzh-9F-aKO"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="'_Key" id="Pzh-9F-aKO"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-AT-f9h">
                                         <rect key="frame" x="541" y="73" width="48" height="48"/>
@@ -1050,7 +1050,7 @@
                                             <constraint firstAttribute="width" constant="48" id="LlY-gs-pcR"/>
                                             <constraint firstAttribute="height" constant="48" id="n3M-XA-eDk"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="9LZ-kT-LHf"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="[_Key" id="9LZ-kT-LHf"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al6-TW-0mP">
                                         <rect key="frame" x="769" y="179" width="48" height="48"/>
@@ -1058,7 +1058,7 @@
                                             <constraint firstAttribute="width" constant="48" id="IZe-6Q-pfK"/>
                                             <constraint firstAttribute="height" constant="48" id="rw6-Jg-uyp"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="p4C-Jr-Boy"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="]_Key" id="p4C-Jr-Boy"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-ac-9ME" userLabel="`">
                                         <rect key="frame" x="104" y="232" width="48" height="48"/>
@@ -1154,7 +1154,7 @@
                                             <constraint firstAttribute="height" constant="48" id="U82-oc-aNY"/>
                                             <constraint firstAttribute="width" constant="48" id="rzU-zi-gY2"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="=_Key copy" id="L5H-cK-rX3"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="=_Key" id="L5H-cK-rX3"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-RC-1xO">
                                         <rect key="frame" x="793" y="232" width="127" height="48"/>
@@ -1423,6 +1423,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="'_Key" width="100" height="100"/>
         <image name="-_Key" width="100" height="100"/>
         <image name="0_Key" width="100" height="100"/>
         <image name="1_Key" width="100" height="100"/>
@@ -1432,12 +1433,15 @@
         <image name="5_Key" width="100" height="100"/>
         <image name="8_Key" width="100" height="100"/>
         <image name="9_Key" width="100" height="100"/>
-        <image name="=_Key copy" width="100" height="100"/>
+        <image name=";_Key" width="100" height="100"/>
+        <image name="=_Key" width="100" height="100"/>
         <image name="A_Key" width="100" height="100"/>
         <image name="B_Key" width="100" height="100"/>
         <image name="C_Key" width="100" height="100"/>
         <image name="Fn_Key" width="100" height="100"/>
         <image name="Z_Key" width="100" height="100"/>
+        <image name="[_Key" width="100" height="100"/>
+        <image name="]_Key" width="100" height="100"/>
         <image name="`_Key" width="100" height="100"/>
         <image name="backslasj_Key" width="215" height="100"/>
         <image name="capslock_key" width="160" height="100"/>
