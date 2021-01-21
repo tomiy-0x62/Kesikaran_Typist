@@ -718,7 +718,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-di-hlu">
-                                <rect key="frame" x="645" y="255" width="150" height="28"/>
+                                <rect key="frame" x="745" y="255" width="150" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Klc-K8-Jgw"/>
                                 </constraints>
@@ -761,10 +761,10 @@
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="YbI-aM-eKf" userLabel="KeyBord View">
-                                <rect key="frame" x="270" y="303" width="900" height="300"/>
+                                <rect key="frame" x="245" y="303" width="950" height="300"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-i5-cjs">
-                                        <rect key="frame" x="295" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="363" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="j67-El-b1z"/>
                                             <constraint firstAttribute="width" constant="48" id="yvA-Eo-n6F"/>
@@ -772,7 +772,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="O2Y-so-Mfb"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-PL-wSQ">
-                                        <rect key="frame" x="613" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="681" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Qw2-7n-BJq"/>
                                             <constraint firstAttribute="height" constant="48" id="omk-e5-lvm"/>
@@ -780,7 +780,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="JGu-pP-RIF"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82P-aj-0fj">
-                                        <rect key="frame" x="242" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="310" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="DwL-0B-q0k"/>
                                             <constraint firstAttribute="height" constant="48" id="EC7-TT-SDg"/>
@@ -788,7 +788,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="T5I-zQ-tKp"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-Sh-0yh">
-                                        <rect key="frame" x="348" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="416" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="1jM-yS-mH9"/>
                                             <constraint firstAttribute="width" constant="48" id="IKh-2e-60t"/>
@@ -796,7 +796,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Dwt-9R-h8d"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-mc-FC4">
-                                        <rect key="frame" x="454" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="522" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="udE-Tz-yXH"/>
                                             <constraint firstAttribute="height" constant="48" id="vlo-Yo-rGP"/>
@@ -804,7 +804,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="qdU-KY-EL1"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l7I-xR-BfZ" userLabel="A">
-                                        <rect key="frame" x="136" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="204" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="LC3-5b-vmJ"/>
                                             <constraint firstAttribute="height" constant="48" id="dUf-9g-LOI"/>
@@ -812,7 +812,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="xcK-4b-MbQ"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uFl-lP-XMM">
-                                        <rect key="frame" x="161" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="186" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="7y1-ax-QN4"/>
                                             <constraint firstAttribute="width" constant="48" id="H56-cI-C72"/>
@@ -820,7 +820,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Yhf-V6-eEl"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UrB-7N-Gis">
-                                        <rect key="frame" x="214" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="239" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="BKj-EU-M3e"/>
                                             <constraint firstAttribute="width" constant="48" id="GfH-Oo-28S"/>
@@ -828,7 +828,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="533-4A-HPE"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6YL-ce-Rha">
-                                        <rect key="frame" x="267" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="292" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="8P7-oY-Wg9"/>
                                             <constraint firstAttribute="height" constant="48" id="HDE-5h-D46"/>
@@ -836,7 +836,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="rFL-6y-bAR"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PP4-Wq-eUS">
-                                        <rect key="frame" x="320" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="345" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Sdg-AX-pSG"/>
                                             <constraint firstAttribute="height" constant="48" id="bcI-q3-eIt"/>
@@ -844,7 +844,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="6K0-O8-Iyn"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-98-0eE">
-                                        <rect key="frame" x="373" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="398" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="oBW-jI-fgw"/>
                                             <constraint firstAttribute="width" constant="48" id="tGQ-pq-SaL"/>
@@ -852,7 +852,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="SCN-BL-B5e"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-iB-0Le">
-                                        <rect key="frame" x="171" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="223" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="0NJ-s0-5U1"/>
                                             <constraint firstAttribute="width" constant="48" id="njf-fQ-7vF"/>
@@ -860,7 +860,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="JxU-np-jqE"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zy-rL-81h">
-                                        <rect key="frame" x="224" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="276" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="IXx-cE-QDF"/>
                                             <constraint firstAttribute="height" constant="48" id="TEh-yP-4Cp"/>
@@ -868,7 +868,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Jr6-aE-DYp"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qwS-gf-Uf6">
-                                        <rect key="frame" x="277" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="329" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="V1c-d6-uGY"/>
                                             <constraint firstAttribute="height" constant="48" id="xKy-7d-ZaI"/>
@@ -876,7 +876,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="CHP-Di-ZNC"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-Kc-Xvo">
-                                        <rect key="frame" x="330" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="382" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="4i7-KP-wTd"/>
                                             <constraint firstAttribute="height" constant="48" id="Yqa-gX-3up"/>
@@ -884,7 +884,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="eHx-Xt-NRV"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeM-Kb-ffB">
-                                        <rect key="frame" x="383" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="435" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="ajv-J6-bmu"/>
                                             <constraint firstAttribute="height" constant="48" id="wHB-m4-ZfI"/>
@@ -892,7 +892,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="qUn-Tg-g5Q"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yw4-t9-YL2">
-                                        <rect key="frame" x="436" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="488" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="pr6-bo-L9h"/>
                                             <constraint firstAttribute="width" constant="48" id="ruz-tm-8g6"/>
@@ -900,7 +900,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="s3g-Mz-N2I"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9w-sd-Xlk">
-                                        <rect key="frame" x="542" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="594" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="5F3-DD-9hY"/>
                                             <constraint firstAttribute="width" constant="48" id="SQ2-Ko-ajI"/>
@@ -908,7 +908,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="jit-7a-fef"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-86-l1T">
-                                        <rect key="frame" x="595" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="647" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Ovo-fi-SPw"/>
                                             <constraint firstAttribute="width" constant="48" id="sY4-2M-mi0"/>
@@ -916,7 +916,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="N3a-zT-nzK"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-DL-NzF">
-                                        <rect key="frame" x="648" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="700" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="EPE-WW-pQ6"/>
                                             <constraint firstAttribute="height" constant="48" id="Vqe-Iq-9Mf"/>
@@ -924,7 +924,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="WK7-PG-iNm"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-kK-zPD">
-                                        <rect key="frame" x="560" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="628" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="HHK-6O-i7B"/>
                                             <constraint firstAttribute="width" constant="48" id="bqm-WT-JGG"/>
@@ -932,7 +932,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="SPm-gF-6N1"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-Qo-mID">
-                                        <rect key="frame" x="507" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="575" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="jYD-Px-9nM"/>
                                             <constraint firstAttribute="height" constant="48" id="wNR-wL-azX"/>
@@ -940,7 +940,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="RJv-iP-jcQ"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90Q-jb-7zE">
-                                        <rect key="frame" x="189" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="257" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="0D6-f4-y2r"/>
                                             <constraint firstAttribute="height" constant="48" id="Cwa-bo-cgu"/>
@@ -948,7 +948,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="FsT-yq-zhg"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-c7-phD">
-                                        <rect key="frame" x="401" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="469" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="B3s-nL-4qY"/>
                                             <constraint firstAttribute="height" constant="48" id="Hm8-0X-uhC"/>
@@ -956,7 +956,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="gK8-Ba-UMY"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-VV-Nu7">
-                                        <rect key="frame" x="666" y="126" width="48" height="48"/>
+                                        <rect key="frame" x="734" y="126" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="BVt-mg-1WA"/>
                                             <constraint firstAttribute="width" constant="48" id="NJR-zO-kWm"/>
@@ -964,7 +964,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Pzh-9F-aKO"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-AT-f9h">
-                                        <rect key="frame" x="489" y="73" width="48" height="48"/>
+                                        <rect key="frame" x="541" y="73" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Snj-Bb-Lnv"/>
                                             <constraint firstAttribute="height" constant="48" id="lpu-zA-zcw"/>
@@ -972,15 +972,15 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Sn7-RH-Hq6"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-6t-klA" userLabel="return">
-                                        <rect key="frame" x="719" y="126" width="151" height="48"/>
+                                        <rect key="frame" x="787" y="126" width="133" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="151" id="BSC-r2-aRv"/>
+                                            <constraint firstAttribute="width" constant="133" id="BSC-r2-aRv"/>
                                             <constraint firstAttribute="height" constant="48" id="mMA-ru-GdZ"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="return_Key" id="MhK-l3-rOw"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGP-1v-Zhi" userLabel="L_control">
-                                        <rect key="frame" x="23" y="126" width="108" height="48"/>
+                                        <rect key="frame" x="91" y="126" width="108" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="108" id="YbK-HQ-pte"/>
                                             <constraint firstAttribute="height" constant="48" id="eUc-q2-SeF"/>
@@ -988,15 +988,15 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="l_control_Key" id="AdL-GP-S6U"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9v0-O7-gYC" userLabel="L_shift">
-                                        <rect key="frame" x="22" y="73" width="144" height="48"/>
+                                        <rect key="frame" x="104" y="73" width="114" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="144" id="e63-RT-CVE"/>
+                                            <constraint firstAttribute="width" constant="114" id="e63-RT-CVE"/>
                                             <constraint firstAttribute="height" constant="48" id="pvF-19-OE6"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="l_shift_Key" id="yb7-CI-1VF"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I4p-Vd-QUt" userLabel="L_shift">
-                                        <rect key="frame" x="701" y="73" width="167" height="48"/>
+                                        <rect key="frame" x="753" y="73" width="167" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="167" id="0ZR-kY-v6m"/>
                                             <constraint firstAttribute="height" constant="48" id="aI0-Cb-pLS"/>
@@ -1004,7 +1004,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="r_shift_Key" id="z0F-dk-n00"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8EA-Oa-9r1">
-                                        <rect key="frame" x="426" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="451" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="3ND-n5-OmO"/>
                                             <constraint firstAttribute="width" constant="48" id="XyL-lI-Kv5"/>
@@ -1012,7 +1012,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="mIn-u3-q3O"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKn-Ko-uJq">
-                                        <rect key="frame" x="479" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="504" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="5Qq-iS-r6m"/>
                                             <constraint firstAttribute="width" constant="48" id="kMr-zH-FCc"/>
@@ -1020,7 +1020,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="siR-uh-3i8"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTy-CO-Qlp">
-                                        <rect key="frame" x="532" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="557" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="IfU-6j-kzN"/>
                                             <constraint firstAttribute="width" constant="48" id="TC5-Pp-lPA"/>
@@ -1028,7 +1028,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="epA-ty-s2Y"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjp-Ut-Q6y">
-                                        <rect key="frame" x="585" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="610" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="0Sf-M8-JJq"/>
                                             <constraint firstAttribute="height" constant="48" id="Efh-HM-kPX"/>
@@ -1036,7 +1036,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="rDj-hA-cVT"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpL-5t-vTX">
-                                        <rect key="frame" x="638" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="663" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Ycy-Z2-n6V"/>
                                             <constraint firstAttribute="height" constant="48" id="auj-zO-l88"/>
@@ -1044,7 +1044,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="bfn-wT-Jmp"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-vd-N4W">
-                                        <rect key="frame" x="691" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="716" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="LlY-gs-pcR"/>
                                             <constraint firstAttribute="height" constant="48" id="n3M-XA-eDk"/>
@@ -1052,7 +1052,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="9LZ-kT-LHf"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al6-TW-0mP">
-                                        <rect key="frame" x="744" y="179" width="48" height="48"/>
+                                        <rect key="frame" x="769" y="179" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="IZe-6Q-pfK"/>
                                             <constraint firstAttribute="height" constant="48" id="rw6-Jg-uyp"/>
@@ -1060,7 +1060,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="p4C-Jr-Boy"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-ac-9ME">
-                                        <rect key="frame" x="58" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="104" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Z46-zu-oRN"/>
                                             <constraint firstAttribute="height" constant="48" id="tCH-SH-cd4"/>
@@ -1068,7 +1068,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="7id-YX-gwB"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oQm-aJ-07l">
-                                        <rect key="frame" x="111" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="157" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="0yT-OF-Kje"/>
                                             <constraint firstAttribute="width" constant="48" id="qS8-gl-66F"/>
@@ -1076,7 +1076,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="xJp-DX-qWk"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzG-QL-5Jd">
-                                        <rect key="frame" x="164" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="210" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="8Bf-el-uNl"/>
                                             <constraint firstAttribute="width" constant="48" id="vty-uh-S05"/>
@@ -1084,7 +1084,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Tcg-S1-L8G"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-hY-zfI">
-                                        <rect key="frame" x="217" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="263" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="s8T-Bp-hwf"/>
                                             <constraint firstAttribute="height" constant="48" id="uN7-DJ-s8b"/>
@@ -1092,7 +1092,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="olC-OM-DM7"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hfy-xT-lsd">
-                                        <rect key="frame" x="270" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="316" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="8PJ-QZ-o6J"/>
                                             <constraint firstAttribute="height" constant="48" id="WB9-bV-WvN"/>
@@ -1100,7 +1100,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="Sc7-MG-Fky"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nyh-SJ-twi">
-                                        <rect key="frame" x="323" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="369" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="min-do-KPt"/>
                                             <constraint firstAttribute="height" constant="48" id="n8K-9f-az5"/>
@@ -1108,7 +1108,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="KqC-IP-cy1"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOe-nm-LDa">
-                                        <rect key="frame" x="376" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="422" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="jWf-Uy-d5n"/>
                                             <constraint firstAttribute="width" constant="48" id="kUG-VS-Nrr"/>
@@ -1116,7 +1116,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="YLj-IS-884"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0o8-Rr-qxT">
-                                        <rect key="frame" x="429" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="475" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="8Pp-nL-PbC"/>
                                             <constraint firstAttribute="height" constant="48" id="Rad-8n-U9t"/>
@@ -1124,7 +1124,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="w5m-Ur-UMY"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEm-kK-feL">
-                                        <rect key="frame" x="482" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="528" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="B3g-Xa-RtG"/>
                                             <constraint firstAttribute="height" constant="48" id="WkA-l3-Ehv"/>
@@ -1132,7 +1132,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="R6s-XK-IOz"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iks-Lv-VVt">
-                                        <rect key="frame" x="535" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="581" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="BYG-Uo-g3d"/>
                                             <constraint firstAttribute="width" constant="48" id="Ejz-Bk-pui"/>
@@ -1140,7 +1140,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="k4h-Is-8uu"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPM-jn-dzq">
-                                        <rect key="frame" x="641" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="687" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="hhA-UO-7E0"/>
                                             <constraint firstAttribute="width" constant="48" id="ppg-q7-Feq"/>
@@ -1148,7 +1148,7 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="jEx-OH-6Cc"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZh-nL-Gei">
-                                        <rect key="frame" x="694" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="740" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="U82-oc-aNY"/>
                                             <constraint firstAttribute="width" constant="48" id="rzU-zi-gY2"/>
@@ -1156,23 +1156,23 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="L5H-cK-rX3"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-RC-1xO">
-                                        <rect key="frame" x="747" y="232" width="132" height="48"/>
+                                        <rect key="frame" x="793" y="232" width="127" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="132" id="WHt-nl-yv6"/>
+                                            <constraint firstAttribute="width" constant="127" id="WHt-nl-yv6"/>
                                             <constraint firstAttribute="height" constant="48" id="hh4-Zs-NZj"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="delete_Key" id="Sr6-7k-I4U"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yQ-cc-76F">
-                                        <rect key="frame" x="797" y="179" width="86" height="48"/>
+                                        <rect key="frame" x="822" y="179" width="98" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="86" id="3eQ-IK-US7"/>
+                                            <constraint firstAttribute="width" constant="98" id="3eQ-IK-US7"/>
                                             <constraint firstAttribute="height" constant="48" id="y1w-Gk-pbN"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="backslasj_Key" id="qQx-0i-E5K"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-qo-MPf" userLabel="tab">
-                                        <rect key="frame" x="67" y="179" width="89" height="48"/>
+                                        <rect key="frame" x="92" y="179" width="89" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="QFu-3r-TH3"/>
                                             <constraint firstAttribute="width" constant="89" id="Uhi-Yq-vFR"/>
@@ -1180,76 +1180,76 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tab_Key" id="qDh-5p-zvG"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-uv-8fc">
-                                        <rect key="frame" x="588" y="232" width="48" height="48"/>
+                                        <rect key="frame" x="634" y="232" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Aoz-Hs-aE5"/>
                                             <constraint firstAttribute="height" constant="48" id="Hch-05-gi9"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="mFM-ap-dDj"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZj-x1-xgb" userLabel="caps rock">
-                                        <rect key="frame" x="20" y="20" width="97" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="FRu-U7-Qcl"/>
-                                            <constraint firstAttribute="width" constant="89" id="chX-UV-ppx"/>
-                                        </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="capslock_key" id="XgC-E6-rTi"/>
-                                    </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-wN-JJo" userLabel="L_command">
-                                        <rect key="frame" x="189" y="20" width="97" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-wN-JJo" userLabel="L_command">
+                                        <rect key="frame" x="247" y="20" width="81" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="lZ4-mS-z66"/>
-                                            <constraint firstAttribute="width" constant="89" id="wih-p3-BnO"/>
+                                            <constraint firstAttribute="width" constant="81" id="wih-p3-BnO"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="l_command_Key" id="HeI-5a-lUX"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjz-dx-4NG" userLabel="L_option">
-                                        <rect key="frame" x="118" y="20" width="66" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hjz-dx-4NG" userLabel="L_option">
+                                        <rect key="frame" x="190" y="20" width="52" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="62" id="05g-8H-mn7"/>
+                                            <constraint firstAttribute="width" constant="52" id="05g-8H-mn7"/>
                                             <constraint firstAttribute="height" constant="48" id="8oI-dS-dUS"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="l_option_Key" id="zaT-of-A8X"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vg2-fK-nRQ" userLabel="spase">
-                                        <rect key="frame" x="294" y="20" width="289" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vg2-fK-nRQ" userLabel="spase">
+                                        <rect key="frame" x="333" y="20" width="312" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="PHK-hm-WYO"/>
-                                            <constraint firstAttribute="width" constant="288" id="QoK-oT-arm"/>
+                                            <constraint firstAttribute="width" constant="312" id="QoK-oT-arm"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="spase_Key" id="Nz2-9U-hSs"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-gW-37B" userLabel="R_command">
-                                        <rect key="frame" x="591" y="20" width="70" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cV2-gW-37B" userLabel="R_command">
+                                        <rect key="frame" x="650" y="20" width="69" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="fmK-9O-FpS"/>
                                             <constraint firstAttribute="width" constant="69" id="quq-Xv-Ddp"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="r_command_Key" id="C0c-mF-eHs"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9e5-sP-BpV" userLabel="R_option">
-                                        <rect key="frame" x="666" y="20" width="70" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9e5-sP-BpV" userLabel="R_option">
+                                        <rect key="frame" x="724" y="20" width="69" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="4xA-mP-Khb"/>
                                             <constraint firstAttribute="width" constant="69" id="Yqo-vX-3bt"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="r_option_Key" id="hzS-q5-gc7"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-IH-ust" userLabel="R_control">
-                                        <rect key="frame" x="744" y="20" width="70" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lmv-IH-ust" userLabel="R_control">
+                                        <rect key="frame" x="798" y="20" width="69" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="4by-ga-F20"/>
                                             <constraint firstAttribute="width" constant="69" id="azR-kz-ykZ"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="r_control_Key" id="qSf-Vd-CIp"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-5T-IFn" userLabel="Fn">
-                                        <rect key="frame" x="835" y="20" width="48" height="48"/>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vDj-5T-IFn" userLabel="Fn">
+                                        <rect key="frame" x="872" y="20" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="3q3-WS-bRi"/>
                                             <constraint firstAttribute="width" constant="48" id="Bot-qX-Zwz"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Fn_Key" id="bAL-x1-eTB"/>
+                                    </imageView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZj-x1-xgb" userLabel="caps rock">
+                                        <rect key="frame" x="104" y="20" width="81" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="FRu-U7-Qcl"/>
+                                            <constraint firstAttribute="width" constant="81" id="chX-UV-ppx"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="capslock_key" id="XgC-E6-rTi"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -1257,10 +1257,10 @@
                                     <constraint firstItem="4zy-rL-81h" firstAttribute="leading" secondItem="Asq-iB-0Le" secondAttribute="trailing" constant="5" id="09v-1c-HLk"/>
                                     <constraint firstItem="hQL-Sh-0yh" firstAttribute="leading" secondItem="lA1-i5-cjs" secondAttribute="trailing" constant="5" id="0DD-CZ-18u"/>
                                     <constraint firstItem="Mr1-wN-JJo" firstAttribute="leading" secondItem="hjz-dx-4NG" secondAttribute="trailing" constant="5" id="0Lb-0D-aRZ"/>
-                                    <constraint firstAttribute="width" constant="900" id="0jW-Zw-GU9"/>
+                                    <constraint firstAttribute="width" constant="950" id="0jW-Zw-GU9"/>
                                     <constraint firstItem="UrB-7N-Gis" firstAttribute="top" secondItem="K4o-hY-zfI" secondAttribute="bottom" constant="5" id="161-bW-FLi"/>
                                     <constraint firstItem="90Q-jb-7zE" firstAttribute="centerY" secondItem="YbI-aM-eKf" secondAttribute="centerY" id="1kG-Fu-2ZQ"/>
-                                    <constraint firstItem="Xg2-c7-phD" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="-25" id="27p-Oh-Fl3"/>
+                                    <constraint firstItem="Xg2-c7-phD" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="18" id="27p-Oh-Fl3"/>
                                     <constraint firstItem="6YL-ce-Rha" firstAttribute="leading" secondItem="UrB-7N-Gis" secondAttribute="trailing" constant="5" id="4XF-oH-8by"/>
                                     <constraint firstItem="U9u-6t-klA" firstAttribute="top" secondItem="8yQ-cc-76F" secondAttribute="bottom" constant="5" id="4fI-Fk-hN3"/>
                                     <constraint firstItem="Eas-Kc-Xvo" firstAttribute="top" secondItem="lA1-i5-cjs" secondAttribute="bottom" constant="5" id="4kj-JT-O64"/>
@@ -1268,7 +1268,6 @@
                                     <constraint firstItem="8EA-Oa-9r1" firstAttribute="leading" secondItem="mZO-98-0eE" secondAttribute="trailing" constant="5" id="54Y-HJ-0wA"/>
                                     <constraint firstItem="Hfy-xT-lsd" firstAttribute="leading" secondItem="K4o-hY-zfI" secondAttribute="trailing" constant="5" id="5Oe-Im-PYE"/>
                                     <constraint firstItem="Iks-Lv-VVt" firstAttribute="leading" secondItem="iEm-kK-feL" secondAttribute="trailing" constant="5" id="5mB-Y8-Mi7"/>
-                                    <constraint firstItem="EOe-nm-LDa" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="-50" id="6R6-if-Hd8"/>
                                     <constraint firstItem="ZOM-vd-N4W" firstAttribute="leading" secondItem="rpL-5t-vTX" secondAttribute="trailing" constant="5" id="6e2-Cj-Bh2"/>
                                     <constraint firstItem="Lmv-IH-ust" firstAttribute="leading" secondItem="9e5-sP-BpV" secondAttribute="trailing" constant="5" id="7P4-ws-SAn"/>
                                     <constraint firstItem="mZO-98-0eE" firstAttribute="top" secondItem="EOe-nm-LDa" secondAttribute="bottom" constant="5" id="810-y6-YbZ"/>
@@ -1301,7 +1300,7 @@
                                     <constraint firstItem="l7I-xR-BfZ" firstAttribute="leading" secondItem="ZGP-1v-Zhi" secondAttribute="trailing" constant="5" id="Q90-iH-NQB"/>
                                     <constraint firstItem="uFl-lP-XMM" firstAttribute="leading" secondItem="jFW-qo-MPf" secondAttribute="trailing" constant="5" id="QpE-6W-La3"/>
                                     <constraint firstItem="PCQ-PL-wSQ" firstAttribute="centerY" secondItem="YbI-aM-eKf" secondAttribute="centerY" id="R0T-MK-yh9"/>
-                                    <constraint firstItem="UeM-Kb-ffB" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="-43" id="Rak-i8-pnA"/>
+                                    <constraint firstItem="UeM-Kb-ffB" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="-16" id="Rak-i8-pnA"/>
                                     <constraint firstItem="cqB-DL-NzF" firstAttribute="top" secondItem="PCQ-PL-wSQ" secondAttribute="bottom" constant="5" id="Rv7-wM-ohx"/>
                                     <constraint firstItem="Eas-Kc-Xvo" firstAttribute="leading" secondItem="qwS-gf-Uf6" secondAttribute="trailing" constant="5" id="SJ7-dB-B0V"/>
                                     <constraint firstItem="ZGP-1v-Zhi" firstAttribute="centerY" secondItem="YbI-aM-eKf" secondAttribute="centerY" id="SOT-iH-Jdp"/>
@@ -1317,6 +1316,7 @@
                                     <constraint firstItem="l7I-xR-BfZ" firstAttribute="centerY" secondItem="YbI-aM-eKf" secondAttribute="centerY" id="WhW-jK-bd2"/>
                                     <constraint firstItem="oQm-aJ-07l" firstAttribute="leading" secondItem="cb0-ac-9ME" secondAttribute="trailing" constant="5" id="X3b-Va-eOO"/>
                                     <constraint firstItem="mZO-98-0eE" firstAttribute="leading" secondItem="PP4-Wq-eUS" secondAttribute="trailing" constant="5" id="XCc-uC-fDn"/>
+                                    <constraint firstItem="vg2-fK-nRQ" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="14" id="YDA-iZ-i5c"/>
                                     <constraint firstItem="pjp-Ut-Q6y" firstAttribute="leading" secondItem="KTy-CO-Qlp" secondAttribute="trailing" constant="5" id="Zc7-QZ-2tQ"/>
                                     <constraint firstItem="I4p-Vd-QUt" firstAttribute="top" secondItem="3tD-VV-Nu7" secondAttribute="bottom" constant="5" id="aS2-Kh-2EO"/>
                                     <constraint firstItem="PCQ-PL-wSQ" firstAttribute="top" secondItem="pjp-Ut-Q6y" secondAttribute="bottom" constant="5" id="aXW-if-0DC"/>
@@ -1332,6 +1332,7 @@
                                     <constraint firstItem="jKn-Ko-uJq" firstAttribute="top" secondItem="iEm-kK-feL" secondAttribute="bottom" constant="5" id="ebA-mm-k4N"/>
                                     <constraint firstItem="al6-TW-0mP" firstAttribute="top" secondItem="3bF-RC-1xO" secondAttribute="bottom" constant="5" id="ekM-lp-DhE"/>
                                     <constraint firstItem="82P-aj-0fj" firstAttribute="centerY" secondItem="YbI-aM-eKf" secondAttribute="centerY" id="f3F-OE-3cB"/>
+                                    <constraint firstItem="0o8-Rr-qxT" firstAttribute="centerX" secondItem="YbI-aM-eKf" secondAttribute="centerX" constant="24" id="fO7-lU-NCc"/>
                                     <constraint firstItem="rpL-5t-vTX" firstAttribute="top" secondItem="pPM-jn-dzq" secondAttribute="bottom" constant="5" id="fum-uv-eE3"/>
                                     <constraint firstItem="Jna-kK-zPD" firstAttribute="leading" secondItem="ccz-Qo-mID" secondAttribute="trailing" constant="5" id="fwS-9K-86u"/>
                                     <constraint firstItem="jFW-qo-MPf" firstAttribute="top" secondItem="oQm-aJ-07l" secondAttribute="bottom" constant="5" id="h8n-RZ-zyd"/>
@@ -1392,7 +1393,7 @@
                             <constraint firstItem="veG-Rx-wIW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="Q1A-tm-AW5"/>
                             <constraint firstItem="kIt-Hg-rsA" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="VLV-pp-FUc"/>
                             <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="kIt-Hg-rsA" secondAttribute="bottom" constant="15" id="VTg-Kn-lge"/>
-                            <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ZBD-A0-0Uw"/>
+                            <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="100" id="ZBD-A0-0Uw"/>
                             <constraint firstItem="YbI-aM-eKf" firstAttribute="top" secondItem="IQQ-fd-8P7" secondAttribute="bottom" constant="16" id="i5V-rN-iDE"/>
                             <constraint firstItem="kIt-Hg-rsA" firstAttribute="top" secondItem="qHt-di-hlu" secondAttribute="bottom" constant="15" id="iTl-oV-Una"/>
                             <constraint firstItem="qHt-di-hlu" firstAttribute="top" secondItem="YbI-aM-eKf" secondAttribute="bottom" constant="20" id="iYG-Kj-2Ed"/>
@@ -1423,19 +1424,19 @@
     <resources>
         <image name="A_Key" width="100" height="100"/>
         <image name="Fn_Key" width="100" height="100"/>
-        <image name="backslasj_Key" width="180" height="100"/>
-        <image name="capslock_key" width="186" height="100"/>
-        <image name="delete_Key" width="271" height="100"/>
-        <image name="l_command_Key" width="186" height="100"/>
+        <image name="backslasj_Key" width="215" height="100"/>
+        <image name="capslock_key" width="160" height="100"/>
+        <image name="delete_Key" width="259" height="100"/>
+        <image name="l_command_Key" width="169" height="100"/>
         <image name="l_control_Key" width="229" height="100"/>
-        <image name="l_option_Key" width="129" height="100"/>
-        <image name="l_shift_Key" width="300" height="100"/>
+        <image name="l_option_Key" width="108" height="100"/>
+        <image name="l_shift_Key" width="238" height="100"/>
         <image name="r_command_Key" width="143" height="100"/>
         <image name="r_control_Key" width="143" height="100"/>
         <image name="r_option_Key" width="143" height="100"/>
         <image name="r_shift_Key" width="375" height="100"/>
-        <image name="return_Key" width="314" height="100"/>
-        <image name="spase_Key" width="600" height="100"/>
+        <image name="return_Key" width="274" height="100"/>
+        <image name="spase_Key" width="650" height="100"/>
         <image name="tab_Key" width="186" height="100"/>
     </resources>
 </document>
