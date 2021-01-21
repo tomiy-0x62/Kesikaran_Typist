@@ -718,12 +718,13 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-di-hlu">
-                                <rect key="frame" x="745" y="255" width="150" height="28"/>
+                                <rect key="frame" x="570" y="243" width="300" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Klc-K8-Jgw"/>
+                                    <constraint firstAttribute="height" constant="40" id="E4M-a8-Biw"/>
+                                    <constraint firstAttribute="width" constant="300" id="Klc-K8-Jgw"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="OW4-dQ-LFL">
-                                    <font key="font" metaFont="system" size="20"/>
+                                    <font key="font" metaFont="system" size="28"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -745,7 +746,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kIt-Hg-rsA">
-                                <rect key="frame" x="656" y="219" width="128" height="21"/>
+                                <rect key="frame" x="656" y="207" width="128" height="21"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="TypedKeyLabel" id="lrp-5L-EvX">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -753,7 +754,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vog-A3-3bB">
-                                <rect key="frame" x="652" y="183" width="136" height="21"/>
+                                <rect key="frame" x="652" y="171" width="136" height="21"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="TypedCharLabel" id="R4K-4B-4Em">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -980,9 +981,9 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="return_Key" id="MhK-l3-rOw"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGP-1v-Zhi" userLabel="L_control">
-                                        <rect key="frame" x="91" y="126" width="108" height="48"/>
+                                        <rect key="frame" x="104" y="126" width="95" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="108" id="YbK-HQ-pte"/>
+                                            <constraint firstAttribute="width" constant="95" id="YbK-HQ-pte"/>
                                             <constraint firstAttribute="height" constant="48" id="eUc-q2-SeF"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="l_control_Key" id="AdL-GP-S6U"/>
@@ -1172,10 +1173,10 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="backslasj_Key" id="qQx-0i-E5K"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-qo-MPf" userLabel="tab">
-                                        <rect key="frame" x="92" y="179" width="89" height="48"/>
+                                        <rect key="frame" x="104" y="179" width="77" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="QFu-3r-TH3"/>
-                                            <constraint firstAttribute="width" constant="89" id="Uhi-Yq-vFR"/>
+                                            <constraint firstAttribute="width" constant="77" id="Uhi-Yq-vFR"/>
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="tab_Key" id="qDh-5p-zvG"/>
                                     </imageView>
@@ -1393,7 +1394,7 @@
                             <constraint firstItem="veG-Rx-wIW" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="Q1A-tm-AW5"/>
                             <constraint firstItem="kIt-Hg-rsA" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="VLV-pp-FUc"/>
                             <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="kIt-Hg-rsA" secondAttribute="bottom" constant="15" id="VTg-Kn-lge"/>
-                            <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="100" id="ZBD-A0-0Uw"/>
+                            <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ZBD-A0-0Uw"/>
                             <constraint firstItem="YbI-aM-eKf" firstAttribute="top" secondItem="IQQ-fd-8P7" secondAttribute="bottom" constant="16" id="i5V-rN-iDE"/>
                             <constraint firstItem="kIt-Hg-rsA" firstAttribute="top" secondItem="qHt-di-hlu" secondAttribute="bottom" constant="15" id="iTl-oV-Una"/>
                             <constraint firstItem="qHt-di-hlu" firstAttribute="top" secondItem="YbI-aM-eKf" secondAttribute="bottom" constant="20" id="iYG-Kj-2Ed"/>
@@ -1428,7 +1429,7 @@
         <image name="capslock_key" width="160" height="100"/>
         <image name="delete_Key" width="259" height="100"/>
         <image name="l_command_Key" width="169" height="100"/>
-        <image name="l_control_Key" width="229" height="100"/>
+        <image name="l_control_Key" width="202" height="100"/>
         <image name="l_option_Key" width="108" height="100"/>
         <image name="l_shift_Key" width="238" height="100"/>
         <image name="r_command_Key" width="143" height="100"/>
@@ -1437,6 +1438,6 @@
         <image name="r_shift_Key" width="375" height="100"/>
         <image name="return_Key" width="274" height="100"/>
         <image name="spase_Key" width="650" height="100"/>
-        <image name="tab_Key" width="186" height="100"/>
+        <image name="tab_Key" width="161" height="100"/>
     </resources>
 </document>
