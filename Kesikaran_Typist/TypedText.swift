@@ -31,7 +31,10 @@ class TextManager {
         }  else if key == "space" {
             self.StrData += " "
             self.keyData += " "
-        } else {
+        } else if key == "Not found" {
+            self.StrData += ""
+            self.keyData += ""
+        } else{
             self.StrData += char
             self.keyData += key
         }
