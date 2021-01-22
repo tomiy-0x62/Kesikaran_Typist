@@ -15,4 +15,16 @@ class KeyView: NSImageView {
         // Drawing code here.
     }
     
+    func changeImage(image: String) {
+        // change image
+    }
+    
+    func  turnOn() {
+        // turn background to orange
+    }
+    
+    func turnOff() {
+        // turn background to transparent
+    }
+    
 }
