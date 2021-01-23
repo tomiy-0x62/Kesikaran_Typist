@@ -65,13 +65,13 @@ class ViewController: NSViewController {
         TextDataClass.update(key: typedKey, char: typedChar)
         typedKeyLabel.stringValue = TextDataClass.keyData
         typedKanaLabel.stringValue = TextDataClass.StrData
-        /*
-        if typedKey == "A"{
-            testKey.backgroundColor = .orange
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.testKey.backgroundColor = .white
+        
+        if typedKey == "return"{
+            testKey.turnOn()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.testKey.turnOff()
             }
-        }*/
+        }
         
     }
     
