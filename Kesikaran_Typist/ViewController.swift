@@ -96,7 +96,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
+        keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
         keyDataClass.loadWord()
         
@@ -126,39 +126,57 @@ class ViewController: NSViewController {
         return [Int(keycode)]
     }
     
+    func genKeycodesforNum(keycode: UInt16) -> [Int] {
+        // shift + ○ に対応させる
+        // shift + 56 -> [421, 56]
+        // 48 -> [48]
+        if isShift {
+            switch sideOfShift{
+            case side.right:
+                return [60, Int(keycode)]
+            case side.left:
+                return [56, Int(keycode)]
+            default:
+                return [56, Int(keycode)]
+            }
+        }
+        return [Int(keycode)]
+    }
+    
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        let typedKey = keyDataClass.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeys = keyDataClass.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeyNums = keyDataClass.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
         let typedChar = keyDataClass.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
-        print("typedKey: \(typedKey)")
-        typedLabel.stringValue = ("Typed: \(typedKey)")
+        print("typedKey: \(typedKeys)")
+        typedLabel.stringValue = ("Typed: \(typedKeys)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
-        TextDataClass.update(key: typedKey, char: typedChar)
+        TextDataClass.update(key: typedKeys, char: typedChar)
         typedKeyLabel.stringValue = TextDataClass.keyData
         typedKanaLabel.stringValue = TextDataClass.StrData
-        /*
-        if typedKey == "return"{
-            testKey.turnOn()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
-                self.testKey.turnOff()
+        print("typedKeyNums: \(typedKeyNums)")
+        for keyNum in typedKeyNums {
+            keyViewList[keyNum].turnOn()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.keyViewList[keyNum].turnOff()
             }
-        }*/
+        }
         
     }
     
     override func flagsChanged(with event: NSEvent) {
         // print(event.keyCode)
-        let typedKey = keyDataClass.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKey = keyDataClass.searchKey(keyCode: [Int(event.keyCode)])
         print("apple: \(typedKey)")
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.shift]:
             print("shift key is pressed")
             self.isShift = true
-            if typedKey == "left_shift" {
+            if typedKey == "left shift" {
                 self.sideOfShift = side.left
             }
-            if typedKey == "right_shift" {
+            if typedKey == "right shift" {
                 self.sideOfShift = side.right
             }
         case [.control]:
