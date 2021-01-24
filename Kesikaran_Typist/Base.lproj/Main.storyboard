@@ -772,7 +772,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="F_Key" id="O2Y-so-Mfb"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-PL-wSQ" userLabel=";" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-PL-wSQ" userLabel="colon" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="631" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Qw2-7n-BJq"/>
@@ -900,7 +900,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="N_Key" id="s3g-Mz-N2I"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9w-sd-Xlk" userLabel="," customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9w-sd-Xlk" userLabel="comma" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="544" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="5F3-DD-9hY"/>
@@ -908,7 +908,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image=",_Key" id="jit-7a-fef"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-86-l1T" userLabel="." customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-86-l1T" userLabel="dot" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="597" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Ovo-fi-SPw"/>
@@ -916,7 +916,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dot_Key" id="N3a-zT-nzK"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-DL-NzF" userLabel="/" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-DL-NzF" userLabel="slash" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="650" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="EPE-WW-pQ6"/>
@@ -956,7 +956,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="H_Key" id="gK8-Ba-UMY"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-VV-Nu7" userLabel="'" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-VV-Nu7" userLabel="quotation" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="684" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="BVt-mg-1WA"/>
@@ -972,7 +972,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="M_Key" id="Sn7-RH-Hq6"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-6t-klA" userLabel="return" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9u-6t-klA" userLabel="return_key" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="737" y="146" width="133" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" id="BSC-r2-aRv"/>
@@ -1044,7 +1044,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="P_Key" id="bfn-wT-Jmp"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-vd-N4W" userLabel="[" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-vd-N4W" userLabel="l_sq_bracket" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="666" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="LlY-gs-pcR"/>
@@ -1052,7 +1052,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="[_Key" id="9LZ-kT-LHf"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al6-TW-0mP" userLabel="]" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al6-TW-0mP" userLabel="r_sq_bracket" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="719" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="IZe-6Q-pfK"/>
@@ -1060,7 +1060,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="]_Key" id="p4C-Jr-Boy"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-ac-9ME" userLabel="`" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-ac-9ME" userLabel="accent_grave" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="54" y="252" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Z46-zu-oRN"/>
@@ -1140,7 +1140,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="9_Key" id="k4h-Is-8uu"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPM-jn-dzq" userLabel="-" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPM-jn-dzq" userLabel="hyphen" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="637" y="252" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="hhA-UO-7E0"/>
@@ -1148,7 +1148,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="-_Key" id="jEx-OH-6Cc"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZh-nL-Gei" userLabel="=" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xZh-nL-Gei" userLabel="equal" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="690" y="252" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="U82-oc-aNY"/>
@@ -1164,7 +1164,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="delete_Key" id="Sr6-7k-I4U"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yQ-cc-76F" userLabel="\" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yQ-cc-76F" userLabel="back_slash" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="772" y="199" width="98" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="98" id="3eQ-IK-US7"/>
@@ -1404,12 +1404,74 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="A" destination="l7I-xR-BfZ" id="98G-uB-pjs"/>
+                        <outlet property="B" destination="UeM-Kb-ffB" id="Ji7-Rb-Yjd"/>
+                        <outlet property="C" destination="qwS-gf-Uf6" id="qKw-2x-5UV"/>
+                        <outlet property="D" destination="82P-aj-0fj" id="YrW-6j-8qM"/>
+                        <outlet property="E" destination="6YL-ce-Rha" id="sPC-q2-B2l"/>
+                        <outlet property="F" destination="lA1-i5-cjs" id="Ssb-y8-Ht0"/>
+                        <outlet property="Fn" destination="vDj-5T-IFn" id="d1a-v8-OIf"/>
+                        <outlet property="G" destination="hQL-Sh-0yh" id="id3-Xe-VB5"/>
+                        <outlet property="H" destination="Xg2-c7-phD" id="Nbf-fw-8aF"/>
+                        <outlet property="I" destination="KTy-CO-Qlp" id="FLT-Uo-YkW"/>
+                        <outlet property="J" destination="6Fb-mc-FC4" id="NAg-Id-mhw"/>
+                        <outlet property="K" destination="ccz-Qo-mID" id="AuZ-6f-4N4"/>
+                        <outlet property="L" destination="Jna-kK-zPD" id="ACU-kq-gil"/>
+                        <outlet property="M" destination="FCD-AT-f9h" id="pXG-3r-JIA"/>
+                        <outlet property="N" destination="Yw4-t9-YL2" id="asC-mQ-lap"/>
+                        <outlet property="O" destination="pjp-Ut-Q6y" id="asC-Oe-U5Y"/>
+                        <outlet property="P" destination="rpL-5t-vTX" id="hcY-Ch-jq7"/>
+                        <outlet property="Q" destination="uFl-lP-XMM" id="Bph-DD-VgF"/>
+                        <outlet property="R" destination="PP4-Wq-eUS" id="Gxd-Fy-9Yh"/>
+                        <outlet property="S" destination="90Q-jb-7zE" id="0sn-EJ-5mF"/>
+                        <outlet property="T" destination="mZO-98-0eE" id="0cG-3F-pJG"/>
+                        <outlet property="U" destination="jKn-Ko-uJq" id="m9z-48-WpD"/>
+                        <outlet property="V" destination="Eas-Kc-Xvo" id="cye-CS-SJN"/>
+                        <outlet property="W" destination="UrB-7N-Gis" id="pQS-bJ-RdA"/>
+                        <outlet property="X" destination="4zy-rL-81h" id="Z2A-ZK-Wmq"/>
+                        <outlet property="Y" destination="8EA-Oa-9r1" id="pe1-hF-cxC"/>
+                        <outlet property="Z" destination="Asq-iB-0Le" id="vvD-25-Yg5"/>
+                        <outlet property="accent_grave" destination="cb0-ac-9ME" id="aV3-03-RLO"/>
+                        <outlet property="back_slash" destination="8yQ-cc-76F" id="79S-UM-J2k"/>
+                        <outlet property="caps_lock" destination="PZj-x1-xgb" id="0Wb-FI-w7w"/>
+                        <outlet property="colon" destination="PCQ-PL-wSQ" id="ENU-QP-lmt"/>
+                        <outlet property="comma" destination="e9w-sd-Xlk" id="dwu-Qs-WZS"/>
+                        <outlet property="delete" destination="3bF-RC-1xO" id="UmU-mB-oRb"/>
+                        <outlet property="dot" destination="Z4T-86-l1T" id="obh-0G-w1D"/>
+                        <outlet property="eight" destination="iEm-kK-feL" id="E09-36-cUF"/>
+                        <outlet property="equal" destination="xZh-nL-Gei" id="J3m-jW-fl1"/>
+                        <outlet property="five" destination="nyh-SJ-twi" id="g7v-aH-fg1"/>
+                        <outlet property="four" destination="Hfy-xT-lsd" id="GCG-c6-t3O"/>
+                        <outlet property="hyphen" destination="pPM-jn-dzq" id="clH-YU-djW"/>
+                        <outlet property="key" destination="I4p-Vd-QUt" id="bzZ-GN-p8B"/>
+                        <outlet property="l_command" destination="Mr1-wN-JJo" id="nwl-tc-bFy"/>
+                        <outlet property="l_control" destination="ZGP-1v-Zhi" id="ybV-CD-iEU"/>
+                        <outlet property="l_option" destination="hjz-dx-4NG" id="fxh-gY-U2s"/>
+                        <outlet property="l_shift" destination="9v0-O7-gYC" id="JRp-af-TGI"/>
+                        <outlet property="l_sq_bracket" destination="ZOM-vd-N4W" id="6ub-2U-kcZ"/>
                         <outlet property="label" destination="veG-Rx-wIW" id="OCn-7e-cpv"/>
+                        <outlet property="nine" destination="Iks-Lv-VVt" id="oQj-rw-vDn"/>
+                        <outlet property="one" destination="oQm-aJ-07l" id="0LF-RV-Z0X"/>
+                        <outlet property="quotation" destination="3tD-VV-Nu7" id="4aL-ur-9zL"/>
+                        <outlet property="r_command" destination="cV2-gW-37B" id="WUd-vj-ww3"/>
+                        <outlet property="r_control" destination="Lmv-IH-ust" id="f5B-Di-xk1"/>
+                        <outlet property="r_option" destination="9e5-sP-BpV" id="MUL-LK-xKC"/>
+                        <outlet property="r_sq_bracket" destination="al6-TW-0mP" id="qil-Is-xaV"/>
+                        <outlet property="returnKey" destination="U9u-6t-klA" id="ZB8-nl-tLk"/>
+                        <outlet property="seven" destination="0o8-Rr-qxT" id="75U-Or-ymg"/>
+                        <outlet property="shift" destination="I4p-Vd-QUt" id="q0D-gQ-1nr"/>
+                        <outlet property="six" destination="EOe-nm-LDa" id="2Ce-sw-GWS"/>
+                        <outlet property="slash" destination="cqB-DL-NzF" id="PA9-qv-H2Y"/>
+                        <outlet property="spase" destination="vg2-fK-nRQ" id="M9D-3R-ntO"/>
+                        <outlet property="tab" destination="jFW-qo-MPf" id="Rd1-oR-T9v"/>
                         <outlet property="textField" destination="qHt-di-hlu" id="wkU-Af-xcd"/>
+                        <outlet property="three" destination="K4o-hY-zfI" id="zvG-7p-oJP"/>
+                        <outlet property="two" destination="bzG-QL-5Jd" id="td5-qn-2WG"/>
                         <outlet property="typedCharLabel" destination="IQQ-fd-8P7" id="ZP9-4P-F5d"/>
                         <outlet property="typedKanaLabel" destination="vog-A3-3bB" id="vbu-uY-h7Z"/>
                         <outlet property="typedKeyLabel" destination="kIt-Hg-rsA" id="2Wx-SC-5GQ"/>
                         <outlet property="typedLabel" destination="Zxa-KR-Wg0" id="vXf-WK-Nhb"/>
+                        <outlet property="zero" destination="gmj-uv-8fc" id="eB5-cY-zfT"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

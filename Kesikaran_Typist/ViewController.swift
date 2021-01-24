@@ -15,7 +15,71 @@ class ViewController: NSViewController {
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
     @IBOutlet weak var typedKeyLabel: NSTextField!    // asdf
     @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
-    @IBOutlet weak var testKey: KeyView!
+    
+    @IBOutlet weak var accent_grave: KeyView!
+    @IBOutlet weak var one: KeyView!
+    @IBOutlet weak var two: KeyView!
+    @IBOutlet weak var three: KeyView!
+    @IBOutlet weak var four: KeyView!
+    @IBOutlet weak var five: KeyView!
+    @IBOutlet weak var six: KeyView!
+    @IBOutlet weak var seven: KeyView!
+    @IBOutlet weak var eight: KeyView!
+    @IBOutlet weak var nine: KeyView!
+    @IBOutlet weak var zero: KeyView!
+    @IBOutlet weak var hyphen: KeyView!
+    @IBOutlet weak var equal: KeyView!
+    @IBOutlet weak var delete: KeyView!
+    @IBOutlet weak var tab: KeyView!
+    @IBOutlet weak var l_sq_bracket: KeyView!
+    @IBOutlet weak var r_sq_bracket: KeyView!
+    @IBOutlet weak var back_slash: KeyView!
+    @IBOutlet weak var l_control: KeyView!
+    @IBOutlet weak var colon: KeyView!
+    @IBOutlet weak var quotation: KeyView!
+    @IBOutlet weak var returnKey: KeyView!
+    @IBOutlet weak var l_shift: KeyView!
+    @IBOutlet weak var comma: KeyView!
+    @IBOutlet weak var dot: KeyView!
+    @IBOutlet weak var slash: KeyView!
+    @IBOutlet weak var shift: KeyView!
+    @IBOutlet weak var caps_lock: KeyView!
+    @IBOutlet weak var l_option: KeyView!
+    @IBOutlet weak var l_command: KeyView!
+    @IBOutlet weak var spase: KeyView!
+    @IBOutlet weak var r_command: KeyView!
+    @IBOutlet weak var r_option: KeyView!
+    @IBOutlet weak var r_control: KeyView!
+    @IBOutlet weak var Fn: KeyView!
+    
+    @IBOutlet weak var A: KeyView!
+    @IBOutlet weak var B: KeyView!
+    @IBOutlet weak var C: KeyView!
+    @IBOutlet weak var D: KeyView!
+    @IBOutlet weak var E: KeyView!
+    @IBOutlet weak var F: KeyView!
+    @IBOutlet weak var G: KeyView!
+    @IBOutlet weak var H: KeyView!
+    @IBOutlet weak var I: KeyView!
+    @IBOutlet weak var J: KeyView!
+    @IBOutlet weak var K: KeyView!
+    @IBOutlet weak var L: KeyView!
+    @IBOutlet weak var M: KeyView!
+    @IBOutlet weak var N: KeyView!
+    @IBOutlet weak var O: KeyView!
+    @IBOutlet weak var P: KeyView!
+    @IBOutlet weak var Q: KeyView!
+    @IBOutlet weak var R: KeyView!
+    @IBOutlet weak var S: KeyView!
+    @IBOutlet weak var T: KeyView!
+    @IBOutlet weak var U: KeyView!
+    @IBOutlet weak var V: KeyView!
+    @IBOutlet weak var W: KeyView!
+    @IBOutlet weak var X: KeyView!
+    @IBOutlet weak var Y: KeyView!
+    @IBOutlet weak var Z: KeyView!
+    
+    
     
     // shiftキーの状態を保存
     var isShift: Bool = false
@@ -65,13 +129,13 @@ class ViewController: NSViewController {
         TextDataClass.update(key: typedKey, char: typedChar)
         typedKeyLabel.stringValue = TextDataClass.keyData
         typedKanaLabel.stringValue = TextDataClass.StrData
-        
+        /*
         if typedKey == "return"{
             testKey.turnOn()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
                 self.testKey.turnOff()
             }
-        }
+        }*/
         
     }
     
