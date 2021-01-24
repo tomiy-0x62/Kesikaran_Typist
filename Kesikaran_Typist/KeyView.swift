@@ -31,6 +31,7 @@ class KeyView: NSImageView {
         // bgLayer.zPosition = -1
         self.layer?.addSublayer(bgLayer)
         imageLayer.contents = keyImage!
+        imageLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         // imageLayer.zPosition = 0
         self.layer?.addSublayer(imageLayer)
     }

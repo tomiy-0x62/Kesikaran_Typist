@@ -764,7 +764,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="YbI-aM-eKf" userLabel="KeyBord View" customClass="KeybordBack" customModule="Kesikaran_Typist" customModuleProvider="target">
                                 <rect key="frame" x="265" y="263" width="910" height="340"/>
                                 <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-i5-cjs" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-i5-cjs" userLabel="F" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="313" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="j67-El-b1z"/>
@@ -772,7 +772,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="F_Key" id="O2Y-so-Mfb"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-PL-wSQ" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-PL-wSQ" userLabel=";" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="631" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Qw2-7n-BJq"/>
@@ -780,7 +780,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image=";_Key" id="JGu-pP-RIF"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82P-aj-0fj" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="82P-aj-0fj" userLabel="D" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="260" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="DwL-0B-q0k"/>
@@ -788,7 +788,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="D_Key" id="T5I-zQ-tKp"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-Sh-0yh" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-Sh-0yh" userLabel="G" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="366" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="1jM-yS-mH9"/>
@@ -796,7 +796,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="G_Key" id="Dwt-9R-h8d"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-mc-FC4" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-mc-FC4" userLabel="J" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="472" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="udE-Tz-yXH"/>
@@ -812,7 +812,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="A_Key" id="xcK-4b-MbQ"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uFl-lP-XMM" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uFl-lP-XMM" userLabel="Q" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="136" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="7y1-ax-QN4"/>
@@ -820,7 +820,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Q_Key" id="Yhf-V6-eEl"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UrB-7N-Gis" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UrB-7N-Gis" userLabel="W" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="189" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="BKj-EU-M3e"/>
@@ -828,7 +828,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="W_Key" id="533-4A-HPE"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6YL-ce-Rha" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6YL-ce-Rha" userLabel="E" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="242" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="8P7-oY-Wg9"/>
@@ -836,7 +836,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="E_Key" id="rFL-6y-bAR"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PP4-Wq-eUS" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PP4-Wq-eUS" userLabel="R" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="295" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Sdg-AX-pSG"/>
@@ -844,7 +844,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="R_Key" id="6K0-O8-Iyn"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-98-0eE" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZO-98-0eE" userLabel="T" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="348" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="oBW-jI-fgw"/>
@@ -860,7 +860,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Z_Key" id="JxU-np-jqE"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zy-rL-81h" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zy-rL-81h" userLabel="X" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="226" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="IXx-cE-QDF"/>
@@ -876,7 +876,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="C_Key" id="CHP-Di-ZNC"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-Kc-Xvo" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-Kc-Xvo" userLabel="V" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="332" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="4i7-KP-wTd"/>
@@ -892,7 +892,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="B_Key" id="qUn-Tg-g5Q"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yw4-t9-YL2" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yw4-t9-YL2" userLabel="N" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="438" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="pr6-bo-L9h"/>
@@ -900,7 +900,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="N_Key" id="s3g-Mz-N2I"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9w-sd-Xlk" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9w-sd-Xlk" userLabel="," customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="544" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="5F3-DD-9hY"/>
@@ -908,7 +908,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image=",_Key" id="jit-7a-fef"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-86-l1T" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-86-l1T" userLabel="." customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="597" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Ovo-fi-SPw"/>
@@ -916,7 +916,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dot_Key" id="N3a-zT-nzK"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-DL-NzF" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqB-DL-NzF" userLabel="/" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="650" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="EPE-WW-pQ6"/>
@@ -924,7 +924,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="slash_Key" id="WK7-PG-iNm"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-kK-zPD" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-kK-zPD" userLabel="L" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="578" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="HHK-6O-i7B"/>
@@ -932,7 +932,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="L_Key" id="SPm-gF-6N1"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-Qo-mID" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-Qo-mID" userLabel="K" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="525" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="jYD-Px-9nM"/>
@@ -940,7 +940,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="K_Key" id="RJv-iP-jcQ"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90Q-jb-7zE" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="90Q-jb-7zE" userLabel="S" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="207" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="0D6-f4-y2r"/>
@@ -948,7 +948,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="S_Key" id="FsT-yq-zhg"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-c7-phD" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xg2-c7-phD" userLabel="H" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="419" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="B3s-nL-4qY"/>
@@ -956,7 +956,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="H_Key" id="gK8-Ba-UMY"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-VV-Nu7" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3tD-VV-Nu7" userLabel="'" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="684" y="146" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="BVt-mg-1WA"/>
@@ -964,7 +964,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="'_Key" id="Pzh-9F-aKO"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-AT-f9h" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-AT-f9h" userLabel="M" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="491" y="93" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Snj-Bb-Lnv"/>
@@ -1004,7 +1004,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="right_shift_Key" id="z0F-dk-n00"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8EA-Oa-9r1" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8EA-Oa-9r1" userLabel="Y" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="401" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="3ND-n5-OmO"/>
@@ -1012,7 +1012,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Y_Key" id="mIn-u3-q3O"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKn-Ko-uJq" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKn-Ko-uJq" userLabel="U" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="454" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="5Qq-iS-r6m"/>
@@ -1020,7 +1020,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="U_Key" id="siR-uh-3i8"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTy-CO-Qlp" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTy-CO-Qlp" userLabel="I" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="507" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="IfU-6j-kzN"/>
@@ -1028,7 +1028,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="I_Key" id="epA-ty-s2Y"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjp-Ut-Q6y" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjp-Ut-Q6y" userLabel="O" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="560" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="0Sf-M8-JJq"/>
@@ -1036,7 +1036,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="O_Key" id="rDj-hA-cVT"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpL-5t-vTX" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rpL-5t-vTX" userLabel="P" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="613" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="Ycy-Z2-n6V"/>
@@ -1044,7 +1044,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="P_Key" id="bfn-wT-Jmp"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-vd-N4W" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-vd-N4W" userLabel="[" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="666" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="LlY-gs-pcR"/>
@@ -1052,7 +1052,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="[_Key" id="9LZ-kT-LHf"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al6-TW-0mP" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="al6-TW-0mP" userLabel="]" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="719" y="199" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="IZe-6Q-pfK"/>
@@ -1156,7 +1156,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="=_Key" id="L5H-cK-rX3"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-RC-1xO" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-RC-1xO" userLabel="delete" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="743" y="252" width="127" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127" id="WHt-nl-yv6"/>
@@ -1164,7 +1164,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="delete_Key" id="Sr6-7k-I4U"/>
                                     </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yQ-cc-76F" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8yQ-cc-76F" userLabel="\" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="772" y="199" width="98" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="98" id="3eQ-IK-US7"/>
@@ -1405,7 +1405,6 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="veG-Rx-wIW" id="OCn-7e-cpv"/>
-                        <outlet property="testKey" destination="U9u-6t-klA" id="y0P-HG-ZiL"/>
                         <outlet property="textField" destination="qHt-di-hlu" id="wkU-Af-xcd"/>
                         <outlet property="typedCharLabel" destination="IQQ-fd-8P7" id="ZP9-4P-F5d"/>
                         <outlet property="typedKanaLabel" destination="vog-A3-3bB" id="vbu-uY-h7Z"/>
