@@ -18,6 +18,7 @@ struct KeyData {
     let char: String          // "あ", "ょ"
     let keyCodes: [Int]        // [20], [421,25]
     let keycapChar: String    // "3" , "shift_9"
+    let keyNum: [Int] = [0]
     // shiftは右左でキーコードが違うので421に統一
     
     //クラスが生成された時の処理

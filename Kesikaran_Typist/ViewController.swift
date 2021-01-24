@@ -16,70 +16,71 @@ class ViewController: NSViewController {
     @IBOutlet weak var typedKeyLabel: NSTextField!    // asdf
     @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
     
-    @IBOutlet weak var accent_grave: KeyView!
-    @IBOutlet weak var one: KeyView!
-    @IBOutlet weak var two: KeyView!
-    @IBOutlet weak var three: KeyView!
-    @IBOutlet weak var four: KeyView!
-    @IBOutlet weak var five: KeyView!
-    @IBOutlet weak var six: KeyView!
-    @IBOutlet weak var seven: KeyView!
-    @IBOutlet weak var eight: KeyView!
-    @IBOutlet weak var nine: KeyView!
-    @IBOutlet weak var zero: KeyView!
-    @IBOutlet weak var hyphen: KeyView!
-    @IBOutlet weak var equal: KeyView!
-    @IBOutlet weak var delete: KeyView!
-    @IBOutlet weak var tab: KeyView!
-    @IBOutlet weak var l_sq_bracket: KeyView!
-    @IBOutlet weak var r_sq_bracket: KeyView!
-    @IBOutlet weak var back_slash: KeyView!
-    @IBOutlet weak var l_control: KeyView!
-    @IBOutlet weak var colon: KeyView!
-    @IBOutlet weak var quotation: KeyView!
-    @IBOutlet weak var returnKey: KeyView!
-    @IBOutlet weak var l_shift: KeyView!
-    @IBOutlet weak var comma: KeyView!
-    @IBOutlet weak var dot: KeyView!
-    @IBOutlet weak var slash: KeyView!
-    @IBOutlet weak var shift: KeyView!
-    @IBOutlet weak var caps_lock: KeyView!
-    @IBOutlet weak var l_option: KeyView!
-    @IBOutlet weak var l_command: KeyView!
-    @IBOutlet weak var spase: KeyView!
-    @IBOutlet weak var r_command: KeyView!
-    @IBOutlet weak var r_option: KeyView!
-    @IBOutlet weak var r_control: KeyView!
-    @IBOutlet weak var Fn: KeyView!
+    @IBOutlet weak var accent_grave: KeyView!  // 0
+    @IBOutlet weak var one: KeyView!  // 1
+    @IBOutlet weak var two: KeyView!  // 2
+    @IBOutlet weak var three: KeyView!  // 3
+    @IBOutlet weak var four: KeyView!  // 4
+    @IBOutlet weak var five: KeyView!  // 5
+    @IBOutlet weak var six: KeyView!  // 6
+    @IBOutlet weak var seven: KeyView!  // 7
+    @IBOutlet weak var eight: KeyView!  // 8
+    @IBOutlet weak var nine: KeyView!  // 9
+    @IBOutlet weak var zero: KeyView!  // 10
     
-    @IBOutlet weak var A: KeyView!
-    @IBOutlet weak var B: KeyView!
-    @IBOutlet weak var C: KeyView!
-    @IBOutlet weak var D: KeyView!
-    @IBOutlet weak var E: KeyView!
-    @IBOutlet weak var F: KeyView!
-    @IBOutlet weak var G: KeyView!
-    @IBOutlet weak var H: KeyView!
-    @IBOutlet weak var I: KeyView!
-    @IBOutlet weak var J: KeyView!
-    @IBOutlet weak var K: KeyView!
-    @IBOutlet weak var L: KeyView!
-    @IBOutlet weak var M: KeyView!
-    @IBOutlet weak var N: KeyView!
-    @IBOutlet weak var O: KeyView!
-    @IBOutlet weak var P: KeyView!
-    @IBOutlet weak var Q: KeyView!
-    @IBOutlet weak var R: KeyView!
-    @IBOutlet weak var S: KeyView!
-    @IBOutlet weak var T: KeyView!
-    @IBOutlet weak var U: KeyView!
-    @IBOutlet weak var V: KeyView!
-    @IBOutlet weak var W: KeyView!
-    @IBOutlet weak var X: KeyView!
-    @IBOutlet weak var Y: KeyView!
-    @IBOutlet weak var Z: KeyView!
+    @IBOutlet weak var A: KeyView!   // 11
+    @IBOutlet weak var B: KeyView!  // 12
+    @IBOutlet weak var C: KeyView!  // 13
+    @IBOutlet weak var D: KeyView!  // 14
+    @IBOutlet weak var E: KeyView!  // 15
+    @IBOutlet weak var F: KeyView!  // 16
+    @IBOutlet weak var G: KeyView!  // 17
+    @IBOutlet weak var H: KeyView!  // 18
+    @IBOutlet weak var I: KeyView!  // 19
+    @IBOutlet weak var J: KeyView!  // 20
+    @IBOutlet weak var K: KeyView!  // 21
+    @IBOutlet weak var L: KeyView!  // 22
+    @IBOutlet weak var M: KeyView!  // 23
+    @IBOutlet weak var N: KeyView!  // 24
+    @IBOutlet weak var O: KeyView!  // 25
+    @IBOutlet weak var P: KeyView!  // 26
+    @IBOutlet weak var Q: KeyView!  // 27
+    @IBOutlet weak var R: KeyView!  // 28
+    @IBOutlet weak var S: KeyView!  // 29
+    @IBOutlet weak var T: KeyView!  // 30
+    @IBOutlet weak var U: KeyView!  // 31
+    @IBOutlet weak var V: KeyView!  // 32
+    @IBOutlet weak var W: KeyView!  // 33
+    @IBOutlet weak var X: KeyView!  // 34
+    @IBOutlet weak var Y: KeyView!  // 35
+    @IBOutlet weak var Z: KeyView!  // 36
     
+    @IBOutlet weak var hyphen: KeyView!  // 37  -
+    @IBOutlet weak var equal: KeyView!  // 38  =
+    @IBOutlet weak var delete: KeyView!  // 39
+    @IBOutlet weak var tab: KeyView!  // 40
+    @IBOutlet weak var l_sq_bracket: KeyView!  // 41  [
+    @IBOutlet weak var r_sq_bracket: KeyView!  // 42  ]
+    @IBOutlet weak var back_slash: KeyView!  // 43  \
+    @IBOutlet weak var l_control: KeyView!  // 44 Ctrl
+    @IBOutlet weak var colon: KeyView!  // 45  ;
+    @IBOutlet weak var quotation: KeyView!  // 46  '
+    @IBOutlet weak var returnKey: KeyView!  // 47
+    @IBOutlet weak var l_shift: KeyView!  // 48
+    @IBOutlet weak var comma: KeyView!  // 49  ,
+    @IBOutlet weak var dot: KeyView!  // 50  .
+    @IBOutlet weak var slash: KeyView!  // 51  /
+    @IBOutlet weak var shift: KeyView!  // 52
+    @IBOutlet weak var caps_lock: KeyView!  // 53
+    @IBOutlet weak var l_option: KeyView!  // 54
+    @IBOutlet weak var l_command: KeyView!  // 55
+    @IBOutlet weak var spase: KeyView!  // 56
+    @IBOutlet weak var r_command: KeyView!  // 57
+    @IBOutlet weak var r_option: KeyView!  // 58
+    @IBOutlet weak var r_control: KeyView!  // 59 Ctrl
+    @IBOutlet weak var Fn: KeyView!  // 60
     
+    var keyViewList: Array<KeyView> = []
     
     // shiftキーの状態を保存
     var isShift: Bool = false
@@ -89,6 +90,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal]
         
         keyDataClass.loadWord()
         
