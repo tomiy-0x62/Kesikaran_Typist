@@ -1,16 +1,16 @@
-"R_control" 62 "right_control" 
-"L_control" 59 "left_control"
-"R_shift" 421,60 "right_shift"
-"L_shift" 421,56 "left_shift"
-"tab" 48 "tab"
-"R_option" 61 "right_option"
-"L_option" 58 "left_option"
-"R_command" 54 "right_command"
-"L_command" 55 "left_command"
-"return" 36 "return"
-"delete" 51 "delete"
-"esc" 53 "esc"
-"space" 49 "space"
+"R_control" 62 "right_control" 59
+"L_control" 59 "left_control" 44
+"R_shift" 421,60 "right_shift" 52
+"L_shift" 421,56 "left_shift" 48
+"tab" 48 "tab" 40
+"R_option" 61 "right_option" 58
+"L_option" 58 "left_option" 54
+"R_command" 54 "right_command" 57
+"L_command" 55 "left_command" 55
+"return" 36 "return" 47
+"delete" 51 "delete" 39
+"esc" 53 "esc"  61
+"space" 49 "space" 56
 "あ" 20 "3" 3
 "い" 14 "E" 15
 "う" 21 "4" 4
@@ -19,7 +19,7 @@
 "か" 17 "T" 30
 "き" 5 "G" 17
 "く" 4 "H" 18
-"け" 39 "'"
+"け" 39 "'" 46
 "こ" 11 "B" 12
 "さ" 7 "X" 34
 "し" 2 "D" 14
@@ -53,7 +53,7 @@
 "り" 37 "L" 22
 "る" 47 "." 50
 "れ" 41 ";" 45
-"ろ" 421,39 "shift_'"
+"ろ" 421,39 "shift_'" 46
 "わ" 29 "0" 10
 "を" 421,29 "shift_0" 10,
 "ん" 16 "Y" 35
@@ -75,4 +75,4 @@
 "」" 421,33 "shift_[" 41
 "ー" 421,30 "shift_]" 42
 "｀" 50 "`" 0
-"〜" 421,50 "shift_`" 0,shift
+"〜" 421,50 "shift_`" 0

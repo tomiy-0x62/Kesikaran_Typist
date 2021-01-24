@@ -7,6 +7,10 @@
 
 import Cocoa
 
+enum side {
+    case right, left, none
+}
+
 class ViewController: NSViewController {
     
     @IBOutlet weak var textField: NSTextField! // textField
@@ -70,13 +74,13 @@ class ViewController: NSViewController {
     @IBOutlet weak var comma: KeyView!  // 49  ,
     @IBOutlet weak var dot: KeyView!  // 50  .
     @IBOutlet weak var slash: KeyView!  // 51  /
-    @IBOutlet weak var shift: KeyView!  // 52
+    @IBOutlet weak var r_shift: KeyView!  // 52
     @IBOutlet weak var caps_lock: KeyView!  // 53
-    @IBOutlet weak var l_option: KeyView!  // 54
-    @IBOutlet weak var l_command: KeyView!  // 55
+    @IBOutlet weak var l_option: KeyView!  // 54  Opt
+    @IBOutlet weak var l_command: KeyView!  // 55  ⌘
     @IBOutlet weak var spase: KeyView!  // 56
-    @IBOutlet weak var r_command: KeyView!  // 57
-    @IBOutlet weak var r_option: KeyView!  // 58
+    @IBOutlet weak var r_command: KeyView!  // 57  ⌘
+    @IBOutlet weak var r_option: KeyView!  // 58 Opt
     @IBOutlet weak var r_control: KeyView!  // 59 Ctrl
     @IBOutlet weak var Fn: KeyView!  // 60
     
@@ -84,6 +88,7 @@ class ViewController: NSViewController {
     
     // shiftキーの状態を保存
     var isShift: Bool = false
+    var sideOfShift = side.none
     
     let keyDataClass = KeysDataManager.sharedInstance
     let TextDataClass = TextManager.sharedInstance
@@ -91,7 +96,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal]
+        let keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
         keyDataClass.loadWord()
         
@@ -145,11 +150,17 @@ class ViewController: NSViewController {
     override func flagsChanged(with event: NSEvent) {
         // print(event.keyCode)
         let typedKey = keyDataClass.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
-        print(typedKey)
+        print("apple: \(typedKey)")
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.shift]:
             print("shift key is pressed")
             self.isShift = true
+            if typedKey == "left_shift" {
+                self.sideOfShift = side.left
+            }
+            if typedKey == "right_shift" {
+                self.sideOfShift = side.right
+            }
         case [.control]:
             print("control key is pressed")
         case [.option] :
@@ -181,6 +192,7 @@ class ViewController: NSViewController {
         default:
             print("no modifier keys are pressed")
             self.isShift = false
+            self.sideOfShift = side.none
         }
     }
 }

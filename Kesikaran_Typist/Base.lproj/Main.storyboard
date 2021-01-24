@@ -1443,7 +1443,6 @@
                         <outlet property="five" destination="nyh-SJ-twi" id="g7v-aH-fg1"/>
                         <outlet property="four" destination="Hfy-xT-lsd" id="GCG-c6-t3O"/>
                         <outlet property="hyphen" destination="pPM-jn-dzq" id="clH-YU-djW"/>
-                        <outlet property="key" destination="I4p-Vd-QUt" id="bzZ-GN-p8B"/>
                         <outlet property="l_command" destination="Mr1-wN-JJo" id="nwl-tc-bFy"/>
                         <outlet property="l_control" destination="ZGP-1v-Zhi" id="ybV-CD-iEU"/>
                         <outlet property="l_option" destination="hjz-dx-4NG" id="fxh-gY-U2s"/>
@@ -1456,10 +1455,10 @@
                         <outlet property="r_command" destination="cV2-gW-37B" id="WUd-vj-ww3"/>
                         <outlet property="r_control" destination="Lmv-IH-ust" id="f5B-Di-xk1"/>
                         <outlet property="r_option" destination="9e5-sP-BpV" id="MUL-LK-xKC"/>
+                        <outlet property="r_shift" destination="I4p-Vd-QUt" id="EmH-v7-ncJ"/>
                         <outlet property="r_sq_bracket" destination="al6-TW-0mP" id="qil-Is-xaV"/>
                         <outlet property="returnKey" destination="U9u-6t-klA" id="ZB8-nl-tLk"/>
                         <outlet property="seven" destination="0o8-Rr-qxT" id="75U-Or-ymg"/>
-                        <outlet property="shift" destination="I4p-Vd-QUt" id="q0D-gQ-1nr"/>
                         <outlet property="six" destination="EOe-nm-LDa" id="2Ce-sw-GWS"/>
                         <outlet property="slash" destination="cqB-DL-NzF" id="PA9-qv-H2Y"/>
                         <outlet property="spase" destination="vg2-fK-nRQ" id="M9D-3R-ntO"/>
