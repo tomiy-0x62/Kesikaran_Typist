@@ -19,7 +19,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
     @IBOutlet weak var typedKeyLabel: NSTextField!    // asdf
     @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
-    
+    // 全キーを手動で接続した。 これは大変けしからん実装である
+    // しかし、outlet collection は macOS では使えない(大昔は使えたらしい)から無理。
+    // 仕方なくこの実装にした。
     @IBOutlet weak var accent_grave: KeyView!  // 0
     @IBOutlet weak var one: KeyView!  // 1
     @IBOutlet weak var two: KeyView!  // 2
@@ -90,8 +92,8 @@ class ViewController: NSViewController {
     var isShift: Bool = false
     var sideOfShift = side.none
     
-    let keyDataClass = KeysDataManager.sharedInstance
-    let TextDataClass = TextManager.sharedInstance
+    let keyDataClass = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
+    let TextDataClass = TextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,8 +129,8 @@ class ViewController: NSViewController {
     }
     
     func genKeycodesforNum(keycode: UInt16) -> [Int] {
-        // shift + ○ に対応させる
-        // shift + 56 -> [421, 56]
+        // shift + ○ に対応させる (shiftの左右を区別する)
+        // right shift + 32 -> [60, 32]
         // 48 -> [48]
         if isShift {
             switch sideOfShift{
