@@ -25,19 +25,31 @@ class SampleTextManager {
     static let sharedInstance = SampleTextManager()
     
     var sampleTextArray: Array<SampleTextData> = []
-    var textNum = 0
+    var textNum = 0 // sequentialText()用 現在のテキスト番号
+    
+    var nowText = SampleTextData(text: "サンプル", kana: "さんぷる")
+    var nowTextIndex: Int = 0 // 今何文字目まで入力したか？
     
     //初期化処理
     private init(){
         //シングルトンであることを保証するためにprivateで宣言
     }
     
-    func randomText() -> SampleTextData {
-        
-        if sampleTextArray.count == 0 {
-            return SampleTextData(text: "けしからん！", kana: "けしからん！")
+    func sequentialText() {
+        // 順番にテキストを選択
+        self.nowText = sampleTextArray[textNum]
+        textNum += 1
+        if sampleTextArray.count == textNum {
+            textNum = 0
         }
-        return sampleTextArray.randomElement()!
+    }
+    
+    func randomText() {
+        // ランダムにテキストを選択
+        if sampleTextArray.count == 0 {
+            self.nowText = SampleTextData(text: "けしからん！", kana: "けしからん！")
+        }
+        self.nowText = sampleTextArray.randomElement()!
         
     }
     
@@ -71,7 +83,6 @@ class SampleTextManager {
         }else{
             print("Fail to get URL of keys.csv")
         }
-        self.textNum = sampleTextArray.count
         
     }
     

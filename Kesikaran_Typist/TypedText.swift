@@ -13,7 +13,6 @@ class TextManager {
     static let sharedInstance = TextManager()
     
     //キーデータを格納するための配列
-    var keyData = ""
     var StrData = ""
     
     //初期化処理
@@ -24,19 +23,14 @@ class TextManager {
     func update(key: String, char: String){
         if key == "return" {
             self.StrData = ""
-            self.keyData = ""
         } else if key == "delete" {
             self.StrData = String(self.StrData.dropLast(1))
-            self.keyData = String(self.keyData.dropLast(1))
         }  else if key == "space" {
             self.StrData += " "
-            self.keyData += " "
         } else if key == "Not found" {
             self.StrData += ""
-            self.keyData += ""
         } else{
             self.StrData += char
-            self.keyData += key
         }
     }
     

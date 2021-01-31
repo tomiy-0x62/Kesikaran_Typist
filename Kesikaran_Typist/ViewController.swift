@@ -87,6 +87,8 @@ class ViewController: NSViewController {
     
     var keyViewList: Array<KeyView> = []
     
+
+    
     // shiftキーの状態を保存
     var isShift: Bool = false
     var sideOfShift = side.none
@@ -103,7 +105,8 @@ class ViewController: NSViewController {
         keyDataClass.loadWord()
         sampleTextClass.loadSampleText()
         
-        sampleTextlabel.stringValue = sampleTextClass.randomText().text
+        sampleTextClass.sequentialText()
+        sampleTextlabel.stringValue = sampleTextClass.nowText.text
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
@@ -148,8 +151,18 @@ class ViewController: NSViewController {
         return [Int(keycode)]
     }
     
-    func checkText() -> Bool {
-        return true
+    func checkText(typedKey: String) -> Bool {
+        let text = sampleTextClass.nowText.kana
+        if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleTextClass.nowTextIndex)]) {
+            sampleTextClass.nowTextIndex += 1
+            print("+++++++++++++++++++++++++++++++")
+            return true
+        }
+        return false
+    }
+    
+    func searchNextKey() {
+        //
     }
     
     override func keyDown(with event: NSEvent) {
@@ -164,6 +177,7 @@ class ViewController: NSViewController {
         TextDataClass.update(key: typedKeys, char: typedChar)
         typedKanaLabel.stringValue = TextDataClass.StrData
         print("typedKeyNums: \(typedKeyNums)")
+        // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {
             keyViewList[keyNum].turnOn()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
