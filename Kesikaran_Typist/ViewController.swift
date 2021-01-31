@@ -93,8 +93,8 @@ class ViewController: NSViewController {
     var sideOfShift = side.none
     
     let keyDataClass = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
-    let TextDataClass = TypedTextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
-    let sampleTextClass = SampleSentenceManeger.sharedInstance  // 例文を管理するクラスのインスタンス
+    let typedTextClass = TypedTextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
+    let sampleSentenceClass = SampleSentenceManeger.sharedInstance  // 例文を管理するクラスのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,10 +102,10 @@ class ViewController: NSViewController {
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
         keyDataClass.loadWord()
-        sampleTextClass.loadSampleText()
+        sampleSentenceClass.loadSampleSentence()
         
-        sampleTextClass.sequentialText()
-        sampleTextlabel.stringValue = sampleTextClass.nowText.sentence
+        sampleSentenceClass.setSequentialSentence()
+        sampleTextlabel.stringValue = sampleSentenceClass.nowSentence.sentence
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
@@ -151,10 +151,9 @@ class ViewController: NSViewController {
     }
     
     func checkText(typedKey: String) -> Bool {
-        let text = sampleTextClass.nowText.kana
-        if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleTextClass.nowTextIndex)]) {
-            sampleTextClass.nowTextIndex += 1
-            print("+++++++++++++++++++++++++++++++")
+        let text = sampleSentenceClass.nowSentence.kana
+        if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceClass.nowSentenceIndex)]) {
+            sampleSentenceClass.nowSentenceIndex += 1
             return true
         }
         return false
@@ -173,8 +172,8 @@ class ViewController: NSViewController {
         print("typedKey: \(typedKeys)")
         typedLabel.stringValue = ("Typed: \(typedKeys)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
-        TextDataClass.update(key: typedKeys, char: typedChar)
-        typedKanaLabel.stringValue = TextDataClass.StrData
+        typedTextClass.update(key: typedKeys, char: typedChar)
+        typedKanaLabel.stringValue = typedTextClass.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {

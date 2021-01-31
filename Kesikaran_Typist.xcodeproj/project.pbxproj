@@ -17,7 +17,7 @@
 		7741F3E9258E03AC001D7A6E /* Kesikaran_TypistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3E8258E03AC001D7A6E /* Kesikaran_TypistTests.swift */; };
 		7741F3F4258E03AC001D7A6E /* Kesikaran_TypistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */; };
 		7767A81E25BB13CA003A4A53 /* KeybordBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7767A81D25BB13CA003A4A53 /* KeybordBack.swift */; };
-		778231B725C6B62000FB4527 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 778231B625C6B62000FB4527 /* text.txt */; };
+		778231B725C6B62000FB4527 /* SampleSentence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 778231B625C6B62000FB4527 /* SampleSentence.txt */; };
 		778231BC25C6B65300FB4527 /* SampleSentenceManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */; };
 		77DD38DE258E367C0049F204 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD38DD258E367C0049F204 /* CustomView.swift */; };
 		77DD38EA258E43B70049F204 /* keys.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77DD38E8258E43B70049F204 /* keys.csv */; };
@@ -58,7 +58,7 @@
 		7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kesikaran_TypistUITests.swift; sourceTree = "<group>"; };
 		7741F3F5258E03AC001D7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7767A81D25BB13CA003A4A53 /* KeybordBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordBack.swift; sourceTree = "<group>"; };
-		778231B625C6B62000FB4527 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		778231B625C6B62000FB4527 /* SampleSentence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleSentence.txt; sourceTree = "<group>"; };
 		778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSentenceManeger.swift; sourceTree = "<group>"; };
 		77DD38DD258E367C0049F204 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		77DD38E8258E43B70049F204 /* keys.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keys.csv; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */,
 				77347F8025B81FCA006EF40E /* TypedTextManager.swift */,
 				77DD38E8258E43B70049F204 /* keys.csv */,
-				778231B625C6B62000FB4527 /* text.txt */,
+				778231B625C6B62000FB4527 /* SampleSentence.txt */,
 				77DD38DD258E367C0049F204 /* CustomView.swift */,
 				77347F8525B83237006EF40E /* KeyView.swift */,
 				7741F3D9258E03AC001D7A6E /* Assets.xcassets */,
@@ -254,7 +254,7 @@
 				7741F3DA258E03AC001D7A6E /* Assets.xcassets in Resources */,
 				77DD38EA258E43B70049F204 /* keys.csv in Resources */,
 				7741F3DD258E03AC001D7A6E /* Main.storyboard in Resources */,
-				778231B725C6B62000FB4527 /* text.txt in Resources */,
+				778231B725C6B62000FB4527 /* SampleSentence.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

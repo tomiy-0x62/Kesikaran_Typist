@@ -25,42 +25,42 @@ class SampleSentenceManeger {
     static let sharedInstance = SampleSentenceManeger()
     
     var sampleSentenceArray: Array<SampleSentenceData> = []
-    var textNum = 0 // sequentialText()用 現在のテキスト番号
+    var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
     
-    var nowText = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
-    var nowTextIndex: Int = 0 // 今何文字目まで入力したか？
+    var nowSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
+    var nowSentenceIndex: Int = 0 // 今何文字目まで入力したか？
     
     //初期化処理
     private init(){
         //シングルトンであることを保証するためにprivateで宣言
     }
     
-    func sequentialText() {
+    func setSequentialSentence() {
         // 順番にテキストを選択
-        self.nowText = sampleSentenceArray[textNum]
-        textNum += 1
-        if sampleSentenceArray.count == textNum {
-            textNum = 0
+        self.nowSentence = sampleSentenceArray[sentenceNum]
+        sentenceNum += 1
+        if sampleSentenceArray.count == sentenceNum {
+            sentenceNum = 0
         }
     }
     
-    func randomText() {
+    func setRandomSentence() {
         // ランダムにテキストを選択
         if sampleSentenceArray.count == 0 {
-            self.nowText = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
+            self.nowSentence = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
         }
-        self.nowText = sampleSentenceArray.randomElement()!
+        self.nowSentence = sampleSentenceArray.randomElement()!
         
     }
     
-    func loadSampleText() {
+    func loadSampleSentence() {
         
         
         //格納済みのデータがあれば一旦削除
         sampleSentenceArray.removeAll()
         
         //CSVファイルパスを取得
-        if let csvFilePath = Bundle.main.url(forResource: "text", withExtension: "txt") {
+        if let csvFilePath = Bundle.main.url(forResource: "SampleSentence", withExtension: "txt") {
             let csvFilePathStr: String = csvFilePath.path
             // print(csvFilePathStr)
             

@@ -24,7 +24,7 @@ class KeyView: NSImageView {
     func  turnOn() {
         let imageLayer = CALayer()
         let keyImage = self.image
-        print(keyImage!)
+        // print(keyImage!)
         bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
         bgLayer.cornerRadius = 5
@@ -38,7 +38,7 @@ class KeyView: NSImageView {
     
     func turnOff() {
         self.layer?.sublayers?.forEach {
-            print(type(of: $0))
+            // print(type(of: $0))
             if type(of: $0) == CALayer.self {
                 $0.removeFromSuperlayer()
                 // print("hello")
