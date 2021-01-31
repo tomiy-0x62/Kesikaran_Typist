@@ -88,14 +88,13 @@ class ViewController: NSViewController {
     var keyViewList: Array<KeyView> = []
     
 
-    
     // shiftキーの状態を保存
     var isShift: Bool = false
     var sideOfShift = side.none
     
     let keyDataClass = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
-    let TextDataClass = TextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
-    let sampleTextClass = SampleTextManager.sharedInstance  // 例文を管理するクラスのインスタンス
+    let TextDataClass = TypedTextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
+    let sampleTextClass = SampleSentenceManeger.sharedInstance  // 例文を管理するクラスのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,7 +105,7 @@ class ViewController: NSViewController {
         sampleTextClass.loadSampleText()
         
         sampleTextClass.sequentialText()
-        sampleTextlabel.stringValue = sampleTextClass.nowText.text
+        sampleTextlabel.stringValue = sampleTextClass.nowText.sentence
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)

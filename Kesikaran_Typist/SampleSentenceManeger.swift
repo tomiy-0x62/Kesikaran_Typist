@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct SampleTextData {
+struct SampleSentenceData {
     
-    let text: String
+    let sentence: String
     let kana: String
     
     //クラスが生成された時の処理
-    init(text: String, kana: String) {
-        self.text = text
+    init(sentence: String, kana: String) {
+        self.sentence = sentence
         self.kana = kana
     }
 }
 
-class SampleTextManager {
+class SampleSentenceManeger {
     
     //シングルトンオブジェクトを作成
-    static let sharedInstance = SampleTextManager()
+    static let sharedInstance = SampleSentenceManeger()
     
-    var sampleTextArray: Array<SampleTextData> = []
+    var sampleSentenceArray: Array<SampleSentenceData> = []
     var textNum = 0 // sequentialText()用 現在のテキスト番号
     
-    var nowText = SampleTextData(text: "サンプル", kana: "さんぷる")
+    var nowText = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
     var nowTextIndex: Int = 0 // 今何文字目まで入力したか？
     
     //初期化処理
@@ -37,19 +37,19 @@ class SampleTextManager {
     
     func sequentialText() {
         // 順番にテキストを選択
-        self.nowText = sampleTextArray[textNum]
+        self.nowText = sampleSentenceArray[textNum]
         textNum += 1
-        if sampleTextArray.count == textNum {
+        if sampleSentenceArray.count == textNum {
             textNum = 0
         }
     }
     
     func randomText() {
         // ランダムにテキストを選択
-        if sampleTextArray.count == 0 {
-            self.nowText = SampleTextData(text: "けしからん！", kana: "けしからん！")
+        if sampleSentenceArray.count == 0 {
+            self.nowText = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
         }
-        self.nowText = sampleTextArray.randomElement()!
+        self.nowText = sampleSentenceArray.randomElement()!
         
     }
     
@@ -57,7 +57,7 @@ class SampleTextManager {
         
         
         //格納済みのデータがあれば一旦削除
-        sampleTextArray.removeAll()
+        sampleSentenceArray.removeAll()
         
         //CSVファイルパスを取得
         if let csvFilePath = Bundle.main.url(forResource: "text", withExtension: "txt") {
@@ -71,9 +71,9 @@ class SampleTextManager {
                 for row in rows {
                     // スペースで分割
                     let values = row.components(separatedBy: ",")
-                    let sampleTextData = SampleTextData(text: values[0], kana: values[1])
+                    let sampleTextData = SampleSentenceData(sentence: values[0], kana: values[1])
                     // print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
-                    self.sampleTextArray.append(sampleTextData)
+                    self.sampleSentenceArray.append(sampleTextData)
                     // print(keyData)
                 }
             } else {

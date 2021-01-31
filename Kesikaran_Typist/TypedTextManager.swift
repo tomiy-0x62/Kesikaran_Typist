@@ -7,10 +7,10 @@
 
 import Foundation
 
-class TextManager {
+class TypedTextManager {
     
     //シングルトンオブジェクトを作成
-    static let sharedInstance = TextManager()
+    static let sharedInstance = TypedTextManager()
     
     //キーデータを格納するための配列
     var StrData = ""
