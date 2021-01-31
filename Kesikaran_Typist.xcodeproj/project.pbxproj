@@ -17,6 +17,8 @@
 		7741F3E9258E03AC001D7A6E /* Kesikaran_TypistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3E8258E03AC001D7A6E /* Kesikaran_TypistTests.swift */; };
 		7741F3F4258E03AC001D7A6E /* Kesikaran_TypistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */; };
 		7767A81E25BB13CA003A4A53 /* KeybordBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7767A81D25BB13CA003A4A53 /* KeybordBack.swift */; };
+		778231B725C6B62000FB4527 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 778231B625C6B62000FB4527 /* text.txt */; };
+		778231BC25C6B65300FB4527 /* SampleTextManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778231BB25C6B65300FB4527 /* SampleTextManeger.swift */; };
 		77DD38DE258E367C0049F204 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD38DD258E367C0049F204 /* CustomView.swift */; };
 		77DD38EA258E43B70049F204 /* keys.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77DD38E8258E43B70049F204 /* keys.csv */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kesikaran_TypistUITests.swift; sourceTree = "<group>"; };
 		7741F3F5258E03AC001D7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7767A81D25BB13CA003A4A53 /* KeybordBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordBack.swift; sourceTree = "<group>"; };
+		778231B625C6B62000FB4527 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		778231BB25C6B65300FB4527 /* SampleTextManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTextManeger.swift; sourceTree = "<group>"; };
 		77DD38DD258E367C0049F204 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		77DD38E8258E43B70049F204 /* keys.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keys.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +115,10 @@
 				7741F3D5258E03AB001D7A6E /* AppDelegate.swift */,
 				7741F3D7258E03AB001D7A6E /* ViewController.swift */,
 				77060CBE2594DF7C00C97BC6 /* lordCSV.swift */,
+				778231BB25C6B65300FB4527 /* SampleTextManeger.swift */,
 				77347F8025B81FCA006EF40E /* TypedText.swift */,
 				77DD38E8258E43B70049F204 /* keys.csv */,
+				778231B625C6B62000FB4527 /* text.txt */,
 				77DD38DD258E367C0049F204 /* CustomView.swift */,
 				77347F8525B83237006EF40E /* KeyView.swift */,
 				7741F3D9258E03AC001D7A6E /* Assets.xcassets */,
@@ -248,6 +254,7 @@
 				7741F3DA258E03AC001D7A6E /* Assets.xcassets in Resources */,
 				77DD38EA258E43B70049F204 /* keys.csv in Resources */,
 				7741F3DD258E03AC001D7A6E /* Main.storyboard in Resources */,
+				778231B725C6B62000FB4527 /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778231BC25C6B65300FB4527 /* SampleTextManeger.swift in Sources */,
 				77DD38DE258E367C0049F204 /* CustomView.swift in Sources */,
 				77060CBF2594DF7C00C97BC6 /* lordCSV.swift in Sources */,
 				7767A81E25BB13CA003A4A53 /* KeybordBack.swift in Sources */,

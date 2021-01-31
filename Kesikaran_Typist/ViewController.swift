@@ -14,10 +14,9 @@ enum side {
 class ViewController: NSViewController {
     
     @IBOutlet weak var textField: NSTextField! // textField
-    @IBOutlet weak var label: NSTextField! // Hello, World
+    @IBOutlet weak var sampleTextlabel: NSTextField! // Hello, World
     @IBOutlet weak var typedLabel: NSTextField!  // Typed: a
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
-    @IBOutlet weak var typedKeyLabel: NSTextField!    // asdf
     @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
     // 全キーを手動で接続した。 これは大変けしからん実装である
     // しかし、outlet collection は macOS では使えない(大昔は使えたらしい)から無理。
@@ -94,6 +93,7 @@ class ViewController: NSViewController {
     
     let keyDataClass = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
     let TextDataClass = TextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
+    let sampleTextClass = SampleTextManager.sharedInstance  // 例文を管理するクラスのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +101,9 @@ class ViewController: NSViewController {
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
         keyDataClass.loadWord()
+        sampleTextClass.loadSampleText()
+        
+        sampleTextlabel.stringValue = sampleTextClass.randomText().text
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
@@ -145,6 +148,10 @@ class ViewController: NSViewController {
         return [Int(keycode)]
     }
     
+    func checkText() -> Bool {
+        return true
+    }
+    
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
@@ -155,7 +162,6 @@ class ViewController: NSViewController {
         typedLabel.stringValue = ("Typed: \(typedKeys)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
         TextDataClass.update(key: typedKeys, char: typedChar)
-        typedKeyLabel.stringValue = TextDataClass.keyData
         typedKanaLabel.stringValue = TextDataClass.StrData
         print("typedKeyNums: \(typedKeyNums)")
         for keyNum in typedKeyNums {
