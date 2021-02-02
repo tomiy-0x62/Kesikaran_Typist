@@ -14,7 +14,9 @@ enum side {
 class ViewController: NSViewController {
     
     @IBOutlet weak var textField: NSTextField! // textField
-    @IBOutlet weak var sampleTextlabel: NSTextField! // Hello, World
+    @IBOutlet weak var sampleTextlabel: NSTextField! // 数年に１回レベルの大変楽しい日本語訳を発見いたしました
+    @IBOutlet weak var kanaTextlabel: NSTextField!  // すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
+    
     @IBOutlet weak var typedLabel: NSTextField!  // Typed: a
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
     @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
@@ -106,6 +108,7 @@ class ViewController: NSViewController {
         
         sampleSentenceClass.setSequentialSentence()
         sampleTextlabel.stringValue = sampleSentenceClass.nowSentence.sentence
+        kanaTextlabel.stringValue = sampleSentenceClass.nowSentence.kana
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)

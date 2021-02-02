@@ -710,7 +710,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-di-hlu">
-                                <rect key="frame" x="570" y="181" width="300" height="40"/>
+                                <rect key="frame" x="570" y="140" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="E4M-a8-Biw"/>
                                     <constraint firstAttribute="width" constant="300" id="Klc-K8-Jgw"/>
@@ -722,7 +722,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-KR-Wg0">
-                                <rect key="frame" x="673" y="103" width="95" height="24"/>
+                                <rect key="frame" x="673" y="62" width="95" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Typed: XX" id="Yp1-qP-g7I">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -730,7 +730,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7">
-                                <rect key="frame" x="679" y="142" width="82" height="24"/>
+                                <rect key="frame" x="679" y="101" width="82" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Char: XX" id="NRB-7T-62j">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1368,8 +1368,19 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vog-A3-3bB">
-                                <rect key="frame" x="652" y="246" width="136" height="21"/>
+                                <rect key="frame" x="652" y="205" width="136" height="21"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="TypedCharLabel" id="R4K-4B-4Em">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="buy-XK-RdO" userLabel="Kana TextLabel">
+                                <rect key="frame" x="698" y="246" width="45" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OLA-H6-4Vz"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Kana" id="QMD-Nb-oPr">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1377,6 +1388,8 @@
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="buy-XK-RdO" firstAttribute="top" secondItem="dTb-q5-1Xa" secondAttribute="bottom" constant="20" id="1II-cR-AOa"/>
+                            <constraint firstItem="buy-XK-RdO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="1U9-jH-Q9f"/>
                             <constraint firstItem="vog-A3-3bB" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="6R4-rK-Qxe"/>
                             <constraint firstItem="IQQ-fd-8P7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Bvs-Ou-Lye"/>
                             <constraint firstItem="Zxa-KR-Wg0" firstAttribute="top" secondItem="IQQ-fd-8P7" secondAttribute="bottom" constant="15" id="C6n-U7-sbZ"/>
@@ -1384,11 +1397,11 @@
                             <constraint firstItem="YbI-aM-eKf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="DPF-kv-ebO"/>
                             <constraint firstItem="dTb-q5-1Xa" firstAttribute="top" secondItem="YbI-aM-eKf" secondAttribute="bottom" constant="40" id="VLg-el-4My"/>
                             <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ZBD-A0-0Uw"/>
-                            <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="dTb-q5-1Xa" secondAttribute="bottom" constant="20" id="huv-Aq-NE2"/>
                             <constraint firstItem="qHt-di-hlu" firstAttribute="top" secondItem="vog-A3-3bB" secondAttribute="bottom" constant="25" id="k4U-bS-fNv"/>
                             <constraint firstItem="IQQ-fd-8P7" firstAttribute="top" secondItem="qHt-di-hlu" secondAttribute="bottom" constant="15" id="pzv-e5-fEK"/>
                             <constraint firstItem="Zxa-KR-Wg0" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="rdh-dN-Hyk"/>
                             <constraint firstItem="dTb-q5-1Xa" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sj9-rj-tt6"/>
+                            <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="buy-XK-RdO" secondAttribute="bottom" constant="20" id="uPC-dZ-AfH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
@@ -1436,6 +1449,7 @@
                         <outlet property="five" destination="nyh-SJ-twi" id="g7v-aH-fg1"/>
                         <outlet property="four" destination="Hfy-xT-lsd" id="GCG-c6-t3O"/>
                         <outlet property="hyphen" destination="pPM-jn-dzq" id="clH-YU-djW"/>
+                        <outlet property="kanaTextlabel" destination="buy-XK-RdO" id="qkB-m7-pDI"/>
                         <outlet property="l_command" destination="Mr1-wN-JJo" id="nwl-tc-bFy"/>
                         <outlet property="l_control" destination="ZGP-1v-Zhi" id="ybV-CD-iEU"/>
                         <outlet property="l_option" destination="hjz-dx-4NG" id="fxh-gY-U2s"/>
