@@ -22,7 +22,7 @@ class TypedTextManager {
     
     func update(key: String, char: String){
         if key == "return" {
-            self.StrData = ""
+            // self.StrData = ""
         } else if key == "delete" {
             self.StrData = String(self.StrData.dropLast(1))
         }  else if key == "space" {

@@ -709,20 +709,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1440" height="738"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qHt-di-hlu">
-                                <rect key="frame" x="570" y="140" width="300" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="E4M-a8-Biw"/>
-                                    <constraint firstAttribute="width" constant="300" id="Klc-K8-Jgw"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="OW4-dQ-LFL">
-                                    <font key="font" metaFont="system" size="28"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-KR-Wg0">
-                                <rect key="frame" x="673" y="62" width="95" height="24"/>
+                                <rect key="frame" x="673" y="122" width="95" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Typed: XX" id="Yp1-qP-g7I">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -730,7 +718,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7">
-                                <rect key="frame" x="679" y="101" width="82" height="24"/>
+                                <rect key="frame" x="679" y="161" width="82" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Char: XX" id="NRB-7T-62j">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1396,9 +1384,7 @@
                             <constraint firstItem="YbI-aM-eKf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="Ca5-4c-3rQ"/>
                             <constraint firstItem="YbI-aM-eKf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="DPF-kv-ebO"/>
                             <constraint firstItem="dTb-q5-1Xa" firstAttribute="top" secondItem="YbI-aM-eKf" secondAttribute="bottom" constant="40" id="VLg-el-4My"/>
-                            <constraint firstItem="qHt-di-hlu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ZBD-A0-0Uw"/>
-                            <constraint firstItem="qHt-di-hlu" firstAttribute="top" secondItem="vog-A3-3bB" secondAttribute="bottom" constant="25" id="k4U-bS-fNv"/>
-                            <constraint firstItem="IQQ-fd-8P7" firstAttribute="top" secondItem="qHt-di-hlu" secondAttribute="bottom" constant="15" id="pzv-e5-fEK"/>
+                            <constraint firstItem="IQQ-fd-8P7" firstAttribute="top" secondItem="vog-A3-3bB" secondAttribute="bottom" constant="20" id="aSL-C3-EGW"/>
                             <constraint firstItem="Zxa-KR-Wg0" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="rdh-dN-Hyk"/>
                             <constraint firstItem="dTb-q5-1Xa" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sj9-rj-tt6"/>
                             <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="buy-XK-RdO" secondAttribute="bottom" constant="20" id="uPC-dZ-AfH"/>
@@ -1470,7 +1456,6 @@
                         <outlet property="slash" destination="cqB-DL-NzF" id="PA9-qv-H2Y"/>
                         <outlet property="spase" destination="vg2-fK-nRQ" id="M9D-3R-ntO"/>
                         <outlet property="tab" destination="jFW-qo-MPf" id="Rd1-oR-T9v"/>
-                        <outlet property="textField" destination="qHt-di-hlu" id="wkU-Af-xcd"/>
                         <outlet property="three" destination="K4o-hY-zfI" id="zvG-7p-oJP"/>
                         <outlet property="two" destination="bzG-QL-5Jd" id="td5-qn-2WG"/>
                         <outlet property="typedCharLabel" destination="IQQ-fd-8P7" id="ZP9-4P-F5d"/>

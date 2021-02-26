@@ -13,7 +13,7 @@ enum side {
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var textField: NSTextField! // textField
+    // @IBOutlet weak var textField: NSTextField! // textField
     @IBOutlet weak var sampleSentenceLabel: NSTextField! // 数年に１回レベルの大変楽しい日本語訳を発見いたしました
     @IBOutlet weak var kanaSampleSentenceLabel: NSTextField!  // すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
     
@@ -100,8 +100,6 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(textField.isEditable = false)
         
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         

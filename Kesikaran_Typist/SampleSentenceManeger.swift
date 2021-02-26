@@ -38,7 +38,7 @@ class SampleSentenceManeger {
     func setSequentialSentence() {
         // 順番にテキストを選択
         // self.nowSentence = sampleSentenceArray[sentenceNum]
-        self.nowSentence = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
+        self.nowSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
         sentenceNum += 1
         if sampleSentenceArray.count == sentenceNum {
             sentenceNum = 0
@@ -48,7 +48,7 @@ class SampleSentenceManeger {
     func setRandomSentence() {
         // ランダムにテキストを選択
         if sampleSentenceArray.count == 0 {
-            self.nowSentence = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
+            self.nowSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
         }
         self.nowSentence = sampleSentenceArray.randomElement()!
     }
