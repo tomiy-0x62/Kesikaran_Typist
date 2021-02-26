@@ -1356,7 +1356,7 @@
                                     <constraint firstItem="hjz-dx-4NG" firstAttribute="top" secondItem="9v0-O7-gYC" secondAttribute="bottom" constant="5" id="zvD-6Y-Qcr"/>
                                 </constraints>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-q5-1Xa">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-q5-1Xa" userLabel="Sample Sentence Label">
                                 <rect key="frame" x="688" y="287" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Os8-xf-f92"/>
@@ -1375,7 +1375,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="buy-XK-RdO" userLabel="Kana TextLabel">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="buy-XK-RdO" userLabel="Kana Sample Sentence Label">
                                 <rect key="frame" x="698" y="246" width="45" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="OLA-H6-4Vz"/>
@@ -1449,7 +1449,7 @@
                         <outlet property="five" destination="nyh-SJ-twi" id="g7v-aH-fg1"/>
                         <outlet property="four" destination="Hfy-xT-lsd" id="GCG-c6-t3O"/>
                         <outlet property="hyphen" destination="pPM-jn-dzq" id="clH-YU-djW"/>
-                        <outlet property="kanaTextlabel" destination="buy-XK-RdO" id="qkB-m7-pDI"/>
+                        <outlet property="kanaSampleSentenceLabel" destination="buy-XK-RdO" id="g4z-fs-oqx"/>
                         <outlet property="l_command" destination="Mr1-wN-JJo" id="nwl-tc-bFy"/>
                         <outlet property="l_control" destination="ZGP-1v-Zhi" id="ybV-CD-iEU"/>
                         <outlet property="l_option" destination="hjz-dx-4NG" id="fxh-gY-U2s"/>
@@ -1464,7 +1464,7 @@
                         <outlet property="r_shift" destination="I4p-Vd-QUt" id="EmH-v7-ncJ"/>
                         <outlet property="r_sq_bracket" destination="al6-TW-0mP" id="qil-Is-xaV"/>
                         <outlet property="returnKey" destination="U9u-6t-klA" id="ZB8-nl-tLk"/>
-                        <outlet property="sampleTextlabel" destination="dTb-q5-1Xa" id="TmX-o3-w0q"/>
+                        <outlet property="sampleSentenceLabel" destination="dTb-q5-1Xa" id="WkV-JC-qfC"/>
                         <outlet property="seven" destination="0o8-Rr-qxT" id="75U-Or-ymg"/>
                         <outlet property="six" destination="EOe-nm-LDa" id="2Ce-sw-GWS"/>
                         <outlet property="slash" destination="cqB-DL-NzF" id="PA9-qv-H2Y"/>

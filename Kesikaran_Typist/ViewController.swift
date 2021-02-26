@@ -14,8 +14,8 @@ enum side {
 class ViewController: NSViewController {
     
     @IBOutlet weak var textField: NSTextField! // textField
-    @IBOutlet weak var sampleTextlabel: NSTextField! // 数年に１回レベルの大変楽しい日本語訳を発見いたしました
-    @IBOutlet weak var kanaTextlabel: NSTextField!  // すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
+    @IBOutlet weak var sampleSentenceLabel: NSTextField! // 数年に１回レベルの大変楽しい日本語訳を発見いたしました
+    @IBOutlet weak var kanaSampleSentenceLabel: NSTextField!  // すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
     
     @IBOutlet weak var typedLabel: NSTextField!  // Typed: a
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
@@ -101,14 +101,16 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(textField.isEditable = false)
+        
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
         keyDataClass.loadWord()
         sampleSentenceClass.loadSampleSentence()
         
         sampleSentenceClass.setSequentialSentence()
-        sampleTextlabel.stringValue = sampleSentenceClass.nowSentence.sentence
-        kanaTextlabel.stringValue = sampleSentenceClass.nowSentence.kana
+        sampleSentenceLabel.stringValue = sampleSentenceClass.nowSentence.sentence
+        kanaSampleSentenceLabel.stringValue = sampleSentenceClass.nowSentence.kanaSentence
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
@@ -154,7 +156,7 @@ class ViewController: NSViewController {
     }
     
     func checkText(typedKey: String) -> Bool {
-        let text = sampleSentenceClass.nowSentence.kana
+        let text = sampleSentenceClass.nowSentence.kanaSentence
         if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceClass.nowSentenceIndex)]) {
             sampleSentenceClass.nowSentenceIndex += 1
             return true

@@ -10,12 +10,12 @@ import Foundation
 struct SampleSentenceData {
     
     let sentence: String
-    let kana: String
+    let kanaSentence: String
     
     //クラスが生成された時の処理
     init(sentence: String, kana: String) {
         self.sentence = sentence
-        self.kana = kana
+        self.kanaSentence = kana
     }
 }
 
@@ -37,7 +37,8 @@ class SampleSentenceManeger {
     
     func setSequentialSentence() {
         // 順番にテキストを選択
-        self.nowSentence = sampleSentenceArray[sentenceNum]
+        // self.nowSentence = sampleSentenceArray[sentenceNum]
+        self.nowSentence = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
         sentenceNum += 1
         if sampleSentenceArray.count == sentenceNum {
             sentenceNum = 0
@@ -50,7 +51,6 @@ class SampleSentenceManeger {
             self.nowSentence = SampleSentenceData(sentence: "けしからん！", kana: "けしからん！")
         }
         self.nowSentence = sampleSentenceArray.randomElement()!
-        
     }
     
     func loadSampleSentence() {
