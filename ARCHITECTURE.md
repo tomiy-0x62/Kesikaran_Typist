@@ -82,6 +82,32 @@ View
 
 ​		ユーザーが入力する例文の読み仮名 ex) すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
 
+・TypedText 
+
+・sampleText
+
+・kanaText
+
+・typed
+
+・typedChar
+
+・typedKana
+
+・typedKeys
+
+・typedKeyNums
+
+・Keycodes
+
+・KeycodesforNum
+
+・Text
+
+・NextKey
+
+・
+
 
 
 ## 設計
@@ -90,7 +116,25 @@ View
 
 1SampleSentence 1ファイル(にする予定)
 
+### 各クラス,構造体,ファイルの役割
 
+・class SampleSentenceManeger 
+
+・struct SampleSentenceData
+
+・class KeybordBack
+
+・class KeyView
+
+・class CustomView
+
+・keys.csv
+
+・class TypedTextManager
+
+・struct KeyData
+
+・class KeysDataManager
 
 
 
