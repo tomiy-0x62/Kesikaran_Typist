@@ -1,5 +1,5 @@
 //
-//  SampleTextManeger.swift
+//  SampleSentenceManeger.swift
 //  Kesikaran_Typist
 //
 //  Created by Tomishige Ryosuke on 2021/01/31.

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77060CBF2594DF7C00C97BC6 /* KeyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */; };
-		77347F8125B81FCA006EF40E /* TypedTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8025B81FCA006EF40E /* TypedTextManager.swift */; };
+		77347F8125B81FCA006EF40E /* TypedKanaSentenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8025B81FCA006EF40E /* TypedKanaSentenceManager.swift */; };
 		77347F8625B83237006EF40E /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8525B83237006EF40E /* KeyView.swift */; };
 		7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D5258E03AB001D7A6E /* AppDelegate.swift */; };
 		7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D7258E03AB001D7A6E /* ViewController.swift */; };
@@ -42,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDataManager.swift; sourceTree = "<group>"; };
-		77347F8025B81FCA006EF40E /* TypedTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedTextManager.swift; sourceTree = "<group>"; };
+		77347F8025B81FCA006EF40E /* TypedKanaSentenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedKanaSentenceManager.swift; sourceTree = "<group>"; };
 		77347F8525B83237006EF40E /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7741F3D2258E03AB001D7A6E /* Kesikaran_Typist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kesikaran_Typist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7741F3D5258E03AB001D7A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				7741F3D7258E03AB001D7A6E /* ViewController.swift */,
 				77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */,
 				778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */,
-				77347F8025B81FCA006EF40E /* TypedTextManager.swift */,
+				77347F8025B81FCA006EF40E /* TypedKanaSentenceManager.swift */,
 				77DD38E8258E43B70049F204 /* keys.csv */,
 				778231B625C6B62000FB4527 /* SampleSentence.txt */,
 				77DD38DD258E367C0049F204 /* CustomView.swift */,
@@ -211,7 +211,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					7741F3D1258E03AB001D7A6E = {
 						CreatedOnToolsVersion = 12.3;
@@ -286,7 +286,7 @@
 				77347F8625B83237006EF40E /* KeyView.swift in Sources */,
 				7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */,
 				7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */,
-				77347F8125B81FCA006EF40E /* TypedTextManager.swift in Sources */,
+				77347F8125B81FCA006EF40E /* TypedKanaSentenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kesikaran_Typist/Kesikaran_Typist.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 56GR6UHHW3;
@@ -475,6 +476,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kesikaran_Typist/Kesikaran_Typist.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 56GR6UHHW3;

@@ -78,13 +78,11 @@ View
 
 ​	ユーザーが入力する例文　ex) 数年に１回レベルの大変楽しい日本語訳を発見いたしました！
 
-・SampleSentence(かな) -> KanaSampleSentence
+・KanaSampleSentence
 
 ​		ユーザーが入力する例文の読み仮名 ex) すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
 
-・TypedText 
-
-・sampleText
+・TypedKanaSentence
 
 ・kanaText
 

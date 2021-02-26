@@ -1,5 +1,5 @@
 //
-//  TypedText.swift
+//  TypedKanaSentenceManager.swift
 //  Kesikaran_Typist
 //
 //  Created by Tomishige Ryosuke on 2021/01/20.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-class TypedTextManager {
+class TypedKanaSentenceManager {
     
     //シングルトンオブジェクトを作成
-    static let sharedInstance = TypedTextManager()
+    static let sharedInstance = TypedKanaSentenceManager()
     
     //キーデータを格納するための配列
     var StrData = ""

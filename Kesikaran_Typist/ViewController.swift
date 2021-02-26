@@ -94,21 +94,21 @@ class ViewController: NSViewController {
     var isShift: Bool = false
     var sideOfShift = side.none
     
-    let keyDataClass = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
-    let typedTextClass = TypedTextManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
-    let sampleSentenceClass = SampleSentenceManeger.sharedInstance  // 例文を管理するクラスのインスタンス
+    let keyDataManager = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
+    let typedKanaSentenceManager = TypedKanaSentenceManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
+    let sampleSentenceManager = SampleSentenceManeger.sharedInstance  // 例文を管理するクラスのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
-        keyDataClass.loadWord()
-        sampleSentenceClass.loadSampleSentence()
+        keyDataManager.loadWord()
+        sampleSentenceManager.loadSampleSentence()
         
-        sampleSentenceClass.setSequentialSentence()
-        sampleSentenceLabel.stringValue = sampleSentenceClass.nowSentence.sentence
-        kanaSampleSentenceLabel.stringValue = sampleSentenceClass.nowSentence.kanaSentence
+        sampleSentenceManager.setSequentialSentence()
+        sampleSentenceLabel.stringValue = sampleSentenceManager.nowSentence.sentence
+        kanaSampleSentenceLabel.stringValue = sampleSentenceManager.nowSentence.kanaSentence
         
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
@@ -154,9 +154,9 @@ class ViewController: NSViewController {
     }
     
     func checkText(typedKey: String) -> Bool {
-        let text = sampleSentenceClass.nowSentence.kanaSentence
-        if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceClass.nowSentenceIndex)]) {
-            sampleSentenceClass.nowSentenceIndex += 1
+        let text = sampleSentenceManager.nowSentence.kanaSentence
+        if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceManager.nowSentenceIndex)]) {
+            sampleSentenceManager.nowSentenceIndex += 1
             return true
         }
         return false
@@ -169,14 +169,14 @@ class ViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        let typedKeys = keyDataClass.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
-        let typedKeyNums = keyDataClass.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
-        let typedChar = keyDataClass.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeys = keyDataManager.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeyNums = keyDataManager.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
+        let typedChar = keyDataManager.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
         print("typedKey: \(typedKeys)")
         typedLabel.stringValue = ("Typed: \(typedKeys)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
-        typedTextClass.update(key: typedKeys, char: typedChar)
-        typedKanaLabel.stringValue = typedTextClass.StrData
+        typedKanaSentenceManager.update(key: typedKeys, char: typedChar)
+        typedKanaLabel.stringValue = typedKanaSentenceManager.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {
@@ -190,7 +190,7 @@ class ViewController: NSViewController {
     
     override func flagsChanged(with event: NSEvent) {
         // print(event.keyCode)
-        let typedKey = keyDataClass.searchKey(keyCode: [Int(event.keyCode)])
+        let typedKey = keyDataManager.searchKey(keyCode: [Int(event.keyCode)])
         print("apple: \(typedKey)")
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.shift]:
