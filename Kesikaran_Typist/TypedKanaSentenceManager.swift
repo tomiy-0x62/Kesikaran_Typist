@@ -23,10 +23,12 @@ class TypedKanaSentenceManager {
     func update(char: String, kana: String){
         if char == "return" {
             // self.StrData = ""
+        } else if char == "tab" {
+            self.StrData += ""
         } else if char == "delete" {
             self.StrData = String(self.StrData.dropLast(1))
         }  else if char == "space" {
-            self.StrData += " "
+            self.StrData += "　"
         } else if char == "Not found" {
             self.StrData += ""
         } else{
