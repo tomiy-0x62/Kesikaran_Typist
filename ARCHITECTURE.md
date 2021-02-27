@@ -92,15 +92,9 @@ View
 
 ・char キーに刻印されている文字　ex) L
 
+・keyNum　 keyViewListの何番目のキーか？
 
-
-・typedKeyNums
-
-・KeycodesforNum
-
-・Text
-
-・NextKey
+・KeycodesforNum　左右のshiftキーを区別したキーコード
 
 
 
@@ -116,6 +110,8 @@ ex) "ぁ" 421,20 "shift_3" 100
 
 "かな"　keycodes "keyChar" keyNum
 
+keyNumを複合キー(shift_3みたいやつ)に割り当てる必要はないけど、なにも割り当てないのは扱いづらいから意味のない値(100)を割り振っておく
+
 ### 各クラス,構造体,ファイルの役割
 
 ・class SampleSentenceManeger 
@@ -124,17 +120,27 @@ ex) "ぁ" 421,20 "shift_3" 100
 
 ・class KeybordBack
 
+​	キーボードの背景をカスタマイズするためのクラス
+
 ・class KeyView
+
+​	ストリーボードに並べたキーのViewに対して背景色を変えるためのクラス
 
 ・class CustomView
 
-・keys.csv
+​	ウィンドウをkeyDownに対応させるためのViewのクラス
 
-・class TypedTextManager
+・class TypedKanaSentenceManager
 
 ・struct KeyData
 
+​	キーのkeycode,kana,char,keynum等を保管する構造体
+
 ・class KeysDataManager
+
+・keys.csv
+
+​	キーのkeycode,kana,char,keynum等を保存したCSVファイル
 
 
 

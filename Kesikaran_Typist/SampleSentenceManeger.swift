@@ -28,7 +28,7 @@ class SampleSentenceManeger {
     var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
     
     var nowSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
-    var nowSentenceIndex: Int = 0 // 今何文字目まで入力したか？
+    // var nowSentenceIndex: Int = 0 // 今何文字目まで入力したか？
     
     //初期化処理
     private init(){

@@ -157,6 +157,7 @@ class ViewController: NSViewController {
         return [Int(keycode)]
     }
     
+    /*
     func checkText(typedKey: String) -> Bool {
         // なにこれ？
         let text = sampleSentenceManager.nowSentence.kanaSentence
@@ -165,7 +166,7 @@ class ViewController: NSViewController {
             return true
         }
         return false
-    }
+    }*/
     
     func searchNextKey() {
         //
@@ -174,9 +175,9 @@ class ViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        let typedKeyChars = keyDataManager.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeyChars = keyDataManager.searchKeyKana(keyCode: genKeycodes(keycode: event.keyCode))
         let typedKeyNums = keyDataManager.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
-        let typedKana = keyDataManager.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKana = keyDataManager.searchKeyChar(keyCode: genKeycodes(keycode: event.keyCode))
         print("typedKey: \(typedKeyChars)")
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
@@ -195,16 +196,16 @@ class ViewController: NSViewController {
     
     override func flagsChanged(with event: NSEvent) {
         // print(event.keyCode)
-        let typedKey = keyDataManager.searchKey(keyCode: [Int(event.keyCode)])
-        print("apple: \(typedKey)")
+        let typedKeyKana = keyDataManager.searchKeyKana(keyCode: [Int(event.keyCode)])
+        print("apple: \(typedKeyKana)")
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.shift]:
             print("shift key is pressed")
             self.isShift = true
-            if typedKey == "left shift" {
+            if typedKeyKana == "left shift" {
                 self.sideOfShift = side.left
             }
-            if typedKey == "right shift" {
+            if typedKeyKana == "right shift" {
                 self.sideOfShift = side.right
             }
         case [.control]:

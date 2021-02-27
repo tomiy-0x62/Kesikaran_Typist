@@ -18,7 +18,7 @@ struct KeyData {
     let kana: String          // "あ", "ょ"
     let keyCodes: [Int]        // [20], [421,25]
     let keyChar: String    // "3" , "shift_9"
-    let keyNum: Int
+    let keyNum: Int        // "21", "100" keyViewListの何番目か？
     // shiftは右左でキーコードが違うので421に統一
     
     //クラスが生成された時の処理
@@ -51,7 +51,7 @@ class KeysDataManager {
     //単語の読み込み処理
     //------------------------------
     
-    func searchKey(keyCode: [Int]) -> String {
+    func searchKeyKana(keyCode: [Int]) -> String {
         // ex) [421, 29] -> "を"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
@@ -61,7 +61,7 @@ class KeysDataManager {
         return "Not found"
     }
     
-    func searchChar(keyCode: [Int]) -> String {
+    func searchKeyChar(keyCode: [Int]) -> String {
         // ex) [421, 29] -> "shift_0"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
