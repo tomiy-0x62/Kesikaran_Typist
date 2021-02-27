@@ -725,7 +725,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="YbI-aM-eKf" userLabel="KeyBord View" customClass="KeybordBack" customModule="Kesikaran_Typist" customModuleProvider="target">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="YbI-aM-eKf" userLabel="KeyBord View" customClass="KeybordBackground" customModule="Kesikaran_Typist" customModuleProvider="target">
                                 <rect key="frame" x="265" y="348" width="910" height="340"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-i5-cjs" userLabel="F" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">

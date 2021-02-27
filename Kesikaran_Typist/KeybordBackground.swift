@@ -9,7 +9,7 @@
 import Cocoa
 import QuartzCore
 
-class KeybordBack: NSView, CALayerDelegate {
+class KeybordBackground: NSView, CALayerDelegate {
     
     var bgLayer     = CALayer()
     

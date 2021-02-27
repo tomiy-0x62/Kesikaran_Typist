@@ -114,11 +114,19 @@ keyNumを複合キー(shift_3みたいやつ)に割り当てる必要はない�
 
 ### 各クラス,構造体,ファイルの役割
 
+・class TypedKanaSentenceManager
+
+​	ユーザーが入力したかな文を保持するクラス
+
 ・class SampleSentenceManeger 
+
+​	SampleSentenceDataを格納し、SampleSentenceの選択を行うクラス(必要？,ViewControllerですれば？これがTypedKanaSentenceManagerと離れてるから入力とSampleSentenceの比較が困難になってるのでは？)
 
 ・struct SampleSentenceData
 
-・class KeybordBack
+​	SampleSentenceとそのかなを格納するための構造体
+
+・class KeybordBackground
 
 ​	キーボードの背景をカスタマイズするためのクラス
 
@@ -130,13 +138,13 @@ keyNumを複合キー(shift_3みたいやつ)に割り当てる必要はない�
 
 ​	ウィンドウをkeyDownに対応させるためのViewのクラス
 
-・class TypedKanaSentenceManager
-
 ・struct KeyData
 
 ​	キーのkeycode,kana,char,keynum等を保管する構造体
 
 ・class KeysDataManager
+
+​	キーのデータを保持し、キーの検索をするためのクラス
 
 ・keys.csv
 
