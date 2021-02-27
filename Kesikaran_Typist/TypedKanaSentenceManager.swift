@@ -20,17 +20,17 @@ class TypedKanaSentenceManager {
         //シングルトンであることを保証するためにprivateで宣言
     }
     
-    func update(key: String, char: String){
-        if key == "return" {
+    func update(char: String, kana: String){
+        if char == "return" {
             // self.StrData = ""
-        } else if key == "delete" {
+        } else if char == "delete" {
             self.StrData = String(self.StrData.dropLast(1))
-        }  else if key == "space" {
+        }  else if char == "space" {
             self.StrData += " "
-        } else if key == "Not found" {
+        } else if char == "Not found" {
             self.StrData += ""
         } else{
-            self.StrData += char
+            self.StrData += kana
         }
     }
     

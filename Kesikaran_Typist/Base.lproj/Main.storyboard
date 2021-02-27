@@ -717,7 +717,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7" userLabel="Kana: XX">
                                 <rect key="frame" x="679" y="161" width="82" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Char: XX" id="NRB-7T-62j">
                                     <font key="font" metaFont="system" size="20"/>
@@ -1458,9 +1458,9 @@
                         <outlet property="tab" destination="jFW-qo-MPf" id="Rd1-oR-T9v"/>
                         <outlet property="three" destination="K4o-hY-zfI" id="zvG-7p-oJP"/>
                         <outlet property="two" destination="bzG-QL-5Jd" id="td5-qn-2WG"/>
-                        <outlet property="typedCharLabel" destination="IQQ-fd-8P7" id="ZP9-4P-F5d"/>
                         <outlet property="typedKanaSentenceLabel" destination="vog-A3-3bB" id="shG-4T-h09"/>
-                        <outlet property="typedLabel" destination="Zxa-KR-Wg0" id="vXf-WK-Nhb"/>
+                        <outlet property="typedKeyCharLabel" destination="Zxa-KR-Wg0" id="5zv-L9-Tbo"/>
+                        <outlet property="typedKeyKanaLabel" destination="IQQ-fd-8P7" id="b0e-4d-pLV"/>
                         <outlet property="zero" destination="gmj-uv-8fc" id="eB5-cY-zfT"/>
                     </connections>
                 </viewController>

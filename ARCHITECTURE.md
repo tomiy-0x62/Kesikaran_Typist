@@ -86,9 +86,17 @@ View
 
 ​		ユーザーが入力したかな文 ex) すうねんにいっかいれへ゛るの
 
+・typedKey　入力されたキー
+
+・kana かな
+
+・char キーに刻印されている文字
+
+
+
 ・kanaText
 
-・typed
+
 
 ・typedChar
 

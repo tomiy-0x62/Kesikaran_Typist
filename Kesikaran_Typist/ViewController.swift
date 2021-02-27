@@ -17,8 +17,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var sampleSentenceLabel: NSTextField! // 数年に１回レベルの大変楽しい日本語訳を発見いたしました
     @IBOutlet weak var kanaSampleSentenceLabel: NSTextField!  // すうねんにいっかいれへ゛るのたいへんたのしいにほんこ゛やくをはっけんいたしました！
     
-    @IBOutlet weak var typedLabel: NSTextField!  // Typed: a
-    @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
+    @IBOutlet weak var typedKeyCharLabel: NSTextField!  // Typed: a
+    @IBOutlet weak var typedKeyKanaLabel: NSTextField!  // Kana: ち
     @IBOutlet weak var typedKanaSentenceLabel: NSTextField!   // ちとしは
     // 全キーを手動で接続した。 これは大変けしからん実装である
     // しかし、outlet collection は macOS では使えない(大昔は使えたらしい)から無理。
@@ -172,11 +172,11 @@ class ViewController: NSViewController {
         print("KeDown: Code '\(event.keyCode)'")
         let typedKeys = keyDataManager.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
         let typedKeyNums = keyDataManager.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
-        let typedChar = keyDataManager.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKana = keyDataManager.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
         print("typedKey: \(typedKeys)")
-        typedLabel.stringValue = ("Typed: \(typedKeys)")
-        typedCharLabel.stringValue = ("Char: \(typedChar)")
-        typedKanaSentenceManager.update(key: typedKeys, char: typedChar)
+        typedKeyCharLabel.stringValue = ("Typed: \(typedKeys)")
+        typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
+        typedKanaSentenceManager.update(char: typedKeys, kana: typedKana)
         typedKanaSentenceLabel.stringValue = typedKanaSentenceManager.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
