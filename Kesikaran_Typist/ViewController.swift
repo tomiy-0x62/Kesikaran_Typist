@@ -105,7 +105,7 @@ class ViewController: NSViewController {
         keyDataManager.loadKeyData()
         sentenceManager.loadSampleSentence()
         
-        sentenceManager.setSequentialSentence()
+        sentenceManager.setSequentialSampleSentence()
         sampleSentenceLabel.stringValue = sentenceManager.nowSentence.sentence
         kanaSampleSentenceLabel.stringValue = sentenceManager.nowSentence.kanaSentence
         
@@ -181,7 +181,7 @@ class ViewController: NSViewController {
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
         sentenceManager.updateTypedKanaSentence(char: typedKeyChars, kana: typedKana)
-        typedKanaSentenceLabel.stringValue = sentenceManager.StrData
+        typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {
@@ -192,6 +192,11 @@ class ViewController: NSViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.keyViewList[keyNum].turnOff()
                 }
+            }
+            if sentenceManager.checkTypedSentence() {
+                typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
+                sampleSentenceLabel.stringValue = sentenceManager.nowSentence.sentence
+                kanaSampleSentenceLabel.stringValue = sentenceManager.nowSentence.kanaSentence
             }
         }
         

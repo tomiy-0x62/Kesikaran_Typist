@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum Mode {
+    case random, sequential
+}
+
 struct SampleSentenceData {
     
     let sentence: String
@@ -21,14 +25,23 @@ struct SampleSentenceData {
 
 class SentenceManager {
     
+    
+    //初期化処理
+    private init(){
+        //シングルトンであることを保証するためにprivateで宣言
+    }
+    
     //シングルトンオブジェクトを作成
     static let sharedInstance = SentenceManager()
+    
+    // 入力されかかな文を保持するため
+    var typedKanaSentence = ""
     
     var sampleSentenceArray: Array<SampleSentenceData> = []
     var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
     var nowSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
     
-    func setSequentialSentence() {
+    func setSequentialSampleSentence() {
         // 順番にテキストを選択
         // self.nowSentence = sampleSentenceArray[sentenceNum]
         self.nowSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
@@ -38,7 +51,7 @@ class SentenceManager {
         }
     }
     
-    func setRandomSentence() {
+    func setRandomSampleSentence() {
         // ランダムにテキストを選択
         if sampleSentenceArray.count == 0 {
             self.nowSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
@@ -47,7 +60,6 @@ class SentenceManager {
     }
     
     func loadSampleSentence() {
-        
         
         //格納済みのデータがあれば一旦削除
         sampleSentenceArray.removeAll()
@@ -79,29 +91,40 @@ class SentenceManager {
         
     }
     
-    // 入力されかかな文を保持するため
-    var StrData = ""
-    
-    //初期化処理
-    private init(){
-        //シングルトンであることを保証するためにprivateで宣言
+    func checkTypedSentence() -> Bool{
+        if typedKanaSentence == nowSentence.kanaSentence {
+            updateSelf(mode: Mode.random)
+            return true
+        }
+        return false
     }
+    
+    func updateSelf(mode: Mode) {
+        self.typedKanaSentence = ""
+        switch mode {
+        case Mode.random:
+            self.setRandomSampleSentence()
+        case Mode.sequential:
+            self.setSequentialSampleSentence()
+        }
+    }
+    
     
     func updateTypedKanaSentence(char: String, kana: String){
         if char == "return" {
             // self.StrData = ""
         } else if char == "tab" {
-            self.StrData += ""
+            self.typedKanaSentence += ""
         } else if char == "delete" {
-            self.StrData = String(self.StrData.dropLast(1))
+            self.typedKanaSentence = String(self.typedKanaSentence.dropLast(1))
         }  else if char == "space" {
-            self.StrData += "　"
+            self.typedKanaSentence += "　"
         }else if char == "esc" {
-            self.StrData += ""
+            self.typedKanaSentence += ""
         } else if char == "Not found" {
-            self.StrData += ""
+            self.typedKanaSentence += ""
         } else{
-            self.StrData += kana
+            self.typedKanaSentence += kana
         }
     }
     
