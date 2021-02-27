@@ -88,33 +88,19 @@ View
 
 ・typedKey　入力されたキー
 
-・kana かな
+・kana かな  ex) り
 
-・char キーに刻印されている文字
-
-
-
-・kanaText
+・char キーに刻印されている文字　ex) L
 
 
-
-・typedChar
-
-・typedKana
-
-・typedKeys
 
 ・typedKeyNums
-
-・Keycodes
 
 ・KeycodesforNum
 
 ・Text
 
 ・NextKey
-
-・
 
 
 
@@ -128,7 +114,7 @@ View
 
 ex) "ぁ" 421,20 "shift_3" 100
 
-"かな"　key code "" keyNum
+"かな"　keycodes "keyChar" keyNum
 
 ### 各クラス,構造体,ファイルの役割
 

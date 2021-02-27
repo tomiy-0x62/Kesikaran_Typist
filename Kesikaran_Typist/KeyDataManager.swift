@@ -15,17 +15,17 @@ import Foundation
 //==================================================
 struct KeyData {
     
-    let char: String          // "あ", "ょ"
+    let kana: String          // "あ", "ょ"
     let keyCodes: [Int]        // [20], [421,25]
-    let keycapChar: String    // "3" , "shift_9"
+    let keyChar: String    // "3" , "shift_9"
     let keyNum: Int
     // shiftは右左でキーコードが違うので421に統一
     
     //クラスが生成された時の処理
-    init(char: String, keyCodes: [Int], keycapChar: String, keyNum: Int) {
-        self.char = char
+    init(kana: String, keyCodes: [Int], keyChar: String, keyNum: Int) {
+        self.kana = kana
         self.keyCodes = keyCodes
-        self.keycapChar = keycapChar
+        self.keyChar = keyChar
         self.keyNum = keyNum
     }
 }
@@ -55,7 +55,7 @@ class KeysDataManager {
         // ex) [421, 29] -> "を"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
-                return keydata.keycapChar
+                return keydata.keyChar
             }
         }
         return "Not found"
@@ -65,7 +65,7 @@ class KeysDataManager {
         // ex) [421, 29] -> "shift_0"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
-                return keydata.char
+                return keydata.kana
             }
         }
         return "Not found"
@@ -116,7 +116,7 @@ class KeysDataManager {
                 for row in rows {
                     // スペースで分割
                     let values = row.components(separatedBy: " ")
-                    let keyData = KeyData(char: removeQuarto(values[0]), keyCodes: formatNums(values[1]), keycapChar: removeQuarto(values[2]), keyNum: Int(values[3])!)
+                    let keyData = KeyData(kana: removeQuarto(values[0]), keyCodes: formatNums(values[1]), keyChar: removeQuarto(values[2]), keyNum: Int(values[3])!)
                     // print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
                     self.keyDataArray.append(keyData)
                     // print(keyData)

@@ -170,13 +170,13 @@ class ViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        let typedKeys = keyDataManager.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeyChars = keyDataManager.searchKey(keyCode: genKeycodes(keycode: event.keyCode))
         let typedKeyNums = keyDataManager.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
         let typedKana = keyDataManager.searchChar(keyCode: genKeycodes(keycode: event.keyCode))
-        print("typedKey: \(typedKeys)")
-        typedKeyCharLabel.stringValue = ("Typed: \(typedKeys)")
+        print("typedKey: \(typedKeyChars)")
+        typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
-        typedKanaSentenceManager.update(char: typedKeys, kana: typedKana)
+        typedKanaSentenceManager.update(char: typedKeyChars, kana: typedKana)
         typedKanaSentenceLabel.stringValue = typedKanaSentenceManager.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
