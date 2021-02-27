@@ -19,7 +19,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var typedLabel: NSTextField!  // Typed: a
     @IBOutlet weak var typedCharLabel: NSTextField!  // Char: ち
-    @IBOutlet weak var typedKanaLabel: NSTextField!   // ちとしは
+    @IBOutlet weak var typedKanaSentenceLabel: NSTextField!   // ちとしは
     // 全キーを手動で接続した。 これは大変けしからん実装である
     // しかし、outlet collection は macOS では使えない(大昔は使えたらしい)から無理。
     // 仕方なくこの実装にした。
@@ -103,7 +103,7 @@ class ViewController: NSViewController {
         
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
-        keyDataManager.loadWord()
+        keyDataManager.loadKeyData()
         sampleSentenceManager.loadSampleSentence()
         
         sampleSentenceManager.setSequentialSentence()
@@ -154,6 +154,7 @@ class ViewController: NSViewController {
     }
     
     func checkText(typedKey: String) -> Bool {
+        // なにこれ？
         let text = sampleSentenceManager.nowSentence.kanaSentence
         if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceManager.nowSentenceIndex)]) {
             sampleSentenceManager.nowSentenceIndex += 1
@@ -176,7 +177,7 @@ class ViewController: NSViewController {
         typedLabel.stringValue = ("Typed: \(typedKeys)")
         typedCharLabel.stringValue = ("Char: \(typedChar)")
         typedKanaSentenceManager.update(key: typedKeys, char: typedChar)
-        typedKanaLabel.stringValue = typedKanaSentenceManager.StrData
+        typedKanaSentenceLabel.stringValue = typedKanaSentenceManager.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {

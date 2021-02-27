@@ -100,7 +100,7 @@ class KeysDataManager {
         return String(char.dropFirst(1).dropLast(1).replacingOccurrences(of: "_", with: " "))
         }
     
-    func loadWord() {
+    func loadKeyData() {
         //格納済みのデータがあれば一旦削除
         keyDataArray.removeAll()
         

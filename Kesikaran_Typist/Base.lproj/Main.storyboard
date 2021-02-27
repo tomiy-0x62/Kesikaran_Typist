@@ -1459,7 +1459,7 @@
                         <outlet property="three" destination="K4o-hY-zfI" id="zvG-7p-oJP"/>
                         <outlet property="two" destination="bzG-QL-5Jd" id="td5-qn-2WG"/>
                         <outlet property="typedCharLabel" destination="IQQ-fd-8P7" id="ZP9-4P-F5d"/>
-                        <outlet property="typedKanaLabel" destination="vog-A3-3bB" id="vbu-uY-h7Z"/>
+                        <outlet property="typedKanaSentenceLabel" destination="vog-A3-3bB" id="shG-4T-h09"/>
                         <outlet property="typedLabel" destination="Zxa-KR-Wg0" id="vXf-WK-Nhb"/>
                         <outlet property="zero" destination="gmj-uv-8fc" id="eB5-cY-zfT"/>
                     </connections>
