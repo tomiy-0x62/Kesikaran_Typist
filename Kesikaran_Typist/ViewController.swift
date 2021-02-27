@@ -181,7 +181,7 @@ class ViewController: NSViewController {
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {
-            keyViewList[keyNum].turnOn()
+            keyViewList[keyNum].turnOn(color: keyColor.orange)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.keyViewList[keyNum].turnOff()
             }

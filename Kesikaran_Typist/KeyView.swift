@@ -7,6 +7,10 @@
 
 import Cocoa
 
+enum keyColor {
+    case orange, red, green
+}
+
 class KeyView: NSImageView {
     
     var bgLayer = CALayer()
@@ -21,10 +25,21 @@ class KeyView: NSImageView {
         // change image
     }
     
-    func  turnOn() {
+    func  turnOn(color: keyColor) {
         let imageLayer = CALayer()
         let keyImage = self.image
         // print(keyImage!)
+        switch color {
+        case keyColor.green:
+            bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        case keyColor.red:
+            bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        case keyColor.orange:
+            bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        //default:
+            //bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+            
+        }
         bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
         bgLayer.cornerRadius = 5
