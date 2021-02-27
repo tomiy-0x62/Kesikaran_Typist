@@ -29,19 +29,16 @@ class KeyView: NSImageView {
         let imageLayer = CALayer()
         let keyImage = self.image
         // print(keyImage!)
-        switch color {
-        case keyColor.green:
-            bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        case keyColor.red:
-            bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        case keyColor.orange:
-            bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        //default:
-            //bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-            
-        }
         bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
+        // bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
+        switch color {
+            case keyColor.green:
+                bgLayer.backgroundColor = CGColor.init(red: 0.4039, green: 0.9333, blue: 0.4627, alpha: 1.0)
+            case keyColor.red:
+                bgLayer.backgroundColor = CGColor.init(red: 0.8941, green: 0.4313, blue: 0.4313, alpha: 1.0)
+            case keyColor.orange:
+                bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
+        }
         bgLayer.cornerRadius = 5
         // bgLayer.zPosition = -1
         self.layer?.addSublayer(bgLayer)
