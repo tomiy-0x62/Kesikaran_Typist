@@ -12,7 +12,7 @@ class TypedKanaSentenceManager {
     //シングルトンオブジェクトを作成
     static let sharedInstance = TypedKanaSentenceManager()
     
-    //キーデータを格納するための配列
+    // 入力されかかな文を保持するため
     var StrData = ""
     
     //初期化処理

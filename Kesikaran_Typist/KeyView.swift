@@ -26,6 +26,9 @@ class KeyView: NSImageView {
     }
     
     func  turnOn(color: keyColor) {
+        // キーの背景色を変える
+        // 色付きのレイヤを上にのせる。そうすると刻印の入った画像が隠れる
+        // その上にさらに画像のレイヤーを載せて対処
         let imageLayer = CALayer()
         let keyImage = self.image
         // print(keyImage!)
@@ -49,6 +52,7 @@ class KeyView: NSImageView {
     }
     
     func turnOff() {
+        // キーの背景色を削除
         self.layer?.sublayers?.forEach {
             // print(type(of: $0))
             if type(of: $0) == CALayer.self {
