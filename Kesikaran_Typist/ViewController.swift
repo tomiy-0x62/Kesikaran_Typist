@@ -110,6 +110,10 @@ class ViewController: NSViewController {
         sampleSentenceLabel.stringValue = sampleSentenceManager.nowSentence.sentence
         kanaSampleSentenceLabel.stringValue = sampleSentenceManager.nowSentence.kanaSentence
         
+        typedKanaSentenceLabel.isSelectable = true
+        sampleSentenceLabel.isSelectable = true
+        kanaSampleSentenceLabel.isSelectable = true
+        
         NSEvent.addLocalMonitorForEvents(matching: .flagsChanged) {
             self.flagsChanged(with: $0)
             return $0
