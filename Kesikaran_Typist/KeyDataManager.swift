@@ -45,6 +45,7 @@ class KeysDataManager {
     //初期化処理
     private init(){
         //シングルトンであることを保証するためにprivateで宣言
+        loadKeyData()
     }
     
     //------------------------------
@@ -100,7 +101,7 @@ class KeysDataManager {
         return String(char.dropFirst(1).dropLast(1).replacingOccurrences(of: "_", with: " "))
         }
     
-    func loadKeyData() {
+    private func loadKeyData() {
         //格納済みのデータがあれば一旦削除
         keyDataArray.removeAll()
         
