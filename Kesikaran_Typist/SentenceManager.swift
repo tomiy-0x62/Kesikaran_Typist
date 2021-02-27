@@ -87,7 +87,7 @@ class SentenceManager {
         //シングルトンであることを保証するためにprivateで宣言
     }
     
-    func update(char: String, kana: String){
+    func updateTypedKanaSentence(char: String, kana: String){
         if char == "return" {
             // self.StrData = ""
         } else if char == "tab" {
@@ -96,6 +96,8 @@ class SentenceManager {
             self.StrData = String(self.StrData.dropLast(1))
         }  else if char == "space" {
             self.StrData += "　"
+        }else if char == "esc" {
+            self.StrData += ""
         } else if char == "Not found" {
             self.StrData += ""
         } else{

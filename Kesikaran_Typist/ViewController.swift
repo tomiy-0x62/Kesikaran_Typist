@@ -89,7 +89,7 @@ class ViewController: NSViewController {
     
     var keyViewList: Array<KeyView> = []
     
-
+    
     // shiftキーの状態を保存
     var isShift: Bool = false
     var sideOfShift = side.none
@@ -157,15 +157,15 @@ class ViewController: NSViewController {
     }
     
     /*
-    func checkText(typedKey: String) -> Bool {
-        // なにこれ？
-        let text = sampleSentenceManager.nowSentence.kanaSentence
-        if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceManager.nowSentenceIndex)]) {
-            sampleSentenceManager.nowSentenceIndex += 1
-            return true
-        }
-        return false
-    }*/
+     func checkText(typedKey: String) -> Bool {
+     // なにこれ？
+     let text = sampleSentenceManager.nowSentence.kanaSentence
+     if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceManager.nowSentenceIndex)]) {
+     sampleSentenceManager.nowSentenceIndex += 1
+     return true
+     }
+     return false
+     }*/
     
     func searchNextKey() {
         //
@@ -180,14 +180,18 @@ class ViewController: NSViewController {
         print("typedKey: \(typedKeyChars)")
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
-        sentenceManager.update(char: typedKeyChars, kana: typedKana)
+        sentenceManager.updateTypedKanaSentence(char: typedKeyChars, kana: typedKana)
         typedKanaSentenceLabel.stringValue = sentenceManager.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {
-            keyViewList[keyNum].turnOn(color: keyColor.green)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.keyViewList[keyNum].turnOff()
+            if keyNum == 61{
+                print("esc")
+            }else {
+                keyViewList[keyNum].turnOn(color: keyColor.green)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.keyViewList[keyNum].turnOff()
+                }
             }
         }
         
