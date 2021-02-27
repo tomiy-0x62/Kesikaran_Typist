@@ -95,8 +95,7 @@ class ViewController: NSViewController {
     var sideOfShift = side.none
     
     let keyDataManager = KeysDataManager.sharedInstance  // keyDataが保存してあるクラスのインスタンス
-    let typedKanaSentenceManager = TypedKanaSentenceManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
-    let sampleSentenceManager = SampleSentenceManeger.sharedInstance  // 例文を管理するクラスのインスタンス
+    let sentenceManager = SentenceManager.sharedInstance  // タイプされた文章を保存するクラスのインスタンス
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,11 +103,11 @@ class ViewController: NSViewController {
         keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
         
         keyDataManager.loadKeyData()
-        sampleSentenceManager.loadSampleSentence()
+        sentenceManager.loadSampleSentence()
         
-        sampleSentenceManager.setSequentialSentence()
-        sampleSentenceLabel.stringValue = sampleSentenceManager.nowSentence.sentence
-        kanaSampleSentenceLabel.stringValue = sampleSentenceManager.nowSentence.kanaSentence
+        sentenceManager.setSequentialSentence()
+        sampleSentenceLabel.stringValue = sentenceManager.nowSentence.sentence
+        kanaSampleSentenceLabel.stringValue = sentenceManager.nowSentence.kanaSentence
         
         typedKanaSentenceLabel.isSelectable = true
         sampleSentenceLabel.isSelectable = true
@@ -181,8 +180,8 @@ class ViewController: NSViewController {
         print("typedKey: \(typedKeyChars)")
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
-        typedKanaSentenceManager.update(char: typedKeyChars, kana: typedKana)
-        typedKanaSentenceLabel.stringValue = typedKanaSentenceManager.StrData
+        sentenceManager.update(char: typedKeyChars, kana: typedKana)
+        typedKanaSentenceLabel.stringValue = sentenceManager.StrData
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {

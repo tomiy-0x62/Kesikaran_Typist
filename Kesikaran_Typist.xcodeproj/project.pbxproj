@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77060CBF2594DF7C00C97BC6 /* KeyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */; };
-		77347F8125B81FCA006EF40E /* TypedKanaSentenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8025B81FCA006EF40E /* TypedKanaSentenceManager.swift */; };
+		77347F8125B81FCA006EF40E /* SentenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8025B81FCA006EF40E /* SentenceManager.swift */; };
 		77347F8625B83237006EF40E /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8525B83237006EF40E /* KeyView.swift */; };
 		7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D5258E03AB001D7A6E /* AppDelegate.swift */; };
 		7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D7258E03AB001D7A6E /* ViewController.swift */; };
@@ -18,7 +18,6 @@
 		7741F3F4258E03AC001D7A6E /* Kesikaran_TypistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3F3258E03AC001D7A6E /* Kesikaran_TypistUITests.swift */; };
 		7767A81E25BB13CA003A4A53 /* KeybordBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7767A81D25BB13CA003A4A53 /* KeybordBackground.swift */; };
 		778231B725C6B62000FB4527 /* SampleSentence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 778231B625C6B62000FB4527 /* SampleSentence.txt */; };
-		778231BC25C6B65300FB4527 /* SampleSentenceManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */; };
 		77DD38DE258E367C0049F204 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD38DD258E367C0049F204 /* CustomView.swift */; };
 		77DD38EA258E43B70049F204 /* keys.csv in Resources */ = {isa = PBXBuildFile; fileRef = 77DD38E8258E43B70049F204 /* keys.csv */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDataManager.swift; sourceTree = "<group>"; };
-		77347F8025B81FCA006EF40E /* TypedKanaSentenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedKanaSentenceManager.swift; sourceTree = "<group>"; };
+		77347F8025B81FCA006EF40E /* SentenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceManager.swift; sourceTree = "<group>"; };
 		77347F8525B83237006EF40E /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7741F3D2258E03AB001D7A6E /* Kesikaran_Typist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kesikaran_Typist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7741F3D5258E03AB001D7A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +58,6 @@
 		7741F3F5258E03AC001D7A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7767A81D25BB13CA003A4A53 /* KeybordBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeybordBackground.swift; sourceTree = "<group>"; };
 		778231B625C6B62000FB4527 /* SampleSentence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleSentence.txt; sourceTree = "<group>"; };
-		778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSentenceManeger.swift; sourceTree = "<group>"; };
 		77DD38DD258E367C0049F204 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		77DD38E8258E43B70049F204 /* keys.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keys.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +113,7 @@
 				7741F3D5258E03AB001D7A6E /* AppDelegate.swift */,
 				7741F3D7258E03AB001D7A6E /* ViewController.swift */,
 				77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */,
-				778231BB25C6B65300FB4527 /* SampleSentenceManeger.swift */,
-				77347F8025B81FCA006EF40E /* TypedKanaSentenceManager.swift */,
+				77347F8025B81FCA006EF40E /* SentenceManager.swift */,
 				77DD38E8258E43B70049F204 /* keys.csv */,
 				778231B625C6B62000FB4527 /* SampleSentence.txt */,
 				77DD38DD258E367C0049F204 /* CustomView.swift */,
@@ -279,14 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				778231BC25C6B65300FB4527 /* SampleSentenceManeger.swift in Sources */,
 				77DD38DE258E367C0049F204 /* CustomView.swift in Sources */,
 				77060CBF2594DF7C00C97BC6 /* KeyDataManager.swift in Sources */,
 				7767A81E25BB13CA003A4A53 /* KeybordBackground.swift in Sources */,
 				77347F8625B83237006EF40E /* KeyView.swift in Sources */,
 				7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */,
 				7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */,
-				77347F8125B81FCA006EF40E /* TypedKanaSentenceManager.swift in Sources */,
+				77347F8125B81FCA006EF40E /* SentenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
