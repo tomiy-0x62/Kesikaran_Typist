@@ -106,8 +106,8 @@ class ViewController: NSViewController {
         sentenceManager.loadSampleSentence()
         
         sentenceManager.setSequentialSampleSentence()
-        sampleSentenceLabel.stringValue = sentenceManager.nowSentence.sentence
-        kanaSampleSentenceLabel.stringValue = sentenceManager.nowSentence.kanaSentence
+        sampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.sentence
+        kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
         
         typedKanaSentenceLabel.isSelectable = true
         sampleSentenceLabel.isSelectable = true
@@ -195,8 +195,8 @@ class ViewController: NSViewController {
             }
             if sentenceManager.checkTypedSentence() {
                 typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
-                sampleSentenceLabel.stringValue = sentenceManager.nowSentence.sentence
-                kanaSampleSentenceLabel.stringValue = sentenceManager.nowSentence.kanaSentence
+                sampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.sentence
+                kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
             }
         }
         

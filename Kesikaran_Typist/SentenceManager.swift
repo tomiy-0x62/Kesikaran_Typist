@@ -39,12 +39,47 @@ class SentenceManager {
     
     var sampleSentenceArray: Array<SampleSentenceData> = []
     var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
-    var nowSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
+    var nowSampleSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
+    
+    var correctCharIndex = 0
+    
+    func getCharfromStr(text: String, index: Int) -> String {
+        return String(text[text.index(text.startIndex, offsetBy: index)])
+    }
+    
+    func test() {
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+        print(getCharfromStr(text: "けしからん", index: 2))
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+    }
+    
+    func calcCorrectCharIndex() -> Int {
+        
+        if typedKanaSentence.utf16.count < nowSampleSentence.kanaSentence.utf16.count {
+            for i in 0..<typedKanaSentence.utf16.count {
+                if getCharfromStr(text: typedKanaSentence, index: i) == getCharfromStr(text: nowSampleSentence.kanaSentence, index: i) {
+                    // pass
+                }else {
+                    return i
+                }
+            }
+            return typedKanaSentence.utf16.count
+        } else {
+            for i in 0..<nowSampleSentence.kanaSentence.utf16.count {
+                if getCharfromStr(text: typedKanaSentence, index: i) == getCharfromStr(text: nowSampleSentence.kanaSentence, index: i) {
+                    // pass
+                } else {
+                    return i
+                }
+            }
+            return nowSampleSentence.kanaSentence.utf16.count
+        }
+    }
     
     func setSequentialSampleSentence() {
         // 順番にテキストを選択
         // self.nowSentence = sampleSentenceArray[sentenceNum]
-        self.nowSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
+        self.nowSampleSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
         sentenceNum += 1
         if sampleSentenceArray.count == sentenceNum {
             sentenceNum = 0
@@ -54,9 +89,9 @@ class SentenceManager {
     func setRandomSampleSentence() {
         // ランダムにテキストを選択
         if sampleSentenceArray.count == 0 {
-            self.nowSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
+            self.nowSampleSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
         }
-        self.nowSentence = sampleSentenceArray.randomElement()!
+        self.nowSampleSentence = sampleSentenceArray.randomElement()!
     }
     
     func loadSampleSentence() {
@@ -92,7 +127,7 @@ class SentenceManager {
     }
     
     func checkTypedSentence() -> Bool{
-        if typedKanaSentence == nowSentence.kanaSentence {
+        if typedKanaSentence == nowSampleSentence.kanaSentence {
             updateSelf(mode: Mode.random)
             return true
         }
@@ -101,6 +136,7 @@ class SentenceManager {
     
     func updateSelf(mode: Mode) {
         self.typedKanaSentence = ""
+        self.correctCharIndex = 0
         switch mode {
         case Mode.random:
             self.setRandomSampleSentence()
@@ -126,6 +162,7 @@ class SentenceManager {
         } else{
             self.typedKanaSentence += kana
         }
+        correctCharIndex = calcCorrectCharIndex()
     }
     
 }
