@@ -199,6 +199,7 @@ class ViewController: NSViewController {
                 kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
             }
         }
+        sentenceManager.test()
         
     }
     

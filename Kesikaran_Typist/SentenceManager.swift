@@ -41,20 +41,22 @@ class SentenceManager {
     var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
     var nowSampleSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
     
-    var correctCharIndex = 0
+    var correctCharIndex = 0 // nowSampleSentenceとtypedKanaSentenceが何文字目まで一致してるか
     
     func getCharfromStr(text: String, index: Int) -> String {
+        // text の index 番目の文字を取得
+        // ex) text: "すうねんにいっかいれへ゛る", index: 3 -> ん
         return String(text[text.index(text.startIndex, offsetBy: index)])
     }
     
     func test() {
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
-        print(getCharfromStr(text: "けしからん", index: 2))
+        getNextKeyNums()
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
     }
     
     func calcCorrectCharIndex() -> Int {
-        
+        // nowSampleSentenceとtypedKanaSentenceが何文字目まで一致してるか計算
         if typedKanaSentence.utf16.count < nowSampleSentence.kanaSentence.utf16.count {
             for i in 0..<typedKanaSentence.utf16.count {
                 if getCharfromStr(text: typedKanaSentence, index: i) == getCharfromStr(text: nowSampleSentence.kanaSentence, index: i) {
@@ -74,6 +76,19 @@ class SentenceManager {
             }
             return nowSampleSentence.kanaSentence.utf16.count
         }
+    }
+    
+    func getNextKeyNums() -> [Int] {
+        // 次にタイプするキーのkeyNumを取得
+        // TODO: nextKeyKanaからKeyNumsを取得してreturn
+        if typedKanaSentence.utf16.count == correctCharIndex {
+            let nextKeyKana = getCharfromStr(text: nowSampleSentence.kanaSentence, index: correctCharIndex)
+            print("Next Kana = \(nextKeyKana)")
+        } else {
+            let nextKeyKana = "delete"
+            print("Next Kana = \(nextKeyKana)")
+        }
+        return [1]
     }
     
     func setSequentialSampleSentence() {
@@ -127,6 +142,7 @@ class SentenceManager {
     }
     
     func checkTypedSentence() -> Bool{
+        // 正確にタイプし終わったか確認
         if typedKanaSentence == nowSampleSentence.kanaSentence {
             updateSelf(mode: Mode.random)
             return true
@@ -135,6 +151,7 @@ class SentenceManager {
     }
     
     func updateSelf(mode: Mode) {
+        // nowSampleSentenceを変更し、typedKanaSentenceをリセット
         self.typedKanaSentence = ""
         self.correctCharIndex = 0
         switch mode {
@@ -147,6 +164,7 @@ class SentenceManager {
     
     
     func updateTypedKanaSentence(char: String, kana: String){
+        // キー入力の結果を反映
         if char == "return" {
             // self.StrData = ""
         } else if char == "tab" {
