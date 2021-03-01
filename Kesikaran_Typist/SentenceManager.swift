@@ -39,6 +39,7 @@ class SentenceManager {
     // 入力されかかな文を保持するため
     var typedKanaSentence = ""
     
+    var lastNextKeyNums: Array<Int> = []
     var nextKeyNums: Array<Int> = []
     
     var sampleSentenceArray: Array<SampleSentenceData> = []
@@ -87,11 +88,13 @@ class SentenceManager {
         if typedKanaSentence.utf16.count == correctCharIndex {
             let nextKeyKana = getCharfromStr(text: nowSampleSentence.kanaSentence, index: correctCharIndex)
             print("Next Kana = \(nextKeyKana)")
+            self.lastNextKeyNums = self.nextKeyNums
             self.nextKeyNums = keyDataManager.searchKeyNums(keyKana: nextKeyKana)
             return self.nextKeyNums
         } else {
             let nextKeyKana = "delete"
             print("Next Kana = \(nextKeyKana)")
+            self.lastNextKeyNums = self.nextKeyNums
             self.nextKeyNums = keyDataManager.searchKeyNums(keyKana: nextKeyKana)
             return self.nextKeyNums
         }
