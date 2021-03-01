@@ -39,6 +39,8 @@ class SentenceManager {
     // 入力されかかな文を保持するため
     var typedKanaSentence = ""
     
+    var nextKeyNums: Array<Int> = []
+    
     var sampleSentenceArray: Array<SampleSentenceData> = []
     var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
     var nowSampleSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
@@ -82,15 +84,16 @@ class SentenceManager {
     
     func getNextKeyNums() -> [Int] {
         // 次にタイプするキーのkeyNumを取得
-        // TODO: nextKeyKanaからKeyNumsを取得してreturn
         if typedKanaSentence.utf16.count == correctCharIndex {
             let nextKeyKana = getCharfromStr(text: nowSampleSentence.kanaSentence, index: correctCharIndex)
             print("Next Kana = \(nextKeyKana)")
-            return keyDataManager.searchKeyNums(keyKana: nextKeyKana)
+            self.nextKeyNums = keyDataManager.searchKeyNums(keyKana: nextKeyKana)
+            return self.nextKeyNums
         } else {
             let nextKeyKana = "delete"
             print("Next Kana = \(nextKeyKana)")
-            return keyDataManager.searchKeyNums(keyKana: nextKeyKana)
+            self.nextKeyNums = keyDataManager.searchKeyNums(keyKana: nextKeyKana)
+            return self.nextKeyNums
         }
     }
     

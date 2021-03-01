@@ -187,6 +187,7 @@ class ViewController: NSViewController {
             if keyNum == 61{
                 print("esc")
             }else {
+                // タイプされたキーの色を変える
                 keyViewList[keyNum].turnOn(color: keyColor.green)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     self.keyViewList[keyNum].turnOff()
@@ -198,8 +199,14 @@ class ViewController: NSViewController {
                 kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
             }
         }
-        sentenceManager.test()
-        
+        for keyNum in sentenceManager.nextKeyNums {
+            keyViewList[keyNum].turnOff()
+        }
+        for keyNum in sentenceManager.getNextKeyNums() {
+            // TODO: deleteの回数が多いときにうまくいかない
+            keyViewList[keyNum].turnOn(color: keyColor.orange)
+        }
+         
     }
     
     override func flagsChanged(with event: NSEvent) {
