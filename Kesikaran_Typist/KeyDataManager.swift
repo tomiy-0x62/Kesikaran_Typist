@@ -84,6 +84,23 @@ class KeysDataManager {
         return nums
     }
     
+    func searchKeyNums(keyKana: String) -> [Int] {
+        for keydata in keyDataArray {
+            if keydata.kana == keyKana {
+                if keydata.keyNum < 100 {
+                    return [keydata.keyNum]
+                } else if keydata.keyNum < 200 {
+                    // 左shift + ○
+                    return [48, keydata.keyNum - 100]
+                } else {
+                    // 右shift + ○
+                    return [52, keydata.keyNum - 200]
+                }
+            }
+        }
+        return [1]
+    }
+    
     private func formatNums(_ codes: String) -> [Int] {
         // ex) "421,33" -> [421, 33]
         let rows = codes.components(separatedBy: ",").filter{!$0.isEmpty}
@@ -99,7 +116,7 @@ class KeysDataManager {
         // それを外すためのメソッド
         // ex) "return" -> return
         return String(char.dropFirst(1).dropLast(1).replacingOccurrences(of: "_", with: " "))
-        }
+    }
     
     private func loadKeyData() {
         //格納済みのデータがあれば一旦削除

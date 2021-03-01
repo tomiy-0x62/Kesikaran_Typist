@@ -34,6 +34,8 @@ class SentenceManager {
     //シングルトンオブジェクトを作成
     static let sharedInstance = SentenceManager()
     
+    let keyDataManager = KeysDataManager.sharedInstance
+    
     // 入力されかかな文を保持するため
     var typedKanaSentence = ""
     
@@ -51,7 +53,7 @@ class SentenceManager {
     
     func test() {
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
-        getNextKeyNums()
+        print(getNextKeyNums())
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
     }
     
@@ -84,11 +86,12 @@ class SentenceManager {
         if typedKanaSentence.utf16.count == correctCharIndex {
             let nextKeyKana = getCharfromStr(text: nowSampleSentence.kanaSentence, index: correctCharIndex)
             print("Next Kana = \(nextKeyKana)")
+            return keyDataManager.searchKeyNums(keyKana: nextKeyKana)
         } else {
             let nextKeyKana = "delete"
             print("Next Kana = \(nextKeyKana)")
+            return keyDataManager.searchKeyNums(keyKana: nextKeyKana)
         }
-        return [1]
     }
     
     func setSequentialSampleSentence() {
