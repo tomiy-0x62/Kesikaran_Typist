@@ -8,12 +8,13 @@
 import Cocoa
 
 enum keyColor {
-    case orange, red, green
+    case orange, red, green, none
 }
 
 class KeyView: NSImageView {
     
     var bgLayer = CALayer()
+    var color: keyColor = .none
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
@@ -35,12 +36,18 @@ class KeyView: NSImageView {
         bgLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         // bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
         switch color {
-            case keyColor.green:
-                bgLayer.backgroundColor = CGColor.init(red: 0.4039, green: 0.9333, blue: 0.4627, alpha: 1.0)
-            case keyColor.red:
-                bgLayer.backgroundColor = CGColor.init(red: 0.8941, green: 0.4313, blue: 0.4313, alpha: 1.0)
-            case keyColor.orange:
-                bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
+        case keyColor.green:
+            bgLayer.backgroundColor = CGColor.init(red: 0.4039, green: 0.9333, blue: 0.4627, alpha: 1.0)
+            self.color = .green
+        case keyColor.red:
+            bgLayer.backgroundColor = CGColor.init(red: 0.8941, green: 0.4313, blue: 0.4313, alpha: 1.0)
+            self.color = .red
+        case keyColor.orange:
+            bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 0.7058, blue: 0.4078, alpha: 1.0)
+            self.color = .orange
+        case keyColor.none:
+            bgLayer.backgroundColor = CGColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 0)
+            self.color = .none
         }
         bgLayer.cornerRadius = 5
         // bgLayer.zPosition = -1
@@ -59,6 +66,21 @@ class KeyView: NSImageView {
                 $0.removeFromSuperlayer()
                 // print("hello")
             }
+        }
+        self.color = .none
+    }
+    
+    func turnOffIf(color: keyColor) {
+        // キーの背景色が\(color)の場合キーの背景色を削除
+        if color == self.color {
+            self.layer?.sublayers?.forEach {
+                // print(type(of: $0))
+                if type(of: $0) == CALayer.self {
+                    $0.removeFromSuperlayer()
+                    // print("hello")
+                }
+            }
+            self.color = .none
         }
     }
     

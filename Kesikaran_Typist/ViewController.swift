@@ -189,8 +189,8 @@ class ViewController: NSViewController {
             }else {
                 // タイプされたキーの色を変える
                 keyViewList[keyNum].turnOn(color: keyColor.green)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    self.keyViewList[keyNum].turnOff()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { // ⭐️
+                    self.keyViewList[keyNum].turnOffIf(color: keyColor.green)
                 }
             }
             if sentenceManager.checkTypedSentence() {
@@ -204,6 +204,7 @@ class ViewController: NSViewController {
         }
         for keyNum in sentenceManager.getNextKeyNums() {
             // TODO: deleteの回数が多いときにうまくいかない
+            // deleteを入力-> deleteをturOnするとその0.1s後に⭐️にされる
             print("NextNum = \(keyNum)")
             keyViewList[keyNum].turnOn(color: keyColor.orange)
         }

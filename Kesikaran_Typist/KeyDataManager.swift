@@ -59,6 +59,17 @@ class KeysDataManager {
                 return keydata.keyChar
             }
         }
+        var newKeyCode = keyCode
+        if let shiftIndex = keyCode.firstIndex(where: { $0 == 421 }) {
+            newKeyCode.remove(at: Int(shiftIndex))
+        } else {
+            return "Not found"
+        }
+        for keydata in keyDataArray {
+            if keydata.keyCodes == newKeyCode {
+                return keydata.keyChar
+            }
+        }
         return "Not found"
     }
     
@@ -69,6 +80,17 @@ class KeysDataManager {
                 return keydata.kana
             }
         }
+        var newKeyCode = keyCode
+                if let shiftIndex = keyCode.firstIndex(where: { $0 == 421 }) {
+                    newKeyCode.remove(at: Int(shiftIndex))
+                } else {
+                    return "Not found"
+                }
+                for keydata in keyDataArray {
+                    if keydata.keyCodes == newKeyCode {
+                        return keydata.kana
+                    }
+                }
         return "Not found"
     }
     
