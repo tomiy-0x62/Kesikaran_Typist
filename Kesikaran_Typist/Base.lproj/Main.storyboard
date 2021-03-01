@@ -710,7 +710,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-KR-Wg0">
-                                <rect key="frame" x="673" y="122" width="95" height="24"/>
+                                <rect key="frame" x="673" y="137" width="95" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Typed: XX" id="Yp1-qP-g7I">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -718,7 +718,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7" userLabel="Kana: XX">
-                                <rect key="frame" x="678" y="161" width="84" height="24"/>
+                                <rect key="frame" x="678" y="181" width="84" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Kana: XX" id="NRB-7T-62j">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -726,7 +726,7 @@
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="YbI-aM-eKf" userLabel="KeyBord View" customClass="KeybordBackground" customModule="Kesikaran_Typist" customModuleProvider="target">
-                                <rect key="frame" x="265" y="348" width="910" height="340"/>
+                                <rect key="frame" x="265" y="225" width="910" height="340"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-i5-cjs" userLabel="F" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="313" y="146" width="48" height="48"/>
@@ -1345,7 +1345,7 @@
                                 </constraints>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-q5-1Xa" userLabel="Sample Sentence Label">
-                                <rect key="frame" x="648" y="287" width="145" height="21"/>
+                                <rect key="frame" x="648" y="687" width="145" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Os8-xf-f92"/>
                                 </constraints>
@@ -1355,16 +1355,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vog-A3-3bB">
-                                <rect key="frame" x="635" y="205" width="170" height="21"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="TypedKanaSentence" id="R4K-4B-4Em">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="buy-XK-RdO" userLabel="Kana Sample Sentence Label">
-                                <rect key="frame" x="658" y="246" width="125" height="21"/>
+                                <rect key="frame" x="658" y="656" width="125" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="OLA-H6-4Vz"/>
                                 </constraints>
@@ -1374,20 +1366,28 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vog-A3-3bB">
+                                <rect key="frame" x="635" y="595" width="170" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="TypedKanaSentence" id="R4K-4B-4Em">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="buy-XK-RdO" firstAttribute="top" secondItem="dTb-q5-1Xa" secondAttribute="bottom" constant="20" id="1II-cR-AOa"/>
                             <constraint firstItem="buy-XK-RdO" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="1U9-jH-Q9f"/>
                             <constraint firstItem="vog-A3-3bB" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="6R4-rK-Qxe"/>
+                            <constraint firstItem="YbI-aM-eKf" firstAttribute="top" secondItem="vog-A3-3bB" secondAttribute="bottom" constant="30" id="8OL-sh-3My"/>
                             <constraint firstItem="IQQ-fd-8P7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Bvs-Ou-Lye"/>
-                            <constraint firstItem="Zxa-KR-Wg0" firstAttribute="top" secondItem="IQQ-fd-8P7" secondAttribute="bottom" constant="15" id="C6n-U7-sbZ"/>
-                            <constraint firstItem="YbI-aM-eKf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="Ca5-4c-3rQ"/>
                             <constraint firstItem="YbI-aM-eKf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="DPF-kv-ebO"/>
-                            <constraint firstItem="dTb-q5-1Xa" firstAttribute="top" secondItem="YbI-aM-eKf" secondAttribute="bottom" constant="40" id="VLg-el-4My"/>
-                            <constraint firstItem="IQQ-fd-8P7" firstAttribute="top" secondItem="vog-A3-3bB" secondAttribute="bottom" constant="20" id="aSL-C3-EGW"/>
+                            <constraint firstItem="IQQ-fd-8P7" firstAttribute="top" secondItem="YbI-aM-eKf" secondAttribute="bottom" constant="20" id="LAe-s3-7KG"/>
+                            <constraint firstItem="Zxa-KR-Wg0" firstAttribute="top" secondItem="IQQ-fd-8P7" secondAttribute="bottom" constant="20" id="Vub-ZR-vgL"/>
+                            <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="buy-XK-RdO" secondAttribute="bottom" constant="40" id="cpM-pv-Aan"/>
+                            <constraint firstItem="dTb-q5-1Xa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="h1D-bg-oY7"/>
+                            <constraint firstItem="buy-XK-RdO" firstAttribute="top" secondItem="dTb-q5-1Xa" secondAttribute="bottom" constant="10" id="jpV-6n-YXW"/>
                             <constraint firstItem="Zxa-KR-Wg0" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="rdh-dN-Hyk"/>
                             <constraint firstItem="dTb-q5-1Xa" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="sj9-rj-tt6"/>
-                            <constraint firstItem="vog-A3-3bB" firstAttribute="top" secondItem="buy-XK-RdO" secondAttribute="bottom" constant="20" id="uPC-dZ-AfH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
