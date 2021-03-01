@@ -204,6 +204,7 @@ class ViewController: NSViewController {
         }
         for keyNum in sentenceManager.getNextKeyNums() {
             // TODO: deleteの回数が多いときにうまくいかない
+            print("NextNum = \(keyNum)")
             keyViewList[keyNum].turnOn(color: keyColor.orange)
         }
          
