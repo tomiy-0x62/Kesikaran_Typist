@@ -158,9 +158,9 @@ class ViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        let typedKeyChars = keyDataManager.searchKeyKana(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeyChars = keyDataManager.searchKeyChar(keyCode: genKeycodes(keycode: event.keyCode))
         let typedKeyNums = keyDataManager.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
-        let typedKana = keyDataManager.searchKeyChar(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKana = keyDataManager.searchKeyKana(keyCode: genKeycodes(keycode: event.keyCode))
         print("typedKey: \(typedKeyChars)")
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Kana: \(typedKana)")
@@ -176,7 +176,7 @@ class ViewController: NSViewController {
             }else {
                 // タイプされたキーの色を変える
                 keyViewList[keyNum].turnOn(color: keyColor.green)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { // ⭐️
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     self.keyViewList[keyNum].turnOffIf(color: keyColor.green)
                 }
             }
@@ -190,8 +190,6 @@ class ViewController: NSViewController {
             keyViewList[keyNum].turnOff()
         }
         for keyNum in sentenceManager.getNextKeyNums() {
-            // TODO: deleteの回数が多いときにうまくいかない
-            // deleteを入力-> deleteをturOnするとその0.1s後に⭐️にされる
             print("NextNum = \(keyNum)")
             keyViewList[keyNum].turnOn(color: keyColor.orange)
         }

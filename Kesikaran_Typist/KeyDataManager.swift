@@ -63,7 +63,7 @@ class KeysDataManager {
             }
         }
     
-    func searchKeyKana(keyCode: [Int]) -> String {
+    func searchKeyChar(keyCode: [Int]) -> String {
         // ex) [421, 29] -> "を"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
@@ -79,7 +79,7 @@ class KeysDataManager {
         return "Not found"
     }
     
-    func searchKeyChar(keyCode: [Int]) -> String {
+    func searchKeyKana(keyCode: [Int]) -> String {
         // ex) [421, 29] -> "shift_0"
         for keydata in keyDataArray {
             if keydata.keyCodes == keyCode {
