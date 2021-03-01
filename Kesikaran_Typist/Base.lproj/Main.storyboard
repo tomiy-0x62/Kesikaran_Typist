@@ -718,8 +718,8 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7" userLabel="Kana: XX">
-                                <rect key="frame" x="679" y="161" width="82" height="24"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Char: XX" id="NRB-7T-62j">
+                                <rect key="frame" x="678" y="161" width="84" height="24"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Kana: XX" id="NRB-7T-62j">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1345,30 +1345,30 @@
                                 </constraints>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-q5-1Xa" userLabel="Sample Sentence Label">
-                                <rect key="frame" x="688" y="287" width="64" height="21"/>
+                                <rect key="frame" x="648" y="287" width="145" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Os8-xf-f92"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Sample" id="27n-C2-vCl">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Sample Sentence" id="27n-C2-vCl">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vog-A3-3bB">
-                                <rect key="frame" x="652" y="205" width="136" height="21"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="TypedCharLabel" id="R4K-4B-4Em">
+                                <rect key="frame" x="635" y="205" width="170" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="TypedKanaSentence" id="R4K-4B-4Em">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="buy-XK-RdO" userLabel="Kana Sample Sentence Label">
-                                <rect key="frame" x="698" y="246" width="45" height="21"/>
+                                <rect key="frame" x="658" y="246" width="125" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="OLA-H6-4Vz"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Kana" id="QMD-Nb-oPr">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Kana Sentence" id="QMD-Nb-oPr">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

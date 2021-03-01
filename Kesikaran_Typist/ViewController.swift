@@ -163,7 +163,7 @@ class ViewController: NSViewController {
         let typedKana = keyDataManager.searchKeyChar(keyCode: genKeycodes(keycode: event.keyCode))
         print("typedKey: \(typedKeyChars)")
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
-        typedKeyKanaLabel.stringValue = ("Char: \(typedKana)")
+        typedKeyKanaLabel.stringValue = ("Kana: \(typedKana)")
         sentenceManager.updateTypedKanaSentence(char: typedKeyChars, kana: typedKana)
         typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
         print("typedKeyNums: \(typedKeyNums)")
