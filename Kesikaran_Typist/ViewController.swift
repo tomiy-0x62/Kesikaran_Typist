@@ -166,6 +166,8 @@ class ViewController: NSViewController {
         typedKeyKanaLabel.stringValue = ("Kana: \(typedKana)")
         sentenceManager.updateTypedKanaSentence(char: typedKeyChars, kana: typedKana)
         typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
+        kanaSampleSentenceLabel.attributedStringValue = sentenceManager.attributedKanaSampleSentence
+        // typedKanaSentenceLabel.attributedStringValue = sentenceManager.AttributedTypedKanaSentence
         print("typedKeyNums: \(typedKeyNums)")
         // checkText(typedKey: typedChar)
         for keyNum in typedKeyNums {

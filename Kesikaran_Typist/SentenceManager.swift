@@ -39,6 +39,8 @@ class SentenceManager {
     // 入力されかかな文を保持するため
     var typedKanaSentence = ""
     
+    var attributedKanaSampleSentence = NSMutableAttributedString()
+    
     var lastNextKeyNums: Array<Int> = []
     var nextKeyNums: Array<Int> = []
     
@@ -108,6 +110,8 @@ class SentenceManager {
         if sampleSentenceArray.count == sentenceNum {
             sentenceNum = 0
         }
+        self.attributedKanaSampleSentence = NSMutableAttributedString()
+        self.attributedKanaSampleSentence.append(NSAttributedString(string: nowSampleSentence.kanaSentence))
     }
     
     func setRandomSampleSentence() {
@@ -116,6 +120,8 @@ class SentenceManager {
             self.nowSampleSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
         }
         self.nowSampleSentence = sampleSentenceArray.randomElement()!
+        self.attributedKanaSampleSentence = NSMutableAttributedString()
+        self.attributedKanaSampleSentence.append(NSAttributedString(string: nowSampleSentence.kanaSentence))
     }
     
     func loadSampleSentence() {
@@ -171,6 +177,24 @@ class SentenceManager {
         }
     }
     
+    private func updateAttributedKanaSampleSentence() {
+        self.attributedKanaSampleSentence = NSMutableAttributedString()
+        let text = nowSampleSentence.kanaSentence
+        let to = text.index(text.startIndex, offsetBy: correctCharIndex)
+        let from = text.index(text.startIndex, offsetBy: correctCharIndex)
+        // calcCorrectCharIndex()
+        let compStr = String(text[text.startIndex..<to])
+        let ncompStr = String(text[from..<text.endIndex])
+        let orangeAttribute: [NSAttributedString.Key : Any] = [
+            .foregroundColor : CGColor.init(red: 1.0, green: 0.3921, blue: 0.0, alpha: 1.0)
+                        ]
+        let comp = NSAttributedString(string: compStr, attributes: orangeAttribute)
+        let ncomp = NSAttributedString(string: ncompStr)
+        self.attributedKanaSampleSentence.append(comp)
+        self.attributedKanaSampleSentence.append(ncomp)
+        
+    }
+    
     
     func updateTypedKanaSentence(char: String, kana: String){
         // キー入力の結果を反映
@@ -190,6 +214,7 @@ class SentenceManager {
             self.typedKanaSentence += kana
         }
         correctCharIndex = calcCorrectCharIndex()
+        updateAttributedKanaSampleSentence()
     }
     
 }
