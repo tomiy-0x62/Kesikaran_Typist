@@ -52,6 +52,17 @@ class KeysDataManager {
     //単語の読み込み処理
     //------------------------------
     
+    private func removeShift(keyCode: [Int]) -> [Int] {
+            // ex) [421, 29] -> [421]
+            var newKeyCode = keyCode
+            if let shiftIndex = keyCode.firstIndex(where: { $0 == 421 }) {
+                newKeyCode.remove(at: Int(shiftIndex))
+                return newKeyCode
+            } else {
+                return keyCode
+            }
+        }
+    
     func searchKeyKana(keyCode: [Int]) -> String {
         // ex) [421, 29] -> "を"
         for keydata in keyDataArray {
@@ -59,12 +70,7 @@ class KeysDataManager {
                 return keydata.keyChar
             }
         }
-        var newKeyCode = keyCode
-        if let shiftIndex = keyCode.firstIndex(where: { $0 == 421 }) {
-            newKeyCode.remove(at: Int(shiftIndex))
-        } else {
-            return "Not found"
-        }
+        let newKeyCode = removeShift(keyCode: keyCode)
         for keydata in keyDataArray {
             if keydata.keyCodes == newKeyCode {
                 return keydata.keyChar
@@ -80,17 +86,12 @@ class KeysDataManager {
                 return keydata.kana
             }
         }
-        var newKeyCode = keyCode
-                if let shiftIndex = keyCode.firstIndex(where: { $0 == 421 }) {
-                    newKeyCode.remove(at: Int(shiftIndex))
-                } else {
-                    return "Not found"
-                }
-                for keydata in keyDataArray {
-                    if keydata.keyCodes == newKeyCode {
-                        return keydata.kana
-                    }
-                }
+        let newKeyCode = removeShift(keyCode: keyCode)
+        for keydata in keyDataArray {
+            if keydata.keyCodes == newKeyCode {
+                return keydata.kana
+            }
+        }
         return "Not found"
     }
     
