@@ -155,21 +155,6 @@ class ViewController: NSViewController {
         return [Int(keycode)]
     }
     
-    /*
-     func checkText(typedKey: String) -> Bool {
-     // なにこれ？
-     let text = sampleSentenceManager.nowSentence.kanaSentence
-     if typedKey == String(text[text.index(text.startIndex, offsetBy: sampleSentenceManager.nowSentenceIndex)]) {
-     sampleSentenceManager.nowSentenceIndex += 1
-     return true
-     }
-     return false
-     }*/
-    
-    func searchNextKey() {
-        //
-    }
-    
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
