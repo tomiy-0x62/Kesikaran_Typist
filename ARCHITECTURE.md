@@ -20,7 +20,7 @@ SampleSentenceの正しく入力している場所までSampleSentence(かな)�
 
 (アプリケーションメニューからSampleSentence登録(テキストファイルからインポート))
 
-(SampleSentenceには文字数制限)
+(SampleSentenceには文字数制限 kanaが54文字まで(54文字でちょうどキーボードと同じ幅))
 
 (SampleSentenceのインポート時読みの濁音等は自動で変換) ex) 「いだいだ、ぽけもん」-> 「いた゛いた゛、ほ゜けもん」
 

@@ -710,7 +710,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zxa-KR-Wg0">
-                                <rect key="frame" x="673" y="137" width="95" height="24"/>
+                                <rect key="frame" x="673" y="123" width="95" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Typed: XX" id="Yp1-qP-g7I">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -718,7 +718,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-fd-8P7" userLabel="Kana: XX">
-                                <rect key="frame" x="678" y="181" width="84" height="24"/>
+                                <rect key="frame" x="678" y="167" width="84" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Kana: XX" id="NRB-7T-62j">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -726,7 +726,7 @@
                                 </textFieldCell>
                             </textField>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="YbI-aM-eKf" userLabel="KeyBord View" customClass="KeybordBackground" customModule="Kesikaran_Typist" customModuleProvider="target">
-                                <rect key="frame" x="265" y="225" width="910" height="340"/>
+                                <rect key="frame" x="265" y="211" width="910" height="340"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-i5-cjs" userLabel="F" customClass="KeyView" customModule="Kesikaran_Typist" customModuleProvider="target">
                                         <rect key="frame" x="313" y="146" width="48" height="48"/>
@@ -1367,8 +1367,12 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vog-A3-3bB">
-                                <rect key="frame" x="635" y="595" width="170" height="21"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="TypedKanaSentence" id="R4K-4B-4Em">
+                                <rect key="frame" x="265" y="581" width="910" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Bhl-Lh-0UY"/>
+                                    <constraint firstAttribute="width" constant="910" id="H9Q-Uq-obF"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" borderStyle="border" alignment="center" title="TypedKanaSentence" id="R4K-4B-4Em">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
