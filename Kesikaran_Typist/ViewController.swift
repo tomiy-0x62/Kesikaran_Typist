@@ -107,6 +107,7 @@ class ViewController: NSViewController {
         sentenceManager.setSequentialSampleSentence()
         sampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.sentence
         kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
+        typedKanaSentenceLabel.stringValue = "|"
         
         typedKanaSentenceLabel.isSelectable = true
         sampleSentenceLabel.isSelectable = true
