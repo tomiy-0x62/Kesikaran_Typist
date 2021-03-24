@@ -141,10 +141,15 @@ class SentenceManager {
                 for row in rows {
                     // スペースで分割
                     let values = row.components(separatedBy: ",")
-                    let sampleTextData = SampleSentenceData(sentence: values[0], kana: values[1])
-                    // print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
-                    self.sampleSentenceArray.append(sampleTextData)
-                    // print(keyData)
+                    // 54を超えてないかチェック
+                    if values[1].utf16.count > 54 {
+                        print("Can't add \(values[1]), because num of char over 54")
+                    } else {
+                        let sampleTextData = SampleSentenceData(sentence: values[0], kana: values[1])
+                        // print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
+                        self.sampleSentenceArray.append(sampleTextData)
+                        // print(keyData)
+                    }
                 }
             } else {
                 print("Fail to get contens of keys.csv")
@@ -187,7 +192,7 @@ class SentenceManager {
         let ncompStr = String(text[from..<text.endIndex])
         let orangeAttribute: [NSAttributedString.Key : Any] = [
             .foregroundColor : CGColor.init(red: 1.0, green: 0.3921, blue: 0.0, alpha: 1.0)
-                        ]
+        ]
         let comp = NSAttributedString(string: compStr, attributes: orangeAttribute)
         let ncomp = NSAttributedString(string: ncompStr)
         self.attributedKanaSampleSentence.append(comp)
