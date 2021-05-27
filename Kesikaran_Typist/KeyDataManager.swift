@@ -21,7 +21,7 @@ struct KeyData {
     let keyNum: Int        // "21", "100" keyViewListの何番目か？
     // shiftは右左でキーコードが違うので421に統一
     
-    //クラスが生成された時の処理
+    //構造体が生成された時の処理
     init(kana: String, keyCodes: [Int], keyChar: String, keyNum: Int) {
         self.kana = kana
         self.keyCodes = keyCodes
