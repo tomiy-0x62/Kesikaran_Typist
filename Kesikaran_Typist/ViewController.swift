@@ -175,13 +175,20 @@ class ViewController: NSViewController {
             if keyNum == 61{
                 print("esc")
             }else {
-                // タイプされたキーの色を変える
-                keyViewList[keyNum].turnOn(color: keyColor.green)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    self.keyViewList[keyNum].turnOffIf(color: keyColor.green)
+                // タイプされたキーの色を0.2秒間緑にする
+                // ただし、正確にタイプされた時は緑にしない
+                if keyViewList[keyNum].color == .orange {
+                    // pass
+                } else {
+                    keyViewList[keyNum].turnOn(color: keyColor.green)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        // 緑を消す
+                        self.keyViewList[keyNum].turnOffIf(color: keyColor.green)
+                    }
                 }
             }
             if sentenceManager.checkTypedSentence() {
+                // タイプ完了時の処理
                 typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
                 sampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.sentence
                 kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
@@ -194,7 +201,7 @@ class ViewController: NSViewController {
             print("NextNum = \(keyNum)")
             keyViewList[keyNum].turnOn(color: keyColor.orange)
         }
-         
+        
     }
     
     override func flagsChanged(with event: NSEvent) {
