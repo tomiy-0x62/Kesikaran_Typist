@@ -16,17 +16,14 @@ import Foundation
 struct KeyData {
     
     let kana: String          // "あ", "ょ"
-    let keyCodes: [Int]        // [20], [421,25]
+    let keyCodes: [Int]        // [20], [56,25]
     let keyChar: String    // "3" , "shift_9"
-    let keyNum: Int        // "21", "100" keyViewListの何番目か？
-    // shiftは右左でキーコードが違うので421に統一
     
     //構造体の初期化処理
-    init(kana: String, keyCodes: [Int], keyChar: String, keyNum: Int) {
+    init(kana: String, keyCodes: [Int], keyChar: String) {
         self.kana = kana
         self.keyCodes = keyCodes
         self.keyChar = keyChar
-        self.keyNum = keyNum
     }
 }
 
@@ -53,79 +50,93 @@ class KeysDataManager {
     //------------------------------
     
     private func removeShift(keyCode: [Int]) -> [Int] {
-            // ex) [421, 29] -> [421]
-            var newKeyCode = keyCode
-            if let shiftIndex = keyCode.firstIndex(where: { $0 == 421 }) {
-                newKeyCode.remove(at: Int(shiftIndex))
-                return newKeyCode
-            } else {
-                return keyCode
-            }
+        // ex) [60, 29] -> [29]
+        // ex) [56, 29] -> [29]
+        var newKeyCode = keyCode
+        if let shiftIndex = keyCode.firstIndex(where: { $0 == 56 || $0 == 60}) {
+            newKeyCode.remove(at: Int(shiftIndex))
+            return newKeyCode
+        } else {
+            return keyCode
         }
-    
-    func searchKeyChar(keyCode: [Int]) -> String {
-        // ex) [421, 29] -> "を"
-        for keydata in keyDataArray {
-            if keydata.keyCodes == keyCode {
-                return keydata.keyChar
-            }
-        }
-        let newKeyCode = removeShift(keyCode: keyCode)
-        for keydata in keyDataArray {
-            if keydata.keyCodes == newKeyCode {
-                return keydata.keyChar
-            }
-        }
-        return "Not found"
     }
     
-    func searchKeyKana(keyCode: [Int]) -> String {
-        // ex) [421, 29] -> "shift_0"
-        for keydata in keyDataArray {
-            if keydata.keyCodes == keyCode {
-                return keydata.kana
-            }
+    private func trShift(keyCode: [Int]) -> [Int] {
+        // ex) [60, 29] -> [116, 29]
+        // ex) [56, 29] -> [116, 29]
+        var newKeyCode = keyCode
+        if let shiftIndex = keyCode.firstIndex(where: { $0 == 56 || $0 == 60}) {
+            newKeyCode[Int(shiftIndex)] = 116
+            return newKeyCode
+        } else {
+            return keyCode
         }
-        let newKeyCode = removeShift(keyCode: keyCode)
-        for keydata in keyDataArray {
-            if keydata.keyCodes == newKeyCode {
-                return keydata.kana
-            }
-        }
-        return "Not found"
     }
     
-    func searchKeyNums(keyCodes: [Int]) -> [Int] {
-        var nums: Array<Int> = []
-        for keyCode in keyCodes {
-            for keydata in keyDataArray {
-                if keydata.keyCodes == [keyCode] {
-                    nums.append(keydata.keyNum)
+    private func cmpKeyCodes(_ a: [Int], _ b:[Int]) -> Bool {
+        if (a.count == b.count){
+            if (a.count == 1) {
+                if (a == b) {
+                    return true
+                }
+            }
+            if (a.count == 2) {
+                if (trShift(keyCode: a) == trShift(keyCode: b)){
+                    return true
                 }
             }
         }
-        return nums
+        return false
     }
     
-    func searchKeyNums(keyKana: String) -> [Int] {
+    func searchKeyChar(keyCodes: [Int]) -> String {
+        // ex) [56, 29] -> "shift_0"
+        // ex) [60, 29] -> "shift_0"
+        // ex) [0] -> "A"
+        for keydata in keyDataArray {
+            if cmpKeyCodes(keydata.keyCodes, keyCodes) {
+                return keydata.keyChar
+            }
+        }
+        let newKeyCode = removeShift(keyCode: keyCodes)
+        for keydata in keyDataArray {
+            if cmpKeyCodes(keydata.keyCodes, newKeyCode) {
+                return keydata.keyChar
+            }
+        }
+        return "Not found"
+    }
+    
+    func searchKeyKana(keyCodes: [Int]) -> String {
+        // ex) [56, 29] -> "を"
+        // ex) [60, 29] -> "を"
+        // ex) [0] -> "ち"
+        for keydata in keyDataArray {
+            if cmpKeyCodes(keydata.keyCodes, keyCodes) {
+                return keydata.kana
+            }
+        }
+        let newKeyCode = removeShift(keyCode: keyCodes)
+        for keydata in keyDataArray {
+            if cmpKeyCodes(keydata.keyCodes, newKeyCode) {
+                return keydata.kana
+            }
+        }
+        return "Not found"
+    }
+    
+    func searchKeyCodes(keyKana: String) -> [Int] {
+        // ex) "お" -> [22]
         for keydata in keyDataArray {
             if keydata.kana == keyKana {
-                if keydata.keyNum < 100 {
-                    return [keydata.keyNum]
-                } else if keydata.keyNum < 200 {
-                    // 左shift + ○
-                    return [48, keydata.keyNum - 100]
-                } else {
-                    // 右shift + ○
-                    return [52, keydata.keyNum - 200]
-                }
+                return keydata.keyCodes
             }
         }
         return [1]
     }
     
     private func formatNums(_ codes: String) -> [Int] {
-        // ex) "421,33" -> [421, 33]
+        // ex) "60,33" -> [60, 33]
         let rows = codes.components(separatedBy: ",").filter{!$0.isEmpty}
         var result: [Int] = []
         for row in rows {
@@ -157,7 +168,7 @@ class KeysDataManager {
                 for row in rows {
                     // スペースで分割
                     let values = row.components(separatedBy: " ")
-                    let keyData = KeyData(kana: removeQuarto(values[0]), keyCodes: formatNums(values[1]), keyChar: removeQuarto(values[2]), keyNum: Int(values[3])!)
+                    let keyData = KeyData(kana: removeQuarto(values[0]), keyCodes: formatNums(values[1]), keyChar: removeQuarto(values[2]))
                     // print("\(keyData.char)の文字コードは、\(keyData.keyCodes)、キーは\(keyData.keycapChar)です。")
                     self.keyDataArray.append(keyData)
                     // print(keyData)

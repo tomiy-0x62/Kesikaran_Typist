@@ -41,11 +41,11 @@ class SentenceManager {
     
     var attributedKanaSampleSentence = NSMutableAttributedString()
     
-    var lastNextKeyNums: Array<Int> = []
-    var nextKeyNums: Array<Int> = []
+    var lastNextKeyCodes: Array<Int> = []
+    var nextKeyCodes: Array<Int> = []
     
     var sampleSentenceArray: Array<SampleSentenceData> = []
-    var sentenceNum = 0 // sequentialText()用 現在のテキスト番号
+    var sentenceIndex = 0 // sequentialText()用 現在のテキスト番号
     var nowSampleSentence = SampleSentenceData(sentence: "サンプル", kana: "さんぷる")
     
     var correctCharIndex = 0 // nowSampleSentenceとtypedKanaSentenceが何文字目まで一致してるか
@@ -58,7 +58,7 @@ class SentenceManager {
     
     func test() {
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
-        print(getNextKeyNums())
+        print(getNextKeyCodes())
         print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
     }
     
@@ -85,20 +85,20 @@ class SentenceManager {
         }
     }
     
-    func getNextKeyNums() -> [Int] {
-        // 次にタイプするキーのkeyNumを取得
+    func getNextKeyCodes() -> [Int] {
+        // 次にタイプするキーのkeyCOdeを取得
         if typedKanaSentence.utf16.count == correctCharIndex {
             let nextKeyKana = getCharfromStr(text: nowSampleSentence.kanaSentence, index: correctCharIndex)
             print("Next Kana = \(nextKeyKana)")
-            self.lastNextKeyNums = self.nextKeyNums
-            self.nextKeyNums = keyDataManager.searchKeyNums(keyKana: nextKeyKana)
-            return self.nextKeyNums
+            self.lastNextKeyCodes = self.nextKeyCodes
+            self.nextKeyCodes = keyDataManager.searchKeyCodes(keyKana: nextKeyKana)
+            return self.nextKeyCodes
         } else {
             let nextKeyKana = "delete"
             print("Next Kana = \(nextKeyKana)")
-            self.lastNextKeyNums = self.nextKeyNums
-            self.nextKeyNums = keyDataManager.searchKeyNums(keyKana: nextKeyKana)
-            return self.nextKeyNums
+            self.lastNextKeyCodes = self.nextKeyCodes
+            self.nextKeyCodes = keyDataManager.searchKeyCodes(keyKana: nextKeyKana)
+            return self.nextKeyCodes
         }
     }
     
@@ -106,9 +106,9 @@ class SentenceManager {
         // 順番にテキストを選択
         // self.nowSentence = sampleSentenceArray[sentenceNum]
         self.nowSampleSentence = SampleSentenceData(sentence: "けしからん", kana: "けしからん")
-        sentenceNum += 1
-        if sampleSentenceArray.count == sentenceNum {
-            sentenceNum = 0
+        sentenceIndex += 1
+        if sampleSentenceArray.count == sentenceIndex {
+            sentenceIndex = 0
         }
         self.attributedKanaSampleSentence = NSMutableAttributedString()
         self.attributedKanaSampleSentence.append(NSAttributedString(string: nowSampleSentence.kanaSentence))

@@ -86,8 +86,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var r_option: KeyView!  // 58 Opt
     @IBOutlet weak var r_control: KeyView!  // 59 Ctrl
     @IBOutlet weak var Fn: KeyView!  // 60
+    var NULL_KEY: KeyView!
     
-    var keyViewList: Array<KeyView> = []
+    var keyViewList: Array<KeyView?> = []
     
     
     // shiftキーの状態を保存
@@ -100,7 +101,11 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
+        // keyViewList = [accent_grave, one, two, three, four, five, six, seven, eight, nine, zero, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, hyphen, equal, delete, tab, l_sq_bracket, r_sq_bracket, back_slash, l_control, colon, quotation, returnKey, l_shift, comma, dot, slash, r_shift, caps_lock, l_option, l_command, spase, r_command, r_option, Fn]
+        
+        keyViewList = [A, S, D, F, H, G, Z, X, C, V, NULL_KEY, B, Q, W, E, R, Y, T, one, two, three, four, six, five, equal, nine, seven, hyphen, eight, zero, r_sq_bracket, O, U, l_sq_bracket, I, P, returnKey, L, J, quotation, K, colon, back_slash, comma, slash, N, M, dot, tab, spase, accent_grave ,delete ,NULL_KEY ,NULL_KEY ,r_command, l_command, l_shift, NULL_KEY, l_option, l_control, r_shift, r_option, r_control]
+        
+        // shift_z,shift_E,shift_3,shift_4,shift_6,shift_5,shift_=,shift_9,shift_7,shift_8,shift_0,shift_],shift_[,shift_',shift_,,shift_/,shift_.,shift_`
         
         sentenceManager.loadSampleSentence()
         
@@ -131,26 +136,16 @@ class ViewController: NSViewController {
     
     func genKeycodes(keycode: UInt16) -> [Int] {
         // shift + ○ に対応させる
-        // shift + 56 -> [421, 56]
+        // shift + 8 -> [56, 8]
         // 48 -> [48]
         if isShift {
-            return [421, Int(keycode)]
-        }
-        return [Int(keycode)]
-    }
-    
-    func genKeycodesforNum(keycode: UInt16) -> [Int] {
-        // shift + ○ に対応させる (shiftの左右を区別する)
-        // right shift + 32 -> [60, 32]
-        // 48 -> [48]
-        if isShift {
-            switch sideOfShift{
-            case side.right:
+            switch sideOfShift {
+            case .left:
+                return [56, Int(keycode)]
+            case .right:
                 return [60, Int(keycode)]
-            case side.left:
-                return [56, Int(keycode)]
-            default:
-                return [56, Int(keycode)]
+            case .none:
+                return [Int(keycode)]
             }
         }
         return [Int(keycode)]
@@ -159,9 +154,9 @@ class ViewController: NSViewController {
     override func keyDown(with event: NSEvent) {
         // textField.stringValue = String(describing: event.characters!)
         print("KeDown: Code '\(event.keyCode)'")
-        let typedKeyChars = keyDataManager.searchKeyChar(keyCode: genKeycodes(keycode: event.keyCode))
-        let typedKeyNums = keyDataManager.searchKeyNums(keyCodes: genKeycodesforNum(keycode: event.keyCode))
-        let typedKana = keyDataManager.searchKeyKana(keyCode: genKeycodes(keycode: event.keyCode))
+        let typedKeyCodes = genKeycodes(keycode: event.keyCode)
+        let typedKeyChars = keyDataManager.searchKeyChar(keyCodes: typedKeyCodes)
+        let typedKana = keyDataManager.searchKeyKana(keyCodes: typedKeyCodes)
         print("typedKey: \(typedKeyChars)")
         typedKeyCharLabel.stringValue = ("Typed: \(typedKeyChars)")
         typedKeyKanaLabel.stringValue = ("Kana: \(typedKana)")
@@ -169,21 +164,23 @@ class ViewController: NSViewController {
         typedKanaSentenceLabel.stringValue = sentenceManager.typedKanaSentence
         kanaSampleSentenceLabel.attributedStringValue = sentenceManager.attributedKanaSampleSentence
         // typedKanaSentenceLabel.attributedStringValue = sentenceManager.AttributedTypedKanaSentence
-        print("typedKeyNums: \(typedKeyNums)")
+        print("typedKeyCodes: \(typedKeyCodes)")
         // checkText(typedKey: typedChar)
-        for keyNum in typedKeyNums {
-            if keyNum == 61{
+        for keyCode in typedKeyCodes {
+            if keyCode == 53{
                 print("esc")
-            }else {
+            } else if (keyViewList.count <= keyCode) {
+                print("Not found")
+            } else {
                 // タイプされたキーの色を0.2秒間緑にする
                 // ただし、正確にタイプされた時は緑にしない
-                if keyViewList[keyNum].color == .orange {
+                if keyViewList[keyCode]!.color == .orange {
                     // pass
                 } else {
-                    keyViewList[keyNum].turnOn(color: keyColor.green)
+                    keyViewList[keyCode]!.turnOn(color: keyColor.green)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         // 緑を消す
-                        self.keyViewList[keyNum].turnOffIf(color: keyColor.green)
+                        self.keyViewList[keyCode]!.turnOffIf(color: keyColor.green)
                     }
                 }
             }
@@ -194,28 +191,28 @@ class ViewController: NSViewController {
                 kanaSampleSentenceLabel.stringValue = sentenceManager.nowSampleSentence.kanaSentence
             }
         }
-        for keyNum in sentenceManager.nextKeyNums {
-            keyViewList[keyNum].turnOff()
+        for keyCode in sentenceManager.nextKeyCodes {
+            keyViewList[keyCode]!.turnOff()
         }
-        for keyNum in sentenceManager.getNextKeyNums() {
-            print("NextNum = \(keyNum)")
-            keyViewList[keyNum].turnOn(color: keyColor.orange)
+        for keyCode in sentenceManager.getNextKeyCodes() {
+            print("NextKeyCode = \(keyCode)")
+            keyViewList[keyCode]!.turnOn(color: keyColor.orange)
         }
         
     }
     
     override func flagsChanged(with event: NSEvent) {
         // print(event.keyCode)
-        let typedKeyKana = keyDataManager.searchKeyKana(keyCode: [Int(event.keyCode)])
+        let typedKeyKana = keyDataManager.searchKeyKana(keyCodes: [Int(event.keyCode)])
         print("apple: \(typedKeyKana)")
         switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
         case [.shift]:
             print("shift key is pressed")
             self.isShift = true
-            if typedKeyKana == "left shift" {
+            if typedKeyKana == "L shift" {
                 self.sideOfShift = side.left
             }
-            if typedKeyKana == "right shift" {
+            if typedKeyKana == "R shift" {
                 self.sideOfShift = side.right
             }
         case [.control]:
