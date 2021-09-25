@@ -86,7 +86,7 @@ class SentenceManager {
     }
     
     func getNextKeyCodes() -> [Int] {
-        // 次にタイプするキーのkeyCOdeを取得
+        // 次にタイプするキーのkeyCodeを取得
         if typedKanaSentence.utf16.count == correctCharIndex {
             let nextKeyKana = getCharfromStr(text: nowSampleSentence.kanaSentence, index: correctCharIndex)
             print("Next Kana = \(nextKeyKana)")
