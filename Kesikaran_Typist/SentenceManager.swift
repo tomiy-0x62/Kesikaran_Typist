@@ -13,10 +13,9 @@ enum Mode {
 
 struct SampleSentenceData {
     
-    let sentence: String
-    let kanaSentence: String
+    let sentence: String // 雨ニモマケズ
+    let kanaSentence: String // あめにもまけす゛
     
-    //クラスが生成された時の処理
     init(sentence: String, kana: String) {
         self.sentence = sentence
         self.kanaSentence = kana
