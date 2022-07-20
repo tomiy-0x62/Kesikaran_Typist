@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -678,13 +679,13 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="757" y="40"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Kesikara_Typist" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -694,12 +695,51 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="nK7-Ls-txg" kind="relationship" relationship="window.shadowedContentViewController" id="UKg-RT-4is"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="763" y="282"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZyA-l8-uw3">
+            <objects>
+                <viewController id="nK7-Ls-txg" sceneMemberID="viewController">
+                    <view key="view" id="vXa-lH-pm5">
+                        <rect key="frame" x="0.0" y="0.0" width="662" height="507"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NDu-am-8ya">
+                                <rect key="frame" x="192" y="341" width="279" height="25"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="けしからん　タイピスト" id="S0y-SK-dpI">
+                                    <font key="font" size="25" name="HiraginoSans-W3"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bil-E4-Bdr">
+                                <rect key="frame" x="290" y="137" width="83" height="32"/>
+                                <buttonCell key="cell" type="push" title="スタート" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dDX-tM-MNl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="XfG-lQ-9wD" kind="modal" id="5FU-Lw-3YO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NDu-am-8ya" firstAttribute="centerY" secondItem="vXa-lH-pm5" secondAttribute="centerY" constant="-100" id="AtS-vq-6LE"/>
+                            <constraint firstItem="Bil-E4-Bdr" firstAttribute="centerX" secondItem="vXa-lH-pm5" secondAttribute="centerX" id="CzY-Ra-N1S"/>
+                            <constraint firstItem="Bil-E4-Bdr" firstAttribute="centerY" secondItem="vXa-lH-pm5" secondAttribute="centerY" constant="100" id="MIY-SD-Nef"/>
+                            <constraint firstItem="NDu-am-8ya" firstAttribute="centerX" secondItem="vXa-lH-pm5" secondAttribute="centerX" id="TME-rR-iZF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="yQ1-9b-bCK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="818.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">

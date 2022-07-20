@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77060CBF2594DF7C00C97BC6 /* KeyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */; };
+		7721ECCB27A2ED7200F77127 /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721ECCA27A2ED7200F77127 /* SlideSegue.swift */; };
 		77347F8125B81FCA006EF40E /* SentenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8025B81FCA006EF40E /* SentenceManager.swift */; };
 		77347F8625B83237006EF40E /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77347F8525B83237006EF40E /* KeyView.swift */; };
 		7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7741F3D5258E03AB001D7A6E /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		77060CBE2594DF7C00C97BC6 /* KeyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDataManager.swift; sourceTree = "<group>"; };
+		7721ECCA27A2ED7200F77127 /* SlideSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
 		77347F8025B81FCA006EF40E /* SentenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceManager.swift; sourceTree = "<group>"; };
 		77347F8525B83237006EF40E /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		7741F3D2258E03AB001D7A6E /* Kesikaran_Typist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kesikaran_Typist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				77347F8525B83237006EF40E /* KeyView.swift */,
 				7741F3D9258E03AC001D7A6E /* Assets.xcassets */,
 				7741F3DB258E03AC001D7A6E /* Main.storyboard */,
+				7721ECCA27A2ED7200F77127 /* SlideSegue.swift */,
 				7767A81D25BB13CA003A4A53 /* KeybordBackground.swift */,
 				7741F3DE258E03AC001D7A6E /* Info.plist */,
 				7741F3DF258E03AC001D7A6E /* Kesikaran_Typist.entitlements */,
@@ -281,6 +284,7 @@
 				7767A81E25BB13CA003A4A53 /* KeybordBackground.swift in Sources */,
 				77347F8625B83237006EF40E /* KeyView.swift in Sources */,
 				7741F3D8258E03AB001D7A6E /* ViewController.swift in Sources */,
+				7721ECCB27A2ED7200F77127 /* SlideSegue.swift in Sources */,
 				7741F3D6258E03AB001D7A6E /* AppDelegate.swift in Sources */,
 				77347F8125B81FCA006EF40E /* SentenceManager.swift in Sources */,
 			);
